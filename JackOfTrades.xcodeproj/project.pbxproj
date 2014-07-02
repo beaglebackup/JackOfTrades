@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF86FC5E194FFDFA0059CD68 /* AntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC5D194FFDFA0059CD68 /* AntViewController.m */; };
+		EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC601950018F0059CD68 /* BitingViewController.m */; };
+		EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56219639EF500991CFF /* CrittersViewController.m */; };
+		EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF5651963A0E600991CFF /* FliesViewController.m */; };
+		EF8FF5691963A21800991CFF /* MothsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF5681963A21700991CFF /* MothsViewController.m */; };
+		EF8FF56C1963A32800991CFF /* PantryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56B1963A32800991CFF /* PantryViewController.m */; };
+		EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56E1963A60700991CFF /* BirdsViewController.m */; };
+		EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF5741963AAEC00991CFF /* RodentsViewController.m */; };
+		EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF5771963AC3500991CFF /* OccasionalViewController.m */; };
+		EF8FF57B1963AC4800991CFF /* SpidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF57A1963AC4800991CFF /* SpidersViewController.m */; };
+		EF8FF57E1963AC6300991CFF /* StingingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF57D1963AC6300991CFF /* StingingViewController.m */; };
+		EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46AF193022B9002EECBD /* Foundation.framework */; };
+		EFBB46B2193022B9002EECBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B1193022B9002EECBD /* CoreGraphics.framework */; };
+		EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B3193022B9002EECBD /* UIKit.framework */; };
+		EFBB46BA193022B9002EECBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46B8193022B9002EECBD /* InfoPlist.strings */; };
+		EFBB46BC193022B9002EECBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46BB193022B9002EECBD /* main.m */; };
+		EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46BF193022B9002EECBD /* AppDelegate.m */; };
+		EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46C1193022B9002EECBD /* Main.storyboard */; };
+		EFBB46C6193022B9002EECBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46C5193022B9002EECBD /* ViewController.m */; };
+		EFBB46C8193022B9002EECBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46C7193022B9002EECBD /* Images.xcassets */; };
+		EFBB46CF193022B9002EECBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46CE193022B9002EECBD /* XCTest.framework */; };
+		EFBB46D0193022B9002EECBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46AF193022B9002EECBD /* Foundation.framework */; };
+		EFBB46D1193022B9002EECBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B3193022B9002EECBD /* UIKit.framework */; };
+		EFBB46D9193022BA002EECBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46D7193022BA002EECBD /* InfoPlist.strings */; };
+		EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */; };
+		EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E4193054D6002EECBD /* IMG_0615.JPG */; };
+		EFBB46E819305AC7002EECBD /* RoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* RoachViewController.m */; };
+		EFBB46EA19305D45002EECBD /* roach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E919305D45002EECBD /* roach.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFBB46D2193022BA002EECBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFBB46A4193022B9002EECBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFBB46AB193022B9002EECBD;
+			remoteInfo = JackOfTrades;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF86FC5C194FFDFA0059CD68 /* AntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AntViewController.h; sourceTree = "<group>"; };
+		EF86FC5D194FFDFA0059CD68 /* AntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntViewController.m; sourceTree = "<group>"; };
+		EF86FC5F1950018F0059CD68 /* BitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitingViewController.h; sourceTree = "<group>"; };
+		EF86FC601950018F0059CD68 /* BitingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitingViewController.m; sourceTree = "<group>"; };
+		EF8FF56119639EF500991CFF /* CrittersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittersViewController.h; sourceTree = "<group>"; };
+		EF8FF56219639EF500991CFF /* CrittersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrittersViewController.m; sourceTree = "<group>"; };
+		EF8FF5641963A0E600991CFF /* FliesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FliesViewController.h; sourceTree = "<group>"; };
+		EF8FF5651963A0E600991CFF /* FliesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FliesViewController.m; sourceTree = "<group>"; };
+		EF8FF5671963A21700991CFF /* MothsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MothsViewController.h; sourceTree = "<group>"; };
+		EF8FF5681963A21700991CFF /* MothsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MothsViewController.m; sourceTree = "<group>"; };
+		EF8FF56A1963A32800991CFF /* PantryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PantryViewController.h; sourceTree = "<group>"; };
+		EF8FF56B1963A32800991CFF /* PantryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PantryViewController.m; sourceTree = "<group>"; };
+		EF8FF56D1963A60700991CFF /* BirdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdsViewController.h; sourceTree = "<group>"; };
+		EF8FF56E1963A60700991CFF /* BirdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdsViewController.m; sourceTree = "<group>"; };
+		EF8FF5731963AAEC00991CFF /* RodentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RodentsViewController.h; sourceTree = "<group>"; };
+		EF8FF5741963AAEC00991CFF /* RodentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RodentsViewController.m; sourceTree = "<group>"; };
+		EF8FF5761963AC3500991CFF /* OccasionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccasionalViewController.h; sourceTree = "<group>"; };
+		EF8FF5771963AC3500991CFF /* OccasionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccasionalViewController.m; sourceTree = "<group>"; };
+		EF8FF5791963AC4800991CFF /* SpidersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpidersViewController.h; sourceTree = "<group>"; };
+		EF8FF57A1963AC4800991CFF /* SpidersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpidersViewController.m; sourceTree = "<group>"; };
+		EF8FF57C1963AC6300991CFF /* StingingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StingingViewController.h; sourceTree = "<group>"; };
+		EF8FF57D1963AC6300991CFF /* StingingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StingingViewController.m; sourceTree = "<group>"; };
+		EFBB46AC193022B9002EECBD /* JackOfTrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackOfTrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBB46AF193022B9002EECBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFBB46B1193022B9002EECBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EFBB46B3193022B9002EECBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EFBB46B7193022B9002EECBD /* JackOfTrades-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JackOfTrades-Info.plist"; sourceTree = "<group>"; };
+		EFBB46B9193022B9002EECBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFBB46BB193022B9002EECBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFBB46BD193022B9002EECBD /* JackOfTrades-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackOfTrades-Prefix.pch"; sourceTree = "<group>"; };
+		EFBB46BE193022B9002EECBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFBB46BF193022B9002EECBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFBB46C2193022B9002EECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFBB46C4193022B9002EECBD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EFBB46C5193022B9002EECBD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EFBB46C7193022B9002EECBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EFBB46CD193022B9002EECBD /* JackOfTradesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackOfTradesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBB46CE193022B9002EECBD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EFBB46D6193022BA002EECBD /* JackOfTradesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JackOfTradesTests-Info.plist"; sourceTree = "<group>"; };
+		EFBB46D8193022BA002EECBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackOfTradesTests.m; sourceTree = "<group>"; };
+		EFBB46E4193054D6002EECBD /* IMG_0615.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0615.JPG; sourceTree = SOURCE_ROOT; };
+		EFBB46E619305AC7002EECBD /* RoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoachViewController.h; sourceTree = "<group>"; };
+		EFBB46E719305AC7002EECBD /* RoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoachViewController.m; sourceTree = "<group>"; };
+		EFBB46E919305D45002EECBD /* roach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roach.jpg; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFBB46A9193022B9002EECBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46B2193022B9002EECBD /* CoreGraphics.framework in Frameworks */,
+				EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */,
+				EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBB46CA193022B9002EECBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46CF193022B9002EECBD /* XCTest.framework in Frameworks */,
+				EFBB46D1193022B9002EECBD /* UIKit.framework in Frameworks */,
+				EFBB46D0193022B9002EECBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFBB46A3193022B9002EECBD = {
+			isa = PBXGroup;
+			children = (
+				EFBB46B5193022B9002EECBD /* JackOfTrades */,
+				EFBB46D4193022BA002EECBD /* JackOfTradesTests */,
+				EFBB46AE193022B9002EECBD /* Frameworks */,
+				EFBB46AD193022B9002EECBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFBB46AD193022B9002EECBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46AC193022B9002EECBD /* JackOfTrades.app */,
+				EFBB46CD193022B9002EECBD /* JackOfTradesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFBB46AE193022B9002EECBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46AF193022B9002EECBD /* Foundation.framework */,
+				EFBB46B1193022B9002EECBD /* CoreGraphics.framework */,
+				EFBB46B3193022B9002EECBD /* UIKit.framework */,
+				EFBB46CE193022B9002EECBD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFBB46B5193022B9002EECBD /* JackOfTrades */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46BE193022B9002EECBD /* AppDelegate.h */,
+				EFBB46BF193022B9002EECBD /* AppDelegate.m */,
+				EFBB46C1193022B9002EECBD /* Main.storyboard */,
+				EFBB46C4193022B9002EECBD /* ViewController.h */,
+				EFBB46C5193022B9002EECBD /* ViewController.m */,
+				EF86FC5C194FFDFA0059CD68 /* AntViewController.h */,
+				EF86FC5D194FFDFA0059CD68 /* AntViewController.m */,
+				EF86FC5F1950018F0059CD68 /* BitingViewController.h */,
+				EF86FC601950018F0059CD68 /* BitingViewController.m */,
+				EF8FF56D1963A60700991CFF /* BirdsViewController.h */,
+				EF8FF56E1963A60700991CFF /* BirdsViewController.m */,
+				EF8FF56119639EF500991CFF /* CrittersViewController.h */,
+				EF8FF56219639EF500991CFF /* CrittersViewController.m */,
+				EF8FF5641963A0E600991CFF /* FliesViewController.h */,
+				EF8FF5651963A0E600991CFF /* FliesViewController.m */,
+				EF8FF5671963A21700991CFF /* MothsViewController.h */,
+				EF8FF5681963A21700991CFF /* MothsViewController.m */,
+				EF8FF56A1963A32800991CFF /* PantryViewController.h */,
+				EF8FF56B1963A32800991CFF /* PantryViewController.m */,
+				EFBB46E619305AC7002EECBD /* RoachViewController.h */,
+				EFBB46E719305AC7002EECBD /* RoachViewController.m */,
+				EF8FF5731963AAEC00991CFF /* RodentsViewController.h */,
+				EF8FF5741963AAEC00991CFF /* RodentsViewController.m */,
+				EF8FF5761963AC3500991CFF /* OccasionalViewController.h */,
+				EF8FF5771963AC3500991CFF /* OccasionalViewController.m */,
+				EF8FF5791963AC4800991CFF /* SpidersViewController.h */,
+				EF8FF57A1963AC4800991CFF /* SpidersViewController.m */,
+				EF8FF57C1963AC6300991CFF /* StingingViewController.h */,
+				EF8FF57D1963AC6300991CFF /* StingingViewController.m */,
+				EFBB46E919305D45002EECBD /* roach.jpg */,
+				EFBB46E4193054D6002EECBD /* IMG_0615.JPG */,
+				EFBB46C7193022B9002EECBD /* Images.xcassets */,
+				EFBB46B6193022B9002EECBD /* Supporting Files */,
+			);
+			path = JackOfTrades;
+			sourceTree = "<group>";
+		};
+		EFBB46B6193022B9002EECBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46B7193022B9002EECBD /* JackOfTrades-Info.plist */,
+				EFBB46B8193022B9002EECBD /* InfoPlist.strings */,
+				EFBB46BB193022B9002EECBD /* main.m */,
+				EFBB46BD193022B9002EECBD /* JackOfTrades-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFBB46D4193022BA002EECBD /* JackOfTradesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */,
+				EFBB46D5193022BA002EECBD /* Supporting Files */,
+			);
+			path = JackOfTradesTests;
+			sourceTree = "<group>";
+		};
+		EFBB46D5193022BA002EECBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB46D6193022BA002EECBD /* JackOfTradesTests-Info.plist */,
+				EFBB46D7193022BA002EECBD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFBB46AB193022B9002EECBD /* JackOfTrades */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBB46DE193022BA002EECBD /* Build configuration list for PBXNativeTarget "JackOfTrades" */;
+			buildPhases = (
+				EFBB46A8193022B9002EECBD /* Sources */,
+				EFBB46A9193022B9002EECBD /* Frameworks */,
+				EFBB46AA193022B9002EECBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JackOfTrades;
+			productName = JackOfTrades;
+			productReference = EFBB46AC193022B9002EECBD /* JackOfTrades.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFBB46CC193022B9002EECBD /* JackOfTradesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBB46E1193022BA002EECBD /* Build configuration list for PBXNativeTarget "JackOfTradesTests" */;
+			buildPhases = (
+				EFBB46C9193022B9002EECBD /* Sources */,
+				EFBB46CA193022B9002EECBD /* Frameworks */,
+				EFBB46CB193022B9002EECBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFBB46D3193022BA002EECBD /* PBXTargetDependency */,
+			);
+			name = JackOfTradesTests;
+			productName = JackOfTradesTests;
+			productReference = EFBB46CD193022B9002EECBD /* JackOfTradesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFBB46A4193022B9002EECBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Gabriel;
+				TargetAttributes = {
+					EFBB46CC193022B9002EECBD = {
+						TestTargetID = EFBB46AB193022B9002EECBD;
+					};
+				};
+			};
+			buildConfigurationList = EFBB46A7193022B9002EECBD /* Build configuration list for PBXProject "JackOfTrades" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFBB46A3193022B9002EECBD;
+			productRefGroup = EFBB46AD193022B9002EECBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFBB46AB193022B9002EECBD /* JackOfTrades */,
+				EFBB46CC193022B9002EECBD /* JackOfTradesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFBB46AA193022B9002EECBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46C8193022B9002EECBD /* Images.xcassets in Resources */,
+				EFBB46BA193022B9002EECBD /* InfoPlist.strings in Resources */,
+				EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */,
+				EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */,
+				EFBB46EA19305D45002EECBD /* roach.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBB46CB193022B9002EECBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46D9193022BA002EECBD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFBB46A8193022B9002EECBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46E819305AC7002EECBD /* RoachViewController.m in Sources */,
+				EF86FC5E194FFDFA0059CD68 /* AntViewController.m in Sources */,
+				EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */,
+				EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */,
+				EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */,
+				EFBB46C6193022B9002EECBD /* ViewController.m in Sources */,
+				EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */,
+				EF8FF5691963A21800991CFF /* MothsViewController.m in Sources */,
+				EF8FF57E1963AC6300991CFF /* StingingViewController.m in Sources */,
+				EF8FF56C1963A32800991CFF /* PantryViewController.m in Sources */,
+				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
+				EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */,
+				EF8FF57B1963AC4800991CFF /* SpidersViewController.m in Sources */,
+				EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */,
+				EFBB46BC193022B9002EECBD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBB46C9193022B9002EECBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFBB46D3193022BA002EECBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFBB46AB193022B9002EECBD /* JackOfTrades */;
+			targetProxy = EFBB46D2193022BA002EECBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFBB46B8193022B9002EECBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFBB46B9193022B9002EECBD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EFBB46C1193022B9002EECBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFBB46C2193022B9002EECBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFBB46D7193022BA002EECBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFBB46D8193022BA002EECBD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFBB46DC193022BA002EECBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFBB46DD193022BA002EECBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFBB46DF193022BA002EECBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
+				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "652DB5E9-01CA-4F50-8A88-7DBE8604F341";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EFBB46E0193022BA002EECBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
+				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "652DB5E9-01CA-4F50-8A88-7DBE8604F341";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EFBB46E2193022BA002EECBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JackOfTrades.app/JackOfTrades";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JackOfTradesTests/JackOfTradesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EFBB46E3193022BA002EECBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JackOfTrades.app/JackOfTrades";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
+				INFOPLIST_FILE = "JackOfTradesTests/JackOfTradesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFBB46A7193022B9002EECBD /* Build configuration list for PBXProject "JackOfTrades" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBB46DC193022BA002EECBD /* Debug */,
+				EFBB46DD193022BA002EECBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBB46DE193022BA002EECBD /* Build configuration list for PBXNativeTarget "JackOfTrades" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBB46DF193022BA002EECBD /* Debug */,
+				EFBB46E0193022BA002EECBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBB46E1193022BA002EECBD /* Build configuration list for PBXNativeTarget "JackOfTradesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBB46E2193022BA002EECBD /* Debug */,
+				EFBB46E3193022BA002EECBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFBB46A4193022B9002EECBD /* Project object */;
+}
