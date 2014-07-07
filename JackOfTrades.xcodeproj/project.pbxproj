@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8453F6101963E3CD002D7661 /* JTHomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTHomeButton.m */; };
+		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
-		8491BC65196AFE5A004F3422 /* Parse 2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse 2.framework */; };
+		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
 		8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC66196AFE85004F3422 /* AudioToolbox.framework */; };
 		8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC68196AFE8A004F3422 /* CFNetwork.framework */; };
 		8491BC6B196AFF04004F3422 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC6A196AFF04004F3422 /* CoreLocation.framework */; };
@@ -19,7 +19,13 @@
 		8491BC73196AFF21004F3422 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC72196AFF21004F3422 /* Security.framework */; };
 		8491BC75196AFF26004F3422 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC74196AFF26004F3422 /* StoreKit.framework */; };
 		8491BC77196AFF2E004F3422 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */; };
-		EF86FC5E194FFDFA0059CD68 /* SpeciesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC5D194FFDFA0059CD68 /* SpeciesViewController.m */; };
+		8491BC7A196B0079004F3422 /* Subtype.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC79196B0079004F3422 /* Subtype.m */; };
+		8491BC7D196B0080004F3422 /* Pest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7C196B0080004F3422 /* Pest.m */; };
+		8491BC80196B0505004F3422 /* JTDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7F196B0505004F3422 /* JTDatabaseManager.m */; };
+		8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */; };
+		8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */; };
+		8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC8B196B1683004F3422 /* JTSubtypeButton.m */; };
+		EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */; };
 		EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC601950018F0059CD68 /* BitingViewController.m */; };
 		EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56219639EF500991CFF /* CrittersViewController.m */; };
 		EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF5651963A0E600991CFF /* FliesViewController.m */; };
@@ -37,7 +43,7 @@
 		EFBB46BC193022B9002EECBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46BB193022B9002EECBD /* main.m */; };
 		EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46BF193022B9002EECBD /* AppDelegate.m */; };
 		EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46C1193022B9002EECBD /* Main.storyboard */; };
-		EFBB46C6193022B9002EECBD /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46C5193022B9002EECBD /* HomeController.m */; };
+		EFBB46C6193022B9002EECBD /* JTTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46C5193022B9002EECBD /* JTTypeController.m */; };
 		EFBB46C8193022B9002EECBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46C7193022B9002EECBD /* Images.xcassets */; };
 		EFBB46CF193022B9002EECBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46CE193022B9002EECBD /* XCTest.framework */; };
 		EFBB46D0193022B9002EECBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46AF193022B9002EECBD /* Foundation.framework */; };
@@ -45,7 +51,7 @@
 		EFBB46D9193022BA002EECBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46D7193022BA002EECBD /* InfoPlist.strings */; };
 		EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */; };
 		EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E4193054D6002EECBD /* IMG_0615.JPG */; };
-		EFBB46E819305AC7002EECBD /* RoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* RoachViewController.m */; };
+		EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */; };
 		EFBB46EA19305D45002EECBD /* roach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E919305D45002EECBD /* roach.jpg */; };
 /* End PBXBuildFile section */
 
@@ -60,11 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8453F60E1963E3CD002D7661 /* JTHomeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTHomeButton.h; sourceTree = "<group>"; };
-		8453F60F1963E3CD002D7661 /* JTHomeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTHomeButton.m; sourceTree = "<group>"; };
+		8453F60E1963E3CD002D7661 /* JTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeButton.h; sourceTree = "<group>"; };
+		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		8491BC62196AFDC3004F3422 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
-		8491BC64196AFE5A004F3422 /* Parse 2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Parse 2.framework"; sourceTree = "<group>"; };
+		8491BC64196AFE5A004F3422 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8491BC66196AFE85004F3422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8491BC68196AFE8A004F3422 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8491BC6A196AFF04004F3422 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -74,8 +80,20 @@
 		8491BC72196AFF21004F3422 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8491BC74196AFF26004F3422 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EF86FC5C194FFDFA0059CD68 /* SpeciesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeciesViewController.h; sourceTree = "<group>"; };
-		EF86FC5D194FFDFA0059CD68 /* SpeciesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeciesViewController.m; sourceTree = "<group>"; };
+		8491BC78196B0079004F3422 /* Subtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtype.h; sourceTree = "<group>"; };
+		8491BC79196B0079004F3422 /* Subtype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtype.m; sourceTree = "<group>"; };
+		8491BC7B196B0080004F3422 /* Pest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pest.h; sourceTree = "<group>"; };
+		8491BC7C196B0080004F3422 /* Pest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pest.m; sourceTree = "<group>"; };
+		8491BC7E196B0505004F3422 /* JTDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDatabaseManager.h; sourceTree = "<group>"; };
+		8491BC7F196B0505004F3422 /* JTDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDatabaseManager.m; sourceTree = "<group>"; };
+		8491BC84196B0917004F3422 /* JTTypeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeCollectionCell.h; sourceTree = "<group>"; };
+		8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeCollectionCell.m; sourceTree = "<group>"; };
+		8491BC87196B1646004F3422 /* JTSubtypeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeCollectionCell.h; sourceTree = "<group>"; };
+		8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeCollectionCell.m; sourceTree = "<group>"; };
+		8491BC8A196B1677004F3422 /* JTSubtypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeButton.h; sourceTree = "<group>"; };
+		8491BC8B196B1683004F3422 /* JTSubtypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeButton.m; sourceTree = "<group>"; };
+		EF86FC5C194FFDFA0059CD68 /* JTSubtypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeViewController.h; sourceTree = "<group>"; };
+		EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeViewController.m; sourceTree = "<group>"; };
 		EF86FC5F1950018F0059CD68 /* BitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitingViewController.h; sourceTree = "<group>"; };
 		EF86FC601950018F0059CD68 /* BitingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitingViewController.m; sourceTree = "<group>"; };
 		EF8FF56119639EF500991CFF /* CrittersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittersViewController.h; sourceTree = "<group>"; };
@@ -107,8 +125,8 @@
 		EFBB46BE193022B9002EECBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFBB46BF193022B9002EECBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EFBB46C2193022B9002EECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EFBB46C4193022B9002EECBD /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
-		EFBB46C5193022B9002EECBD /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		EFBB46C4193022B9002EECBD /* JTTypeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTTypeController.h; sourceTree = "<group>"; };
+		EFBB46C5193022B9002EECBD /* JTTypeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTTypeController.m; sourceTree = "<group>"; };
 		EFBB46C7193022B9002EECBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EFBB46CD193022B9002EECBD /* JackOfTradesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackOfTradesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBB46CE193022B9002EECBD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -116,8 +134,8 @@
 		EFBB46D8193022BA002EECBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackOfTradesTests.m; sourceTree = "<group>"; };
 		EFBB46E4193054D6002EECBD /* IMG_0615.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0615.JPG; sourceTree = SOURCE_ROOT; };
-		EFBB46E619305AC7002EECBD /* RoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoachViewController.h; sourceTree = "<group>"; };
-		EFBB46E719305AC7002EECBD /* RoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoachViewController.m; sourceTree = "<group>"; };
+		EFBB46E619305AC7002EECBD /* JTDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDetailsViewController.h; sourceTree = "<group>"; };
+		EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDetailsViewController.m; sourceTree = "<group>"; };
 		EFBB46E919305D45002EECBD /* roach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roach.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -137,7 +155,7 @@
 				8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */,
 				8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */,
 				EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */,
-				8491BC65196AFE5A004F3422 /* Parse 2.framework in Frameworks */,
+				8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */,
 				EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,9 +176,9 @@
 		8453F6081963D6E0002D7661 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8453F6111963E3EE002D7661 /* HomeViewController */,
+				8453F6111963E3EE002D7661 /* TypeViewController */,
 				8453F60D1963D90C002D7661 /* DetailsViewController */,
-				8453F60C1963D8F9002D7661 /* SpeciesViewController */,
+				8453F60C1963D8F9002D7661 /* SubtypeViewController */,
 				8453F60B1963D744002D7661 /* old */,
 			);
 			name = ViewControllers;
@@ -176,6 +194,8 @@
 		8453F60A1963D6F0002D7661 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				8491BC7E196B0505004F3422 /* JTDatabaseManager.h */,
+				8491BC7F196B0505004F3422 /* JTDatabaseManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -207,33 +227,39 @@
 			name = old;
 			sourceTree = "<group>";
 		};
-		8453F60C1963D8F9002D7661 /* SpeciesViewController */ = {
+		8453F60C1963D8F9002D7661 /* SubtypeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EF86FC5C194FFDFA0059CD68 /* SpeciesViewController.h */,
-				EF86FC5D194FFDFA0059CD68 /* SpeciesViewController.m */,
+				8491BC8B196B1683004F3422 /* JTSubtypeButton.m */,
+				8491BC8A196B1677004F3422 /* JTSubtypeButton.h */,
+				8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */,
+				8491BC87196B1646004F3422 /* JTSubtypeCollectionCell.h */,
+				EF86FC5C194FFDFA0059CD68 /* JTSubtypeViewController.h */,
+				EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */,
 			);
-			name = SpeciesViewController;
+			name = SubtypeViewController;
 			sourceTree = "<group>";
 		};
 		8453F60D1963D90C002D7661 /* DetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EFBB46E619305AC7002EECBD /* RoachViewController.h */,
-				EFBB46E719305AC7002EECBD /* RoachViewController.m */,
+				EFBB46E619305AC7002EECBD /* JTDetailsViewController.h */,
+				EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */,
 			);
 			name = DetailsViewController;
 			sourceTree = "<group>";
 		};
-		8453F6111963E3EE002D7661 /* HomeViewController */ = {
+		8453F6111963E3EE002D7661 /* TypeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EFBB46C4193022B9002EECBD /* HomeController.h */,
-				EFBB46C5193022B9002EECBD /* HomeController.m */,
-				8453F60E1963E3CD002D7661 /* JTHomeButton.h */,
-				8453F60F1963E3CD002D7661 /* JTHomeButton.m */,
+				8491BC84196B0917004F3422 /* JTTypeCollectionCell.h */,
+				8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */,
+				EFBB46C4193022B9002EECBD /* JTTypeController.h */,
+				EFBB46C5193022B9002EECBD /* JTTypeController.m */,
+				8453F60E1963E3CD002D7661 /* JTTypeButton.h */,
+				8453F60F1963E3CD002D7661 /* JTTypeButton.m */,
 			);
-			name = HomeViewController;
+			name = TypeViewController;
 			sourceTree = "<group>";
 		};
 		8491BC60196AFDA2004F3422 /* Data */ = {
@@ -241,6 +267,10 @@
 			children = (
 				8491BC61196AFDC3004F3422 /* Type.h */,
 				8491BC62196AFDC3004F3422 /* Type.m */,
+				8491BC7B196B0080004F3422 /* Pest.h */,
+				8491BC7C196B0080004F3422 /* Pest.m */,
+				8491BC78196B0079004F3422 /* Subtype.h */,
+				8491BC79196B0079004F3422 /* Subtype.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -276,7 +306,7 @@
 				8491BC6A196AFF04004F3422 /* CoreLocation.framework */,
 				8491BC68196AFE8A004F3422 /* CFNetwork.framework */,
 				8491BC66196AFE85004F3422 /* AudioToolbox.framework */,
-				8491BC64196AFE5A004F3422 /* Parse 2.framework */,
+				8491BC64196AFE5A004F3422 /* Parse.framework */,
 				EFBB46AF193022B9002EECBD /* Foundation.framework */,
 				EFBB46B1193022B9002EECBD /* CoreGraphics.framework */,
 				EFBB46B3193022B9002EECBD /* UIKit.framework */,
@@ -431,20 +461,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFBB46E819305AC7002EECBD /* RoachViewController.m in Sources */,
-				EF86FC5E194FFDFA0059CD68 /* SpeciesViewController.m in Sources */,
+				EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */,
+				8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */,
+				8491BC7D196B0080004F3422 /* Pest.m in Sources */,
+				EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */,
 				EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */,
 				EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */,
 				EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */,
-				EFBB46C6193022B9002EECBD /* HomeController.m in Sources */,
+				EFBB46C6193022B9002EECBD /* JTTypeController.m in Sources */,
 				EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */,
 				EF8FF5691963A21800991CFF /* MothsViewController.m in Sources */,
+				8491BC7A196B0079004F3422 /* Subtype.m in Sources */,
 				EF8FF57E1963AC6300991CFF /* StingingViewController.m in Sources */,
 				EF8FF56C1963A32800991CFF /* PantryViewController.m in Sources */,
+				8491BC80196B0505004F3422 /* JTDatabaseManager.m in Sources */,
+				8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */,
 				8491BC63196AFDC3004F3422 /* Type.m in Sources */,
+				8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */,
 				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
 				EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */,
-				8453F6101963E3CD002D7661 /* JTHomeButton.m in Sources */,
+				8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */,
 				EF8FF57B1963AC4800991CFF /* SpidersViewController.m in Sources */,
 				EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */,
 				EFBB46BC193022B9002EECBD /* main.m in Sources */,

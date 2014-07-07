@@ -7,16 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "Type.h"
+#import "Subtype.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Register Parse data subclasses
+    [Type registerSubclass];
+    [Subtype registerSubclass];
+    
+    
+    // Initialize Parse
     [Parse setApplicationId:@"qnCDYVRzw5ysXZGS7r25ntqsFq5HGCyWIG7CtGHO"
                   clientKey:@"EodWjT2NWMIKDq2I98FcqefhDv9Uvc9wDS5v3YlA"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-
+    
     
     return YES;
 }

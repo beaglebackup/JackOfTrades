@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JTHomeButton : UIButton
+@interface JTTypeButton : UIButton
 
 @end

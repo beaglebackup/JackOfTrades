@@ -1,5 +1,5 @@
 //
-//  Type.h
+//  Pest.h
 //  JackOfTrades
 //
 //  Created by Admin on 7/7/14.
@@ -8,19 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-
-
-@interface Type : PFObject <PFSubclassing>
-
+@interface Pest : PFObject <PFSubclassing>
 
 @property (retain) NSString *name;
-
-
+@property (retain) PFFile *mainPhoto;
 
 
 + (NSString *)parseClassName;
-
-
-+ (NSString *)nameKey;
 
 @end

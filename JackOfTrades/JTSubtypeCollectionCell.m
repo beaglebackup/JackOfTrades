@@ -1,14 +1,14 @@
 //
-//  JTHomeButton.m
+//  JTTypeCollectionCell.m
 //  JackOfTrades
 //
-//  Created by Admin on 7/1/14.
+//  Created by Admin on 7/7/14.
 //  Copyright (c) 2014 Gabriel. All rights reserved.
 //
 
-#import "JTHomeButton.h"
+#import "JTSubtypeCollectionCell.h"
 
-@implementation JTHomeButton
+@implementation JTSubtypeCollectionCell
 
 - (id)initWithFrame:(CGRect)frame
 {

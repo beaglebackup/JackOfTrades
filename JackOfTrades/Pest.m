@@ -1,27 +1,19 @@
 //
-//  Type.m
+//  Pest.m
 //  JackOfTrades
 //
 //  Created by Admin on 7/7/14.
 //  Copyright (c) 2014 Gabriel. All rights reserved.
 //
 #import <Parse/PFObject+Subclass.h>
-#import "Type.h"
+#import "Pest.h"
 
-@implementation Type
+@implementation Pest
 
 @dynamic name;
 
-
-
 + (NSString *)parseClassName {
-    return @"Type";
+    return @"Pest";
 }
-
-+ (NSString *)nameKey {
-    return @"name";
-}
-
-
 
 @end
