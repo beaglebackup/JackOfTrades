@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Type : PFObject
+
+
+@interface Type : PFObject <PFSubclassing>
+
+
+@property (retain) NSString *name;
+
+
+
+
++ (NSString *)parseClassName;
+
+
++ (NSString *)nameKey;
 
 @end

@@ -14,6 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-    #import <Parse 2/Parse.h>
+    #import <Parse/Parse.h>
+
+    #import "JTDatabaseManager.h"
 
 #endif
