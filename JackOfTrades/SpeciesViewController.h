@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AntViewController : UIViewController {
+@interface SpeciesViewController : UIViewController {
     
-    IBOutlet UIScrollView *antScrollView;
+    IBOutlet UICollectionView *speciesCollectionView;
 }
+
+
+
+@property (strong, nonatomic) NSArray* objects;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *argentineAntButton;

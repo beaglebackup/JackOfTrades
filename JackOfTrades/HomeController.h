@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
+@interface HomeController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     
-    IBOutlet UIScrollView *homeScrollView;
+    IBOutlet UICollectionView *homeScrollView;
     
 }
+
+@property (strong, nonatomic) NSArray* objects;
+
+
 @property (strong, nonatomic) IBOutlet UIButton *antsButton;
 @property (strong, nonatomic) IBOutlet UIButton *bitingInsect;
 @property (strong, nonatomic) IBOutlet UIButton *birdsButton;
