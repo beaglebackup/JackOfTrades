@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
-		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
 		8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC66196AFE85004F3422 /* AudioToolbox.framework */; };
 		8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC68196AFE8A004F3422 /* CFNetwork.framework */; };
 		8491BC6B196AFF04004F3422 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC6A196AFF04004F3422 /* CoreLocation.framework */; };
@@ -24,6 +23,7 @@
 		8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */; };
 		8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */; };
 		8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC8B196B1683004F3422 /* JTSubtypeButton.m */; };
+		84D42832196C6E74005B2F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D42831196C6E74005B2F8E /* Parse.framework */; };
 		EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */; };
 		EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC601950018F0059CD68 /* BitingViewController.m */; };
 		EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56219639EF500991CFF /* CrittersViewController.m */; };
@@ -68,7 +68,6 @@
 		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		8491BC62196AFDC3004F3422 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
-		8491BC64196AFE5A004F3422 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8491BC66196AFE85004F3422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8491BC68196AFE8A004F3422 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8491BC6A196AFF04004F3422 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -88,6 +87,7 @@
 		8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeCollectionCell.m; sourceTree = "<group>"; };
 		8491BC8A196B1677004F3422 /* JTSubtypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeButton.h; sourceTree = "<group>"; };
 		8491BC8B196B1683004F3422 /* JTSubtypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeButton.m; sourceTree = "<group>"; };
+		84D42831196C6E74005B2F8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = JackOfTrades/Parse.framework; sourceTree = "<group>"; };
 		EF86FC5C194FFDFA0059CD68 /* JTSubtypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeViewController.h; sourceTree = "<group>"; };
 		EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeViewController.m; sourceTree = "<group>"; };
 		EF86FC5F1950018F0059CD68 /* BitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitingViewController.h; sourceTree = "<group>"; };
@@ -145,12 +145,12 @@
 				8491BC71196AFF1B004F3422 /* QuartzCore.framework in Frameworks */,
 				8491BC6F196AFF14004F3422 /* MobileCoreServices.framework in Frameworks */,
 				8491BC6D196AFF0E004F3422 /* libz.dylib in Frameworks */,
+				84D42832196C6E74005B2F8E /* Parse.framework in Frameworks */,
 				8491BC6B196AFF04004F3422 /* CoreLocation.framework in Frameworks */,
 				EFBB46B2193022B9002EECBD /* CoreGraphics.framework in Frameworks */,
 				8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */,
 				8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */,
 				EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */,
-				8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */,
 				EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +290,7 @@
 		EFBB46AE193022B9002EECBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84D42831196C6E74005B2F8E /* Parse.framework */,
 				8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */,
 				8491BC74196AFF26004F3422 /* StoreKit.framework */,
 				8491BC72196AFF21004F3422 /* Security.framework */,
@@ -299,7 +300,6 @@
 				8491BC6A196AFF04004F3422 /* CoreLocation.framework */,
 				8491BC68196AFE8A004F3422 /* CFNetwork.framework */,
 				8491BC66196AFE85004F3422 /* AudioToolbox.framework */,
-				8491BC64196AFE5A004F3422 /* Parse.framework */,
 				EFBB46AF193022B9002EECBD /* Foundation.framework */,
 				EFBB46B1193022B9002EECBD /* CoreGraphics.framework */,
 				EFBB46B3193022B9002EECBD /* UIKit.framework */,
@@ -601,6 +601,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/JackOfTrades",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
@@ -619,6 +620,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/JackOfTrades",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
