@@ -20,7 +20,6 @@
 		8491BC75196AFF26004F3422 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC74196AFF26004F3422 /* StoreKit.framework */; };
 		8491BC77196AFF2E004F3422 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */; };
 		8491BC7A196B0079004F3422 /* Subtype.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC79196B0079004F3422 /* Subtype.m */; };
-		8491BC7D196B0080004F3422 /* Pest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7C196B0080004F3422 /* Pest.m */; };
 		8491BC80196B0505004F3422 /* JTDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7F196B0505004F3422 /* JTDatabaseManager.m */; };
 		8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */; };
 		8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */; };
@@ -81,8 +80,6 @@
 		8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8491BC78196B0079004F3422 /* Subtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtype.h; sourceTree = "<group>"; };
 		8491BC79196B0079004F3422 /* Subtype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtype.m; sourceTree = "<group>"; };
-		8491BC7B196B0080004F3422 /* Pest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pest.h; sourceTree = "<group>"; };
-		8491BC7C196B0080004F3422 /* Pest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pest.m; sourceTree = "<group>"; };
 		8491BC7E196B0505004F3422 /* JTDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDatabaseManager.h; sourceTree = "<group>"; };
 		8491BC7F196B0505004F3422 /* JTDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDatabaseManager.m; sourceTree = "<group>"; };
 		8491BC84196B0917004F3422 /* JTTypeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeCollectionCell.h; sourceTree = "<group>"; };
@@ -265,8 +262,6 @@
 			children = (
 				8491BC61196AFDC3004F3422 /* Type.h */,
 				8491BC62196AFDC3004F3422 /* Type.m */,
-				8491BC7B196B0080004F3422 /* Pest.h */,
-				8491BC7C196B0080004F3422 /* Pest.m */,
 				8491BC78196B0079004F3422 /* Subtype.h */,
 				8491BC79196B0079004F3422 /* Subtype.m */,
 			);
@@ -459,7 +454,6 @@
 			files = (
 				EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */,
 				8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */,
-				8491BC7D196B0080004F3422 /* Pest.m in Sources */,
 				EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */,
 				EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */,
 				EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */,
