@@ -264,9 +264,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="JY7-nC-Oei"/>
-                    <connections>
-                        <outlet property="americanRxSubViewTextView" destination="pl4-dg-CKy" id="yOp-Sw-eNZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGP-u6-0Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,9 +397,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="KjQ-qY-QVo"/>
-                    <connections>
-                        <outlet property="americanToolSubViewTextView" destination="A0E-SO-72h" id="BuV-1s-ne2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qr-aH-BUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -437,9 +431,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="a3b-UY-84l"/>
-                    <connections>
-                        <outlet property="americanBulbSubViewTextView" destination="Zyg-kK-I6U" id="dyw-XX-qlr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tk9-X4-XUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,9 +465,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NuB-mc-feX"/>
-                    <connections>
-                        <outlet property="americanHandsSubViewTextView" destination="4b1-sH-Q80" id="O3h-AV-s3k"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSI-WW-fe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,6 +480,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XOK-zn-bp8"/>
+        <segue reference="wWg-mP-jJH"/>
     </inferredMetricsTieBreakers>
 </document>
