@@ -69,7 +69,7 @@
     if(mainImageFile != NULL)
     {
         [mainImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-
+            
             _mainImageView.image = [UIImage imageWithData:imageData];
             
         }];
