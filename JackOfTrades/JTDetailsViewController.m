@@ -57,10 +57,30 @@
 }
 
 - (void)objectsDidLoad:(NSError *)error {
+<<<<<<< HEAD
 
     _titleLabel.title = _subtype.name;
 //    _mainImageView.image = _subtype.i
     _textView.text = _subtype.text;
+=======
+    
+    // Set the title && text
+    _titleLabel.text = _subtype.name;
+    _textView.text = _subtype.text;
+    
+    
+    // Set the image
+    PFFile* mainImageFile = _subtype.mainPhoto;
+    
+    if(mainImageFile != NULL)
+    {
+        [mainImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+
+            _mainImageView.image = [UIImage imageWithData:imageData];
+            
+        }];
+    }
+>>>>>>> FETCH_HEAD
 }
     
 - (void)didReceiveMemoryWarning

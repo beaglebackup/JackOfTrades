@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-370" y="498"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller - Options-->
         <scene sceneID="DCm-Bg-3VV">
             <objects>
-                <viewController id="szo-T4-6gM" sceneMemberID="viewController">
+                <viewController id="szo-T4-6gM" customClass="JTMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0LG-Jz-yE6"/>
                         <viewControllerLayoutGuide type="bottom" id="qet-P8-4p7"/>
@@ -80,11 +80,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3bb-lV-k5D"/>
+                    <navigationItem key="navigationItem" title="Options" id="3bb-lV-k5D">
+                        <barButtonItem key="backBarButtonItem" title="Close" id="nzu-dn-JOa"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCk-YJ-Oho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="88"/>
+            <point key="canvasLocation" x="1314" y="394"/>
         </scene>
         <!--Subtype View Controller-->
         <scene sceneID="jVI-8j-K1g">
@@ -210,7 +212,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="mEn-Xj-XHd">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="szo-T4-6gM" kind="push" id="8Ex-lr-hPX"/>
+                                <segue destination="szo-T4-6gM" kind="modal" id="XOK-zn-bp8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -223,10 +225,17 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+<<<<<<< HEAD
         <!--Details View Controller-->
         <scene sceneID="8Rm-XJ-per">
             <objects>
                 <viewController id="Y1g-LR-c2y" customClass="JTDetailsViewController" sceneMemberID="viewController">
+=======
+        <!--View Controller-->
+        <scene sceneID="8Rm-XJ-per">
+            <objects>
+                <viewController id="Y1g-LR-c2y" sceneMemberID="viewController">
+>>>>>>> FETCH_HEAD
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7A7-N7-Qt8"/>
                         <viewControllerLayoutGuide type="bottom" id="rw0-1e-m4P"/>
@@ -274,6 +283,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
                                 <rect key="frame" x="10" y="129" width="300" height="334"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,13 +346,85 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+=======
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HO-3I-n0q">
+                                <rect key="frame" x="0.0" y="65" width="325" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
+                                        <rect key="frame" x="12" y="132" width="300" height="309"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-8J-nTj">
+                                        <rect key="frame" x="27" y="462" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="RX">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Y1g-LR-c2y" kind="push" id="PEb-g4-9fy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
+                                        <rect key="frame" x="244" y="462" width="56" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="ToolBox">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vrH-U1-Cji" kind="push" id="0N4-Sn-4p5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
+                                        <rect key="frame" x="165" y="462" width="45" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Hands">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Phq-A0-B9i" kind="push" id="g59-em-2ru"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
+                                        <rect key="frame" x="96" y="462" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Bulb">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="KRw-Ch-d6C" kind="push" id="yHM-bJ-0Gg"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DB8-yK-Wiy">
+                                        <rect key="frame" x="96" y="27" width="133" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGv-ZX-Uxl">
+                                        <rect key="frame" x="36" y="-48" width="253" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+>>>>>>> FETCH_HEAD
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PxG-Ps-QO3">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="WFX-se-H45">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="hz1-bh-Oby"/>
+                        <barButtonItem key="rightBarButtonItem" title="Home" systemItem="bookmarks" id="TUP-Rr-QQz">
                             <connections>
+<<<<<<< HEAD
                                 <segue destination="szo-T4-6gM" kind="push" id="S7M-4Z-9MA"/>
                             </connections>
                         </barButtonItem>
@@ -351,12 +433,23 @@
                     <connections>
                         <outlet property="americanInfoLabel" destination="DGv-ZX-Uxl" id="PDg-lf-OkE"/>
                         <outlet property="americanInfoTextScroll" destination="rHH-oC-7QO" id="DW1-c2-PG8"/>
+=======
+                                <segue destination="szo-T4-6gM" kind="modal" id="wWg-mP-jJH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+>>>>>>> FETCH_HEAD
                         <outlet property="bulbButton" destination="pqI-d2-nvW" id="m0O-4C-FFy"/>
                         <outlet property="handsButton" destination="N2q-bp-cCa" id="zRS-mX-HD9"/>
                         <outlet property="mainImageView" destination="DB8-yK-Wiy" id="Bsl-yx-Ua3"/>
                         <outlet property="rxButton" destination="OfN-8J-nTj" id="Xdj-KR-Fua"/>
                         <outlet property="textView" destination="rHH-oC-7QO" id="GGy-Jl-6Bj"/>
+<<<<<<< HEAD
                         <outlet property="titleLabel" destination="PxG-Ps-QO3" id="hVF-jv-eab"/>
+=======
+                        <outlet property="titleLabel" destination="DGv-ZX-Uxl" id="5x8-a5-Rhc"/>
+>>>>>>> FETCH_HEAD
                         <outlet property="toolboxButton" destination="y4l-eI-qAy" id="vpQ-JB-WrB"/>
                     </connections>
                 </viewController>
@@ -364,10 +457,17 @@
             </objects>
             <point key="canvasLocation" x="1662" y="-589"/>
         </scene>
+<<<<<<< HEAD
         <!--Details View Controller-->
         <scene sceneID="9BS-pL-5Sh">
             <objects>
                 <viewController id="vrH-U1-Cji" customClass="JTDetailsViewController" sceneMemberID="viewController">
+=======
+        <!--View Controller-->
+        <scene sceneID="9BS-pL-5Sh">
+            <objects>
+                <viewController id="vrH-U1-Cji" sceneMemberID="viewController">
+>>>>>>> FETCH_HEAD
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G68-Cl-GCI"/>
                         <viewControllerLayoutGuide type="bottom" id="QI6-yc-aEH"/>
@@ -401,10 +501,17 @@
             </objects>
             <point key="canvasLocation" x="3617" y="355"/>
         </scene>
+<<<<<<< HEAD
         <!--Details View Controller-->
         <scene sceneID="oGH-H9-RZe">
             <objects>
                 <viewController id="KRw-Ch-d6C" customClass="JTDetailsViewController" sceneMemberID="viewController">
+=======
+        <!--View Controller-->
+        <scene sceneID="oGH-H9-RZe">
+            <objects>
+                <viewController id="KRw-Ch-d6C" sceneMemberID="viewController">
+>>>>>>> FETCH_HEAD
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tmk-ZG-WDP"/>
                         <viewControllerLayoutGuide type="bottom" id="4U4-WQ-hHz"/>
@@ -438,10 +545,17 @@
             </objects>
             <point key="canvasLocation" x="2726" y="355"/>
         </scene>
+<<<<<<< HEAD
         <!--Details View Controller-->
         <scene sceneID="qx5-4h-f4E">
             <objects>
                 <viewController id="Phq-A0-B9i" customClass="JTDetailsViewController" sceneMemberID="viewController">
+=======
+        <!--View Controller-->
+        <scene sceneID="qx5-4h-f4E">
+            <objects>
+                <viewController id="Phq-A0-B9i" sceneMemberID="viewController">
+>>>>>>> FETCH_HEAD
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DWc-NR-SaY"/>
                         <viewControllerLayoutGuide type="bottom" id="eOb-rz-bmG"/>
@@ -485,6 +599,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="S7M-4Z-9MA"/>
+=======
+        <segue reference="wWg-mP-jJH"/>
+>>>>>>> FETCH_HEAD
     </inferredMetricsTieBreakers>
 </document>
