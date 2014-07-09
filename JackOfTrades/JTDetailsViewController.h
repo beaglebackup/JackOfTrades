@@ -20,21 +20,11 @@
  */
 @property (strong, nonatomic) Subtype* subtype;
 
-<<<<<<< HEAD
-
-@property (strong, nonatomic) IBOutlet UINavigationItem *titleLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
-
-
-@property (strong, nonatomic) IBOutlet UITextView *textView;
-
-=======
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 
 
->>>>>>> FETCH_HEAD
 @property (strong, nonatomic) IBOutlet UIButton *rxButton;
 @property (strong, nonatomic) IBOutlet UIButton *toolboxButton;
 @property (strong, nonatomic) IBOutlet UIButton *handsButton;
