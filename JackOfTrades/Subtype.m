@@ -13,6 +13,10 @@
 @dynamic name;
 @dynamic mainPhoto;
 @dynamic text;
+@dynamic RX;
+@dynamic toolbox;
+@dynamic hands;
+@dynamic bulb;
 @dynamic parentString;
 
 

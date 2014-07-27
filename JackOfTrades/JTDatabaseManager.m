@@ -38,6 +38,8 @@
     
     PFQuery *subtypeQuery = [Subtype query];
     
+    NSLog(@"queryForSubtypes -- type = %@",type);
+    
     [subtypeQuery whereKey:[Subtype parentStringKey] equalTo:type];
     
     // Only include basic keys

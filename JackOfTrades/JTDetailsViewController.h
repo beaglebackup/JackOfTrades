@@ -24,11 +24,17 @@
 @property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 
-
 @property (strong, nonatomic) IBOutlet UIButton *rxButton;
 @property (strong, nonatomic) IBOutlet UIButton *toolboxButton;
 @property (strong, nonatomic) IBOutlet UIButton *handsButton;
 @property (strong, nonatomic) IBOutlet UIButton *bulbButton;
+
+
+- (IBAction)didTapRXButton:(id)sender;
+- (IBAction)didTapBulbButton:(id)sender;
+- (IBAction)didTapHandsButton:(id)sender;
+- (IBAction)didTapToolboxButton:(id)sender;
+
 
 
 ////text scroll

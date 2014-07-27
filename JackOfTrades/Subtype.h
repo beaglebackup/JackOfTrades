@@ -14,6 +14,13 @@
 @property (retain) PFFile *mainPhoto;
 @property (retain) NSString *text;
 
+@property (retain) NSString* RX;
+@property (retain) NSString* hands;
+@property (retain) NSString* toolbox;
+@property (retain) NSString* bulb;
+
+
+
 @property (retain) NSString *parentString;
 
 

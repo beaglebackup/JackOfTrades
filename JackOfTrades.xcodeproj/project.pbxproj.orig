@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
+
 		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
+
 		8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC66196AFE85004F3422 /* AudioToolbox.framework */; };
 		8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC68196AFE8A004F3422 /* CFNetwork.framework */; };
 		8491BC6B196AFF04004F3422 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC6A196AFF04004F3422 /* CoreLocation.framework */; };
@@ -20,13 +22,20 @@
 		8491BC75196AFF26004F3422 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC74196AFF26004F3422 /* StoreKit.framework */; };
 		8491BC77196AFF2E004F3422 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */; };
 		8491BC7A196B0079004F3422 /* Subtype.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC79196B0079004F3422 /* Subtype.m */; };
+
+		8491BC7D196B0080004F3422 /* Pest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7C196B0080004F3422 /* Pest.m */; };
+
 		8491BC80196B0505004F3422 /* JTDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC7F196B0505004F3422 /* JTDatabaseManager.m */; };
 		8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */; };
 		8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */; };
 		8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC8B196B1683004F3422 /* JTSubtypeButton.m */; };
+
 		84D42832196C6E74005B2F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D42831196C6E74005B2F8E /* Parse.framework */; };
+<<<<<<< HEAD
 		84D4287C196DCB04005B2F8E /* JTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4287B196DCB04005B2F8E /* JTMenuViewController.m */; };
-		84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD52C719856D160061A528 /* JTSubDetailsViewController.m */; };
+=======
+
+>>>>>>> 1453f01ff419a1263905c247ba48369e22b08e22
 		EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */; };
 		EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86FC601950018F0059CD68 /* BitingViewController.m */; };
 		EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF56219639EF500991CFF /* CrittersViewController.m */; };
@@ -54,6 +63,9 @@
 		EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */; };
 		EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E4193054D6002EECBD /* IMG_0615.JPG */; };
 		EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */; };
+
+		EFBB46EA19305D45002EECBD /* roach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E919305D45002EECBD /* roach.jpg */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +83,9 @@
 		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		8491BC62196AFDC3004F3422 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
+
 		8491BC64196AFE5A004F3422 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+
 		8491BC66196AFE85004F3422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8491BC68196AFE8A004F3422 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8491BC6A196AFF04004F3422 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -83,6 +97,10 @@
 		8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8491BC78196B0079004F3422 /* Subtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtype.h; sourceTree = "<group>"; };
 		8491BC79196B0079004F3422 /* Subtype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtype.m; sourceTree = "<group>"; };
+
+		8491BC7B196B0080004F3422 /* Pest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pest.h; sourceTree = "<group>"; };
+		8491BC7C196B0080004F3422 /* Pest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pest.m; sourceTree = "<group>"; };
+
 		8491BC7E196B0505004F3422 /* JTDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDatabaseManager.h; sourceTree = "<group>"; };
 		8491BC7F196B0505004F3422 /* JTDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDatabaseManager.m; sourceTree = "<group>"; };
 		8491BC84196B0917004F3422 /* JTTypeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeCollectionCell.h; sourceTree = "<group>"; };
@@ -91,11 +109,14 @@
 		8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeCollectionCell.m; sourceTree = "<group>"; };
 		8491BC8A196B1677004F3422 /* JTSubtypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeButton.h; sourceTree = "<group>"; };
 		8491BC8B196B1683004F3422 /* JTSubtypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeButton.m; sourceTree = "<group>"; };
+
 		84D42831196C6E74005B2F8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = JackOfTrades/Parse.framework; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		84D4287A196DCB04005B2F8E /* JTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTMenuViewController.h; sourceTree = "<group>"; };
 		84D4287B196DCB04005B2F8E /* JTMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTMenuViewController.m; sourceTree = "<group>"; };
-		84DD52C619856D160061A528 /* JTSubDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubDetailsViewController.h; sourceTree = "<group>"; };
-		84DD52C719856D160061A528 /* JTSubDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubDetailsViewController.m; sourceTree = "<group>"; };
+=======
+
+>>>>>>> 1453f01ff419a1263905c247ba48369e22b08e22
 		EF86FC5C194FFDFA0059CD68 /* JTSubtypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeViewController.h; sourceTree = "<group>"; };
 		EF86FC5D194FFDFA0059CD68 /* JTSubtypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeViewController.m; sourceTree = "<group>"; };
 		EF86FC5F1950018F0059CD68 /* BitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitingViewController.h; sourceTree = "<group>"; };
@@ -140,6 +161,9 @@
 		EFBB46E4193054D6002EECBD /* IMG_0615.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0615.JPG; sourceTree = SOURCE_ROOT; };
 		EFBB46E619305AC7002EECBD /* JTDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDetailsViewController.h; sourceTree = "<group>"; };
 		EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDetailsViewController.m; sourceTree = "<group>"; };
+
+		EFBB46E919305D45002EECBD /* roach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roach.jpg; sourceTree = SOURCE_ROOT; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +183,9 @@
 				8491BC69196AFE8A004F3422 /* CFNetwork.framework in Frameworks */,
 				8491BC67196AFE85004F3422 /* AudioToolbox.framework in Frameworks */,
 				EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */,
+
 				8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */,
+
 				EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +206,6 @@
 		8453F6081963D6E0002D7661 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				84DD52C519856CEF0061A528 /* SubDetailsViewController */,
 				8453F6111963E3EE002D7661 /* TypeViewController */,
 				8453F60D1963D90C002D7661 /* DetailsViewController */,
 				8453F60C1963D8F9002D7661 /* SubtypeViewController */,
@@ -274,19 +299,14 @@
 			children = (
 				8491BC61196AFDC3004F3422 /* Type.h */,
 				8491BC62196AFDC3004F3422 /* Type.m */,
+
+				8491BC7B196B0080004F3422 /* Pest.h */,
+				8491BC7C196B0080004F3422 /* Pest.m */,
+
 				8491BC78196B0079004F3422 /* Subtype.h */,
 				8491BC79196B0079004F3422 /* Subtype.m */,
 			);
 			name = Data;
-			sourceTree = "<group>";
-		};
-		84DD52C519856CEF0061A528 /* SubDetailsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84DD52C619856D160061A528 /* JTSubDetailsViewController.h */,
-				84DD52C719856D160061A528 /* JTSubDetailsViewController.m */,
-			);
-			name = SubDetailsViewController;
 			sourceTree = "<group>";
 		};
 		EFBB46A3193022B9002EECBD = {
@@ -321,7 +341,9 @@
 				8491BC6A196AFF04004F3422 /* CoreLocation.framework */,
 				8491BC68196AFE8A004F3422 /* CFNetwork.framework */,
 				8491BC66196AFE85004F3422 /* AudioToolbox.framework */,
+
 				8491BC64196AFE5A004F3422 /* Parse.framework */,
+
 				EFBB46AF193022B9002EECBD /* Foundation.framework */,
 				EFBB46B1193022B9002EECBD /* CoreGraphics.framework */,
 				EFBB46B3193022B9002EECBD /* UIKit.framework */,
@@ -423,9 +445,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Gabriel;
 				TargetAttributes = {
-					EFBB46AB193022B9002EECBD = {
-						DevelopmentTeam = X2ZH23CYYJ;
-					};
 					EFBB46CC193022B9002EECBD = {
 						TestTargetID = EFBB46AB193022B9002EECBD;
 					};
@@ -479,6 +498,9 @@
 			files = (
 				EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */,
 				8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */,
+
+				8491BC7D196B0080004F3422 /* Pest.m in Sources */,
+
 				EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */,
 				EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */,
 				EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */,
@@ -497,7 +519,6 @@
 				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
 				EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */,
 				8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */,
-				84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */,
 				EF8FF57B1963AC4800991CFF /* SpidersViewController.m in Sources */,
 				EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */,
 				EFBB46BC193022B9002EECBD /* main.m in Sources */,
@@ -625,8 +646,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -636,7 +655,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "652DB5E9-01CA-4F50-8A88-7DBE8604F341";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -646,8 +665,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -657,7 +674,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "652DB5E9-01CA-4F50-8A88-7DBE8604F341";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

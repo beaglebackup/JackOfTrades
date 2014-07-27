@@ -233,10 +233,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Sub Details View Controller-->
         <scene sceneID="8Rm-XJ-per">
             <objects>
-                <viewController id="Y1g-LR-c2y" sceneMemberID="viewController">
+                <viewController id="Y1g-LR-c2y" customClass="JTSubDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7A7-N7-Qt8"/>
                         <viewControllerLayoutGuide type="bottom" id="rw0-1e-m4P"/>
@@ -245,29 +245,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hd-rsz">
-                                <rect key="frame" x="112" y="25" width="23" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pl4-dg-CKy">
-                                <rect key="frame" x="25" y="155" width="275" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNh-C6-t7K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Common Controls for this  specific Pest....Physical, Chemical, Cultural, etc...  The treatment prescription plan.      (scrolling text)                    </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <connections>
+                                    <outlet property="delegate" destination="Y1g-LR-c2y" id="33T-zx-sQJ"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="JY7-nC-Oei"/>
+                    <connections>
+                        <outlet property="webView" destination="WNh-C6-t7K" id="ILe-iR-2Nj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGP-u6-0Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="364"/>
+            <point key="canvasLocation" x="2265" y="368"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="mw5-7I-ADc">
@@ -296,7 +292,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Y1g-LR-c2y" kind="push" id="PEb-g4-9fy"/>
+                                    <action selector="didTapRXButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="sSI-Bz-T2a"/>
+                                    <segue destination="Y1g-LR-c2y" kind="push" identifier="detailsToSubdetails" id="PEb-g4-9fy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
@@ -307,7 +304,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vrH-U1-Cji" kind="push" id="0N4-Sn-4p5"/>
+                                    <action selector="didTapToolboxButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Izq-3Q-Rd2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
@@ -318,7 +315,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Phq-A0-B9i" kind="push" id="g59-em-2ru"/>
+                                    <action selector="didTapHandsButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Y9M-YY-0Xr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
@@ -329,7 +326,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KRw-Ch-d6C" kind="push" id="yHM-bJ-0Gg"/>
+                                    <action selector="didTapBulbButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="huV-P8-x80"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DB8-yK-Wiy">
@@ -367,108 +364,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVj-fp-Nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="-589"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9BS-pL-5Sh">
-            <objects>
-                <viewController id="vrH-U1-Cji" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G68-Cl-GCI"/>
-                        <viewControllerLayoutGuide type="bottom" id="QI6-yc-aEH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Ic-cV-3YF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToolBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-E1-NE1">
-                                <rect key="frame" x="48" y="20" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tools that are recommended for use when controlling this specific pest.  (scrolling text)" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-SO-72h">
-                                <rect key="frame" x="20" y="137" width="240" height="308"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KjQ-qY-QVo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8qr-aH-BUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3617" y="355"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="oGH-H9-RZe">
-            <objects>
-                <viewController id="KRw-Ch-d6C" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tmk-ZG-WDP"/>
-                        <viewControllerLayoutGuide type="bottom" id="4U4-WQ-hHz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LqA-BR-Uit">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bulb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkj-Pt-eEr">
-                                <rect key="frame" x="54" y="20" width="36" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Innovative Solutions, Outside the box suggestions (scrolling text)" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-kK-I6U">
-                                <rect key="frame" x="27" y="147" width="273" height="333"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="a3b-UY-84l"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tk9-X4-XUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2726" y="355"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qx5-4h-f4E">
-            <objects>
-                <viewController id="Phq-A0-B9i" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DWc-NR-SaY"/>
-                        <viewControllerLayoutGuide type="bottom" id="eOb-rz-bmG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WGl-BU-kPA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hands Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXG-eW-CZi">
-                                <rect key="frame" x="36" y="25" width="102" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="IPM recommendations.  Partnerships between customer, owner, property managers, tenants, etc.  (scrolling text)" translatesAutoresizingMaskIntoConstraints="NO" id="4b1-sH-Q80">
-                                <rect key="frame" x="36" y="140" width="264" height="396"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NuB-mc-feX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FSI-WW-fe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3153" y="355"/>
         </scene>
     </scenes>
     <resources>

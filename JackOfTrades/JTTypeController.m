@@ -14,6 +14,8 @@
 
 @interface JTTypeController ()
 
+@property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
+
 @end
 
 @implementation JTTypeController
@@ -25,6 +27,11 @@
     NSLog(@"in type controller");
     
     [super viewDidLoad];
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.activityIndicator.center = self.collectionView.center;
+    [self.view addSubview:self.activityIndicator];
+    [self.activityIndicator startAnimating];
 
     
     // Set the collectionView delegate
@@ -61,6 +68,8 @@
 
 
 - (void)objectsDidLoad:(NSError *)error {
+    
+    [self.activityIndicator stopAnimating];
     
     [self.collectionView reloadData];
     

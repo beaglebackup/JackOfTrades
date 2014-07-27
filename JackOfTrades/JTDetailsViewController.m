@@ -7,6 +7,14 @@
 //
 
 #import "JTDetailsViewController.h"
+#import "JTSubDetailsViewController.h"
+
+typedef enum {
+    JTSubDetailsButtonsRX,
+    JTSubDetailsButtonsBulb,
+	JTSubDetailsButtonsHands,
+    JTSubDetailsButtonsToolbox
+} JTSubDetailsButtonsIndex;
 
 @interface JTDetailsViewController ()
 
@@ -28,6 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set the tags to identify the buttons when pressed
+    self.rxButton.tag = JTSubDetailsButtonsRX;
+    self.bulbButton.tag = JTSubDetailsButtonsBulb;
+    self.handsButton.tag = JTSubDetailsButtonsHands;
+    self.toolboxButton.tag = JTSubDetailsButtonsToolbox;
     
     
     // Call Parse for Data
@@ -62,16 +76,28 @@
     _titleLabel.text = _subtype.name;
     _textView.text = _subtype.text;
     
+
+    
     
     // Set the image
+    UIActivityIndicatorView* imageActivityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    imageActivityView.center = _mainImageView.center;
+    [self.view addSubview:imageActivityView];
+    [imageActivityView startAnimating];
+
     PFFile* mainImageFile = _subtype.mainPhoto;
     
     if(mainImageFile != NULL)
     {
         [mainImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
             
-            _mainImageView.image = [UIImage imageWithData:imageData];
+            [imageActivityView stopAnimating];
             
+            if (!error) {
+                _mainImageView.image = [UIImage imageWithData:imageData];
+
+            }
+        
         }];
     }
 }
@@ -82,15 +108,62 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+     UIButton* button = (UIButton*)sender;
+     
+     NSURL* url;
+     
+     switch (button.tag) {
+         case JTSubDetailsButtonsRX:
+             url = [NSURL URLWithString:self.subtype.RX];
+             break;
+             
+         case JTSubDetailsButtonsBulb:
+             url = [NSURL URLWithString:self.subtype.bulb];
+             break;
+             
+         case JTSubDetailsButtonsHands:
+             url = [NSURL URLWithString:self.subtype.hands];
+             break;
+             
+         case JTSubDetailsButtonsToolbox:
+             url = [NSURL URLWithString:self.subtype.toolbox];
+             break;
+             
+         default:
+             break;
+     }
+     
+     
+     
+     if ([[segue identifier] isEqualToString:@"detailsToSubdetails"])
+     {
+         JTSubDetailsViewController *subdetailsVC = [segue destinationViewController];
+         
+         NSLog(@"JTDetailsViewController -- button.titleLabel.text = %@",button.titleLabel.text);
+         NSLog(@"JTDetailsViewController --  url= %@",url);
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+         subdetailsVC.navTitle = button.titleLabel.text;
+         subdetailsVC.url = url;
+     }
+ }
+ 
+
+
+- (IBAction)didTapRXButton:(id)sender {
+    [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
 }
-*/
 
+- (IBAction)didTapBulbButton:(id)sender {
+    [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
+}
+- (IBAction)didTapHandsButton:(id)sender {
+    [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
+}
+
+- (IBAction)didTapToolboxButton:(id)sender {
+    [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
+}
 @end

@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "JOT": {
+            "applicationId": "qnCDYVRzw5ysXZGS7r25ntqsFq5HGCyWIG7CtGHO", 
+            "masterKey": "zgBwVpGbQbCY2WwCwb5yPP1SgKSpgvJTqna7FufQ"
+        }, 
+        "_default": {
+            "link": "JOT"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}

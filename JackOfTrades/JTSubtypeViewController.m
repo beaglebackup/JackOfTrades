@@ -14,6 +14,9 @@
 
 @interface JTSubtypeViewController ()
 
+@property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
+
+
 @end
 
 @implementation JTSubtypeViewController
@@ -23,6 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator.center = self.subtypeCollectionView.center;
+    [self.view addSubview:self.activityIndicator];
+    [self.activityIndicator startAnimating];
+
     
     
     // Set the collectionView delegate
@@ -50,7 +59,7 @@
         else {
             self.objects = subtypes;
             
-            NSLog(@"self.objects = %@",self.objects);
+            NSLog(@"JTSubtypeViewController -- self.objects = %@",self.objects);
             
             [self objectsDidLoad:error];
         }
@@ -59,6 +68,9 @@
 
 
 - (void)objectsDidLoad:(NSError *)error {
+    
+    [self.activityIndicator stopAnimating];
+
     
     [self.subtypeCollectionView reloadData];
     
