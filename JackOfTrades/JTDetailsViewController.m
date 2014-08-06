@@ -8,6 +8,7 @@
 
 #import "JTDetailsViewController.h"
 #import "JTSubDetailsViewController.h"
+#import "JTImageViewerViewController.h"
 
 typedef enum {
     JTSubDetailsButtonsRX,
@@ -17,6 +18,9 @@ typedef enum {
 } JTSubDetailsButtonsIndex;
 
 @interface JTDetailsViewController ()
+
+@property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
+
 
 @end
 
@@ -37,11 +41,26 @@ typedef enum {
 {
     [super viewDidLoad];
     
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator.center = self.mainImageView.center;
+    [self.view addSubview:self.activityIndicator];
+    [self.activityIndicator startAnimating];
+    
+
+    
     // Set the tags to identify the buttons when pressed
     self.rxButton.tag = JTSubDetailsButtonsRX;
     self.bulbButton.tag = JTSubDetailsButtonsBulb;
     self.handsButton.tag = JTSubDetailsButtonsHands;
     self.toolboxButton.tag = JTSubDetailsButtonsToolbox;
+    
+    
+    // Action for imageViewer
+    [self.mainImageView setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *singleTap =  [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapImage:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [self.mainImageView addGestureRecognizer:singleTap];
+
     
     
     // Call Parse for Data
@@ -80,10 +99,10 @@ typedef enum {
     
     
     // Set the image
-    UIActivityIndicatorView* imageActivityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    imageActivityView.center = _mainImageView.center;
-    [self.view addSubview:imageActivityView];
-    [imageActivityView startAnimating];
+//    UIActivityIndicatorView* imageActivityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+//    imageActivityView.center = _mainImageView.center;
+//    [self.view addSubview:imageActivityView];
+//    [imageActivityView startAnimating];
 
     PFFile* mainImageFile = _subtype.mainPhoto;
     
@@ -91,7 +110,7 @@ typedef enum {
     {
         [mainImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
             
-            [imageActivityView stopAnimating];
+            [self.activityIndicator stopAnimating];
             
             if (!error) {
                 _mainImageView.image = [UIImage imageWithData:imageData];
@@ -113,33 +132,33 @@ typedef enum {
  {
      UIButton* button = (UIButton*)sender;
      
-     NSURL* url;
-     
-     switch (button.tag) {
-         case JTSubDetailsButtonsRX:
-             url = [NSURL URLWithString:self.subtype.RX];
-             break;
-             
-         case JTSubDetailsButtonsBulb:
-             url = [NSURL URLWithString:self.subtype.bulb];
-             break;
-             
-         case JTSubDetailsButtonsHands:
-             url = [NSURL URLWithString:self.subtype.hands];
-             break;
-             
-         case JTSubDetailsButtonsToolbox:
-             url = [NSURL URLWithString:self.subtype.toolbox];
-             break;
-             
-         default:
-             break;
-     }
-     
-     
-     
+     // Subdetails
      if ([[segue identifier] isEqualToString:@"detailsToSubdetails"])
      {
+        
+         NSURL* url;
+         
+         switch (button.tag) {
+             case JTSubDetailsButtonsRX:
+                 url = [NSURL URLWithString:self.subtype.RX];
+                 break;
+                 
+             case JTSubDetailsButtonsBulb:
+                 url = [NSURL URLWithString:self.subtype.bulb];
+                 break;
+                 
+             case JTSubDetailsButtonsHands:
+                 url = [NSURL URLWithString:self.subtype.hands];
+                 break;
+                 
+             case JTSubDetailsButtonsToolbox:
+                 url = [NSURL URLWithString:self.subtype.toolbox];
+                 break;
+                 
+             default:
+                 break;
+         }
+         
          JTSubDetailsViewController *subdetailsVC = [segue destinationViewController];
          
          NSLog(@"JTDetailsViewController -- button.titleLabel.text = %@",button.titleLabel.text);
@@ -147,6 +166,13 @@ typedef enum {
 
          subdetailsVC.navTitle = button.titleLabel.text;
          subdetailsVC.url = url;
+     }
+     
+     // Image Viewer
+     else if ([[segue identifier] isEqualToString:@"imageViewer"]) {
+         
+         JTImageViewerViewController *imageViewerVC = [segue destinationViewController];
+         imageViewerVC.passedImage = self.mainImageView.image;
      }
  }
  
@@ -166,4 +192,10 @@ typedef enum {
 - (IBAction)didTapToolboxButton:(id)sender {
     [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
 }
+
+- (void)didTapImage:(id)sender {
+    [self performSegueWithIdentifier:@"imageViewer" sender:sender];
+}
+
+
 @end

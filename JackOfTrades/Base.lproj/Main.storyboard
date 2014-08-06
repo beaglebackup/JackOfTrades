@@ -277,7 +277,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
                                 <rect key="frame" x="10" y="146" width="300" height="309"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -333,7 +333,7 @@
                                 <rect key="frame" x="94" y="50" width="133" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGv-ZX-Uxl">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGv-ZX-Uxl">
                                 <rect key="frame" x="33" y="-26" width="253" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -359,11 +359,39 @@
                         <outlet property="textView" destination="rHH-oC-7QO" id="GGy-Jl-6Bj"/>
                         <outlet property="titleLabel" destination="DGv-ZX-Uxl" id="5x8-a5-Rhc"/>
                         <outlet property="toolboxButton" destination="y4l-eI-qAy" id="vpQ-JB-WrB"/>
+                        <segue destination="P9M-bf-n1Z" kind="push" identifier="imageViewer" id="pCs-bu-t7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVj-fp-Nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="-589"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="oWe-bf-dRO">
+            <objects>
+                <viewController id="P9M-bf-n1Z" customClass="JTImageViewerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4v1-UK-e3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="BxY-lA-06d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="9xQ-VV-XC5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-4o-qF5">
+                                <rect key="frame" x="0.0" y="-220" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="largeImageView" destination="jQl-4o-qF5" id="U73-sy-rdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPS-Os-4IY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2181" y="-946"/>
         </scene>
     </scenes>
     <resources>
