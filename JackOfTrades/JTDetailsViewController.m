@@ -185,6 +185,7 @@ typedef enum {
 - (IBAction)didTapBulbButton:(id)sender {
     [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
 }
+
 - (IBAction)didTapHandsButton:(id)sender {
     [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
 }

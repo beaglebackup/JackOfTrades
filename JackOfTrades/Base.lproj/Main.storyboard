@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="odr-34-qWe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="odr-34-qWe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -285,17 +285,17 @@
                         <viewControllerLayoutGuide type="bottom" id="0fR-ML-NzK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="71E-q9-u7s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
-                                <rect key="frame" x="10" y="146" width="300" height="309"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
+                                <rect key="frame" x="10" y="146" width="300" height="245"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-8J-nTj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-8J-nTj">
                                 <rect key="frame" x="20" y="463" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="RX">
@@ -304,10 +304,9 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapRXButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="sSI-Bz-T2a"/>
-                                    <segue destination="Y1g-LR-c2y" kind="push" identifier="detailsToSubdetails" id="PEb-g4-9fy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
                                 <rect key="frame" x="244" y="463" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ToolBox">
@@ -318,7 +317,7 @@
                                     <action selector="didTapToolboxButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Izq-3Q-Rd2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
                                 <rect key="frame" x="172" y="463" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hands">
@@ -329,7 +328,7 @@
                                     <action selector="didTapHandsButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Y9M-YY-0Xr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
                                 <rect key="frame" x="99" y="463" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bulb">
@@ -353,7 +352,18 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pqI-d2-nvW" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="Ay9-DO-BY8"/>
+                            <constraint firstItem="y4l-eI-qAy" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="BdK-ki-mEk"/>
+                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="OfN-8J-nTj" secondAttribute="bottom" id="PLk-M3-PxM"/>
+                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="y4l-eI-qAy" secondAttribute="bottom" id="eVn-8c-CLY"/>
+                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="pqI-d2-nvW" secondAttribute="bottom" id="oPk-Fz-KmO"/>
+                            <constraint firstItem="N2q-bp-cCa" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="otf-hi-hlr"/>
+                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="N2q-bp-cCa" secondAttribute="bottom" id="tcx-h9-5XA"/>
+                            <constraint firstItem="OfN-8J-nTj" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="ypM-2b-QOb"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="PxG-Ps-QO3">
                         <barButtonItem key="backBarButtonItem" title="Back" id="hz1-bh-Oby"/>
                         <barButtonItem key="rightBarButtonItem" title="Home" systemItem="bookmarks" id="TUP-Rr-QQz">
@@ -371,6 +381,7 @@
                         <outlet property="titleLabel" destination="DGv-ZX-Uxl" id="5x8-a5-Rhc"/>
                         <outlet property="toolboxButton" destination="y4l-eI-qAy" id="vpQ-JB-WrB"/>
                         <segue destination="P9M-bf-n1Z" kind="push" identifier="imageViewer" id="pCs-bu-t7v"/>
+                        <segue destination="Y1g-LR-c2y" kind="push" identifier="detailsToSubdetails" id="oxk-gt-6WR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVj-fp-Nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>

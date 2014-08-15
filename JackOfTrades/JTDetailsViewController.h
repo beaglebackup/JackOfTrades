@@ -37,15 +37,5 @@
 
 
 
-////text scroll
-//@property (strong, nonatomic) IBOutlet UITextView *americanInfoTextScroll;
-//
-//
-////subviews
-//@property (strong, nonatomic) IBOutlet UITextView *americanRxSubViewTextView;
-//@property (strong, nonatomic) IBOutlet UITextView *americanBulbSubViewTextView;
-//@property (strong, nonatomic) IBOutlet UITextView *americanHandsSubViewTextView;
-//@property (strong, nonatomic) IBOutlet UITextView *americanToolSubViewTextView;
-
 
 @end

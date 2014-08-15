@@ -642,7 +642,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9A377FB2-4414-47F2-AFA5-53BADC9DE933";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -663,7 +663,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9A377FB2-4414-47F2-AFA5-53BADC9DE933";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
