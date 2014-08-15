@@ -50,4 +50,10 @@
         
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)openPortalButton:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.training.pestecipm.com"]];
+
+}
 @end

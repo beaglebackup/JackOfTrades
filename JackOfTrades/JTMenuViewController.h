@@ -15,7 +15,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *articlesButton;
 @property (strong, nonatomic) IBOutlet UIButton *videoButton;
 @property (strong, nonatomic) IBOutlet UIButton *feedbackButton;
+@property (strong, nonatomic) IBOutlet UIButton *portalButton;
+
 
 - (IBAction)didTapCloseButton:(id)sender;
+- (IBAction)openPortalButton:(id)sender;
 
 @end
