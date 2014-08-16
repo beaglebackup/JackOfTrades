@@ -22,8 +22,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.expandable = YES;
-        self.expandedLeft = NO;
-        self.expandedRight = NO;
+        self.expandingLeft = NO;
+        self.expandingRight = NO;
+        
+        self.accessoryView.hidden = YES;
 
     }
     return self;
@@ -35,10 +37,12 @@
     
     if(self)
     {
-        
         self.expandable = YES;
-        self.expandedLeft = NO;
-        self.expandedRight = NO;
+        self.expandingLeft = NO;
+        self.expandingRight = NO;
+        
+        self.accessoryView.hidden = YES;
+
     }
     
     return self;
@@ -48,7 +52,7 @@
 {
     [super layoutSubviews];
     
-    if (self.isExpandedLeft || self.isExpandedRight) {
+    if (self.isExpandingLeft || self.isExpandingRight) {
         
         if (![self containsIndicatorView])
             [self addIndicatorView];
@@ -90,12 +94,28 @@ static UIImage *_image = nil;
 
 - (void)addIndicatorView
 {
-    CGPoint point = self.accessoryView.center;
+    
     CGRect bounds = self.accessoryView.bounds;
+
+    CGFloat x;
+    
+    if (self.isExpandedLeft) {
+        x = self.contentView.center.x/2; // A quarter of the cell width
+    }
+    else if (self.isExpandedRight) {
+        x = self.contentView.center.x + self.contentView.center.x/2; // 3/4 of the cell width
+    }
+    
+    CGFloat y = self.frame.size.height - bounds.size.height;
+    
+    CGPoint point = CGPointMake(x, y);
     
     CGRect frame = CGRectMake((point.x - CGRectGetWidth(bounds) * 1.5), point.y * 1.4, CGRectGetWidth(bounds) * 3.0, CGRectGetHeight(self.bounds) - point.y * 1.4);
     SKSTableViewCellIndicator *indicatorView = [[SKSTableViewCellIndicator alloc] initWithFrame:frame];
     indicatorView.tag = kIndicatorViewTag;
+    
+    [SKSTableViewCellIndicator setIndicatorColor:[UIColor colorLavender]];
+    
     [self.contentView addSubview:indicatorView];
 }
 
@@ -117,7 +137,7 @@ static UIImage *_image = nil;
 - (void)accessoryViewAnimation
 {
     [UIView animateWithDuration:0.2 animations:^{
-        if (self.isExpandedLeft || self.isExpandedRight) {
+        if (self.isExpandingLeft || self.isExpandingRight) {
             
             self.accessoryView.transform = CGAffineTransformMakeRotation(M_PI);
             
@@ -126,7 +146,7 @@ static UIImage *_image = nil;
         }
     } completion:^(BOOL finished) {
         
-        if (!self.isExpandedLeft && !self.isExpandedRight)
+        if (!self.isExpandingLeft && !self.isExpandingRight)
             [self removeIndicatorView];
         
     }];

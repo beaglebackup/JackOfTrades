@@ -14,7 +14,7 @@
 
 
 @property (retain) NSString *name;
-@property (retain) PFFile *thumbPhoto;
+@property (retain) PFFile *thumb;
 @property (retain) NSArray *subtypes;
 
 + (NSString *)parseClassName;

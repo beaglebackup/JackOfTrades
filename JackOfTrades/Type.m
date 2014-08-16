@@ -11,7 +11,7 @@
 @implementation Type
 
 @dynamic name;
-@dynamic thumbPhoto;
+@dynamic thumb;
 @dynamic subtypes;
 
 

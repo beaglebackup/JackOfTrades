@@ -43,6 +43,9 @@ static UIColor *_indicatorColor;
     
     CGContextSetFillColorWithColor(context, [[[self class] indicatorColor] CGColor]);
     CGContextFillPath(context);
+    
+    CGContextRotateCTM( context, M_PI_2 ) ;
+
 }
 
 

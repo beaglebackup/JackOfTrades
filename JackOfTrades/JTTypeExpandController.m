@@ -32,6 +32,8 @@
     
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorLavender];
+    
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activityIndicator.center = self.typeExpandTableView.center;
     [self.view addSubview:self.activityIndicator];
@@ -133,6 +135,8 @@
     
     cell.delegate = self;
     
+    cell.backgroundColor = [UIColor colorPurple];
+    
     NSInteger leftItem = indexPath.row * 2;
     NSInteger rightItem = indexPath.row * 2 + 1;
     
@@ -148,11 +152,35 @@
 
     
     // Set the title && Add the trigger
-    [cell.leftTypeButton setTitle:typeLeft.name forState:UIControlStateNormal];
-//    [cell.leftTypeButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.leftTypeLabel setText:typeLeft.name];
+    [cell.rightTypeLabel setText:typeRight.name];
+
     
-    [cell.rightTypeButton setTitle:typeRight.name forState:UIControlStateNormal];
-//    [cell.rightTypeButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    // Set the thumb images
+    PFFile* leftThumbFile = typeLeft.thumb;
+        
+    if(leftThumbFile != NULL)
+    {
+        
+        [leftThumbFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+            [self.activityIndicator stopAnimating];
+            if (!error) {
+                [cell.leftTypeButton setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
+            }
+        }];
+    }
+    
+    PFFile* rightThumbFile = typeRight.thumb;
+    if(rightThumbFile != NULL)
+    {
+        [rightThumbFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+            [self.activityIndicator stopAnimating];
+            if (!error) {
+                [cell.rightTypeButton setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
+            }
+        }];
+    }
+
 
     
     return cell;
@@ -169,24 +197,25 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
     
+    
+    
+    
     NSLog(@"indexPath.row = %d",indexPath.row);
     NSLog(@"indexPath.row = %d",indexPath.subRow);
 
     
     Type* type = self.objects[objectIndex];
-    
-    NSLog(@"type.subtypes.count = %lu",(unsigned long)type.subtypes.count);
-
-    
     Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
     
-    
     cell.textLabel.text = [NSString stringWithFormat:@"%@", subtype.name];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 120.0f;
+}
 
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

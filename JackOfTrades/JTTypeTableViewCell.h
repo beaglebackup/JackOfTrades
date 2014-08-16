@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "SKSTableViewCell.h"
+#import "JTTypeExpandButton.h"
 
 @protocol JTTypeTableViewCellDelegate;
 
 
 @interface JTTypeTableViewCell : SKSTableViewCell
 
-@property (strong, nonatomic) IBOutlet UIButton *rightTypeButton;
-@property (strong, nonatomic) IBOutlet UIButton *leftTypeButton;
+@property (strong, nonatomic) IBOutlet JTTypeExpandButton *rightTypeButton;
+@property (strong, nonatomic) IBOutlet JTTypeExpandButton *leftTypeButton;
+@property (strong, nonatomic) IBOutlet UILabel *leftTypeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *rightTypeLabel;
 
 - (IBAction)didTapLeftTypeButton:(id)sender;
 - (IBAction)didTapRightTypeButton:(id)sender;
