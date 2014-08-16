@@ -26,10 +26,21 @@
     PFQuery *typeQuery = [Type query];
     
     [typeQuery orderByAscending:[Type nameKey]];
+    [typeQuery includeKey:[Type subtypesKey]];
 
     [typeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects) {
+            
+            NSLog(@"DB -- queryForTypesWithCallback -- self.object.count = %lu",(unsigned long)objects.count);
+
             callback(objects,nil);
+        }
+        else {
+            
+            NSLog(@"DB -- queryForTypesWithCallback -- error = %@",error);
+
+            
+            callback(nil,error);
         }
     }];
 }
@@ -64,11 +75,48 @@
     PFQuery *subtypeQuery = [Subtype query];
     
     [subtypeQuery getObjectInBackgroundWithId:[subtype objectId] block:^(PFObject *object, NSError *error) {
+        
+    
         callback(object, error);
     }];
 
     
  
+}
+
+#pragma mark - Admin
++ (void)addSubtypesToTypes {
+    
+    // Get all Subtypes
+    PFQuery *subtypeQuery = [Subtype query];
+    
+    [subtypeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (objects) {
+            
+            [objects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                // Find the Type for this Subtype
+                Subtype* subtype = (Subtype*)obj;
+                NSString* parentType = subtype.parentString;
+                
+                
+                PFQuery* typeQuery = [Type query];
+                [typeQuery whereKey:[Type nameKey] equalTo:parentType];
+                [typeQuery whereKey:[Type subtypesKey] notEqualTo:subtype];
+                [typeQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                    
+
+                    
+                    // Add the subtype to the array
+                    if (object) {
+                        [object addObject:subtype forKey:[Type subtypesKey]];
+                        [object saveEventually];
+                    }
+                }];
+            }];
+        }
+    }];
 }
 
 

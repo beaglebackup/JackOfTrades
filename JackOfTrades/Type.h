@@ -14,13 +14,14 @@
 
 
 @property (retain) NSString *name;
-
-
-
+@property (retain) PFFile *thumbPhoto;
+@property (retain) NSArray *subtypes;
 
 + (NSString *)parseClassName;
 
-
 + (NSString *)nameKey;
+
++ (NSString *)subtypesKey;
+
 
 @end

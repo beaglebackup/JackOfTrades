@@ -7,9 +7,10 @@
 //
 
 #import "JTTypeExpandController.h"
-#import "JTTypeTableViewCell.h"
 #import "Type.h"
 #import "JTSubtypeViewController.h"
+#import "JTDetailsViewController.h"
+#import "JTTypeSegueHackButton.h"
 
 
 @interface JTTypeExpandController ()
@@ -22,7 +23,7 @@
 
 @implementation JTTypeExpandController
 
-@synthesize objects, typeExpandTableView;
+@synthesize objects, objectsSubtypeArrays, typeExpandTableView;
 
 
 - (void)viewDidLoad
@@ -37,9 +38,6 @@
     [self.activityIndicator startAnimating];
     
     
-    // Set the collectionView delegate
-    self.typeExpandTableView.delegate = self;
-    self.typeExpandTableView.dataSource = self;
     
     
     // Call Parse for Data
@@ -62,7 +60,7 @@
         else {
             self.objects = types;
             
-            NSLog(@"self.objects = %@",self.objects);
+//            NSLog(@"self.object.coutn = %@",self.objects.count);
             
             [self objectsDidLoad:error];
         }
@@ -73,6 +71,13 @@
 - (void)objectsDidLoad:(NSError *)error {
     
     [self.activityIndicator stopAnimating];
+    
+    
+    // Set the tableVew delegate
+    self.typeExpandTableView.delegate = self;
+    self.typeExpandTableView.dataSource = self;
+    self.typeExpandTableView.SKSTableViewDelegate = self;
+
     
     [self.typeExpandTableView reloadData];
     
@@ -87,19 +92,34 @@
 
 
 #pragma mark - UITableView Datasource
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     NSLog(@"[self.objects count] = %lu",(unsigned long)[self.objects count]);
     
-    return [self.objects count];
+    return (ceil([self.objects count]/2)); // Divide by two - round up
 }
 
+//- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 1;
+////    return [self.contents[indexPath.section][indexPath.row] count] - 1;
+//}
+
+- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtObjectIndex:(NSInteger)objectIndex
+{
+    Type* typeObject = (Type*)self.objects[objectIndex];
+    
+    NSLog(@"typeObject.subtypes.count = %d",typeObject.subtypes.count);
+    
+    return typeObject.subtypes.count;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 
 }
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -107,24 +127,53 @@
     JTTypeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"typeTableViewCell"];
     
     if (nil == cell) {
+        
         cell = [[JTTypeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"typeTableViewCell"];
     }
     
+    cell.delegate = self;
     
-    // Get the object
-    Type* type = [self.objects objectAtIndex:indexPath.item];
+    NSInteger leftItem = indexPath.row * 2;
+    NSInteger rightItem = indexPath.row * 2 + 1;
     
+    
+    // Get the objects
+    Type* typeLeft = [self.objects objectAtIndex:leftItem];
+    Type* typeRight = [self.objects objectAtIndex:rightItem];
+
     
     // Set a tag to identify the object later
-    cell.leftTypeButton.tag = indexPath.item;
-    
+    cell.leftTypeButton.tag = leftItem;
+    cell.rightTypeButton.tag = rightItem;
+
     
     // Set the title && Add the trigger
-    [cell.leftTypeButton setTitle:type.name forState:UIControlStateNormal];
-    [cell.leftTypeButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.leftTypeButton setTitle:typeLeft.name forState:UIControlStateNormal];
+//    [cell.leftTypeButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [cell.rightTypeButton setTitle:typeRight.name forState:UIControlStateNormal];
+//    [cell.rightTypeButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    
+    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"UITableViewCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    
+    Type* type = self.objects[indexPath.row];
+    Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
     
     
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", subtype.name];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -133,7 +182,24 @@
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
 }
+
+- (void)tableView:(SKSTableView *)tableView didSelectSubRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Section: %d, Row:%d, Subrow:%d", indexPath.section, indexPath.row, indexPath.subRow);
+    
+    Type* type = self.objects[indexPath.row];
+    Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
+    
+    JTTypeSegueHackButton* button = [[JTTypeSegueHackButton alloc] init];
+    button.subtype = subtype;
+
+    
+    [self performSegueWithIdentifier:@"subtypeToDetail" sender:button];
+
+}
+
 
 
 
@@ -141,26 +207,41 @@
 
 #pragma mark - Navigation
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    UIButton* button = (UIButton*)sender;
+//    
+//    if ([[segue identifier] isEqualToString:@"typeToSubtype"])
+//    {
+//        JTSubtypeViewController *subtypeVC = [segue destinationViewController];
+//        subtypeVC.typeName = button.titleLabel.text;
+//    }
+//}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UIButton* button = (UIButton*)sender;
+    JTTypeSegueHackButton* button = (JTTypeSegueHackButton*)sender;
     
-    if ([[segue identifier] isEqualToString:@"typeToSubtype"])
+    if ([[segue identifier] isEqualToString:@"subtypeToDetail"])
     {
-        JTSubtypeViewController *subtypeVC = [segue destinationViewController];
-        subtypeVC.typeName = button.titleLabel.text;
+        JTDetailsViewController *detailsVC = [segue destinationViewController];
+        detailsVC.subtype = button.subtype;
     }
 }
 
 
 #pragma mark - ()
-- (void)didTapButton:(id)sender {
+- (void)typeCell:(JTTypeTableViewCell *)typeCell didTapButton:(UIButton *)button {
+
+    NSInteger row = (button.tag + 2 + 1) / 2; // Divide by two - round up
+
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     
-    UIButton* button = (UIButton*)sender;
+
+    [self.typeExpandTableView expandCell:typeCell atIndexPath:indexPath forObjectIndex:button.tag];
+
     
-    [self.objects objectAtIndex:button.tag];
-    
-    [self performSegueWithIdentifier:@"typeToSubtype" sender:sender];
+//    [self performSegueWithIdentifier:@"typeToSubtype" sender:sender];
     
     
 }

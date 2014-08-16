@@ -27,6 +27,10 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
+    // Admin
+    [JTDatabaseManager addSubtypesToTypes];
+    
+    
     return YES;
 }
 							

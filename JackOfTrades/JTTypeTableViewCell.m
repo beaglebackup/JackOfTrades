@@ -10,6 +10,8 @@
 
 @implementation JTTypeTableViewCell
 
+@synthesize delegate;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -32,8 +34,22 @@
 }
 
 - (IBAction)didTapLeftTypeButton:(id)sender {
+    if (delegate && [delegate respondsToSelector:@selector(typeCell:didTapButton:)]) {
+        [delegate typeCell:self didTapButton:sender];
+    }
+
 }
 
 - (IBAction)didTapRightTypeButton:(id)sender {
+    if (delegate && [delegate respondsToSelector:@selector(typeCell:didTapButton:)]) {
+        [delegate typeCell:self didTapButton:sender];
+    }
+
 }
+
+
+
+
+
+
 @end

@@ -22,8 +22,25 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.expandable = YES;
-        self.expanded = NO;
+        self.expandedLeft = NO;
+        self.expandedRight = NO;
+
     }
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder*)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if(self)
+    {
+        
+        self.expandable = YES;
+        self.expandedLeft = NO;
+        self.expandedRight = NO;
+    }
+    
     return self;
 }
 
@@ -31,7 +48,7 @@
 {
     [super layoutSubviews];
     
-    if (self.isExpanded) {
+    if (self.isExpandedLeft || self.isExpandedRight) {
         
         if (![self containsIndicatorView])
             [self addIndicatorView];
@@ -100,7 +117,7 @@ static UIImage *_image = nil;
 - (void)accessoryViewAnimation
 {
     [UIView animateWithDuration:0.2 animations:^{
-        if (self.isExpanded) {
+        if (self.isExpandedLeft || self.isExpandedRight) {
             
             self.accessoryView.transform = CGAffineTransformMakeRotation(M_PI);
             
@@ -109,7 +126,7 @@ static UIImage *_image = nil;
         }
     } completion:^(BOOL finished) {
         
-        if (!self.isExpanded)
+        if (!self.isExpandedLeft && !self.isExpandedRight)
             [self removeIndicatorView];
         
     }];

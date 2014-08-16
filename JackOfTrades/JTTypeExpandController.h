@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JKExpandTableView.h"
+#import "SKSTableView.h"
+#import "JTTypeTableViewCell.h"
 
-@interface JTTypeExpandController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@interface JTTypeExpandController : UIViewController <UITableViewDataSource, UITableViewDelegate, SKSTableViewDelegate, JTTypeTableViewCellDelegate>
 
 @property (strong, nonatomic) NSArray* objects;
+@property (strong, nonatomic) NSArray* objectsSubtypeArrays;
 
-@property (strong, nonatomic) IBOutlet JKExpandTableView *typeExpandTableView;
+@property (strong, nonatomic) IBOutlet SKSTableView *typeExpandTableView;
 
 @end
 

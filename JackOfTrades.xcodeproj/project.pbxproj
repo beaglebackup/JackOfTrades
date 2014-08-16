@@ -12,10 +12,10 @@
 		8406E8FC199E87BB009EE857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8406E8EA199E87BB009EE857 /* InfoPlist.strings */; };
 		8406E8FD199E87BB009EE857 /* expandableImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8406E8EC199E87BB009EE857 /* expandableImage.png */; };
 		8406E8FE199E87BB009EE857 /* expandableImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8406E8ED199E87BB009EE857 /* expandableImage@2x.png */; };
-		8406E8FF199E87BB009EE857 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8406E8EE199E87BB009EE857 /* Images.xcassets */; };
 		8406E902199E87BB009EE857 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E8F3199E87BB009EE857 /* SKSTableView.m */; };
 		8406E903199E87BB009EE857 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E8F5199E87BB009EE857 /* SKSTableViewCell.m */; };
 		8406E904199E87BB009EE857 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E8F7199E87BB009EE857 /* SKSTableViewCellIndicator.m */; };
+		8406E909199EF1C4009EE857 /* JTTypeSegueHackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */; };
 		840D3B8B199DC443002AC8D1 /* arrow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7B199DC443002AC8D1 /* arrow-icon.png */; };
 		840D3B8C199DC443002AC8D1 /* arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7C199DC443002AC8D1 /* arrow-icon@2x.png */; };
 		840D3B8D199DC443002AC8D1 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7D199DC443002AC8D1 /* checkmark.png */; };
@@ -94,13 +94,14 @@
 		8406E8EB199E87BB009EE857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8406E8EC199E87BB009EE857 /* expandableImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandableImage.png; sourceTree = "<group>"; };
 		8406E8ED199E87BB009EE857 /* expandableImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expandableImage@2x.png"; sourceTree = "<group>"; };
-		8406E8EE199E87BB009EE857 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8406E8F2199E87BB009EE857 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
 		8406E8F3199E87BB009EE857 /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
 		8406E8F4199E87BB009EE857 /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
 		8406E8F5199E87BB009EE857 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
 		8406E8F6199E87BB009EE857 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
 		8406E8F7199E87BB009EE857 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
+		8406E907199EF1C4009EE857 /* JTTypeSegueHackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeSegueHackButton.h; sourceTree = "<group>"; };
+		8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeSegueHackButton.m; sourceTree = "<group>"; };
 		840D3B7B199DC443002AC8D1 /* arrow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon.png"; sourceTree = "<group>"; };
 		840D3B7C199DC443002AC8D1 /* arrow-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon@2x.png"; sourceTree = "<group>"; };
 		840D3B7D199DC443002AC8D1 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
@@ -235,6 +236,8 @@
 				8406E8E1199DC720009EE857 /* JTTypeExpandController.h */,
 				8406E8E2199DC720009EE857 /* JTTypeExpandController.m */,
 				8406E8E4199DC785009EE857 /* JTTypeTableViewCell.h */,
+				8406E907199EF1C4009EE857 /* JTTypeSegueHackButton.h */,
+				8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */,
 				8406E8E5199DC785009EE857 /* JTTypeTableViewCell.m */,
 			);
 			name = "TypeViewController - Expand";
@@ -246,7 +249,6 @@
 				8406E8EA199E87BB009EE857 /* InfoPlist.strings */,
 				8406E8EC199E87BB009EE857 /* expandableImage.png */,
 				8406E8ED199E87BB009EE857 /* expandableImage@2x.png */,
-				8406E8EE199E87BB009EE857 /* Images.xcassets */,
 				8406E8F2199E87BB009EE857 /* SKSTableView.h */,
 				8406E8F3199E87BB009EE857 /* SKSTableView.m */,
 				8406E8F4199E87BB009EE857 /* SKSTableViewCell.h */,
@@ -589,7 +591,6 @@
 				8406E8FD199E87BB009EE857 /* expandableImage.png in Resources */,
 				EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */,
 				840D3B8E199DC443002AC8D1 /* checkmark@2x.png in Resources */,
-				8406E8FF199E87BB009EE857 /* Images.xcassets in Resources */,
 				8406E8FC199E87BB009EE857 /* InfoPlist.strings in Resources */,
 				EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */,
 			);
@@ -639,6 +640,7 @@
 				8406E8E3199DC720009EE857 /* JTTypeExpandController.m in Sources */,
 				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
 				EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */,
+				8406E909199EF1C4009EE857 /* JTTypeSegueHackButton.m in Sources */,
 				8406E904199E87BB009EE857 /* SKSTableViewCellIndicator.m in Sources */,
 				8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */,
 				84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */,

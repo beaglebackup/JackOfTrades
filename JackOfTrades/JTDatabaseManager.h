@@ -19,4 +19,7 @@
 + (void)getAllKeysForSubtype:(Subtype*)subtype withCallback:(void(^)(Subtype* theSubtype, NSError *error))callback;
 
 
+#pragma mark - Admin
++ (void)addSubtypesToTypes;
+    
 @end

@@ -7,13 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKSTableViewCell.h"
 
-@interface JTTypeTableViewCell : UITableViewCell
+@protocol JTTypeTableViewCellDelegate;
+
+
+@interface JTTypeTableViewCell : SKSTableViewCell
 
 @property (strong, nonatomic) IBOutlet UIButton *rightTypeButton;
 @property (strong, nonatomic) IBOutlet UIButton *leftTypeButton;
 
 - (IBAction)didTapLeftTypeButton:(id)sender;
 - (IBAction)didTapRightTypeButton:(id)sender;
+
+
+/*! @name Delegate */
+@property (nonatomic, strong) id<JTTypeTableViewCellDelegate> delegate;
+
+@end
+
+
+@protocol JTTypeTableViewCellDelegate <NSObject>
+
+@required
+
+- (void)typeCell:(JTTypeTableViewCell *)typeCell didTapButton:(UIButton *)button;
 
 @end

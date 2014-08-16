@@ -26,8 +26,21 @@
 
 @required
 
+///**
+// * Returns the number of the subrows for the expandable row at the given index path.
+// *
+// *  @param tableView The instance of SKSTableView class.
+// *
+// *  @param indexPath The index path of the expandable row. It is the value for the expandable row before expanding.
+// *
+// *  @return The number of the subrows.
+// */
+//- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath;
+
+
 /**
- * Returns the number of the subrows for the expandable row at the given index path.
+ * Returns the number of the subrows for the expandable row at the given object index. 
+ * ** objectIndex is needed instead of indexPath because we have two objects per row
  *
  *  @param tableView The instance of SKSTableView class.
  *
@@ -35,7 +48,7 @@
  *
  *  @return The number of the subrows.
  */
-- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtObjectIndex:(NSInteger)objectIndex;
 
 /**
  * Returns the instance of UITableViewCell object for the cell at the given indexPath.
@@ -116,6 +129,8 @@
  * Collapses all currently-expanded cells in the tableview altogether. No subrow is displayed, just main rows.
  */
 - (void)collapseCurrentlyExpandedIndexPaths;
+
+- (void)expandCell:(SKSTableViewCell*)cell atIndexPath:(NSIndexPath *)indexPath forObjectIndex:(NSInteger)objectIndex;
 
 @end
 
