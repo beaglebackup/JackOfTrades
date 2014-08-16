@@ -28,7 +28,7 @@
     
     
     // Admin
-    [JTDatabaseManager addSubtypesToTypes];
+//    [JTDatabaseManager addSubtypesToTypes];
     
     
     return YES;

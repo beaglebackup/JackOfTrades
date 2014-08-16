@@ -175,7 +175,6 @@
     
     Type* type = self.objects[objectIndex];
     
-    NSLog(@"type = %@",type);
     NSLog(@"type.subtypes.count = %lu",(unsigned long)type.subtypes.count);
 
     

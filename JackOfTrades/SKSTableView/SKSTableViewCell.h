@@ -21,12 +21,12 @@
 @property (nonatomic, assign, getter = isExpandable) BOOL expandable;
 
 /**
- * The boolean value showing the receiver is expanded for the left image or not. The default value of this property is NO.
+ * The boolean value showing the receiver is the current cell to be expanded for the left image or not. The default value of this property is NO.
  */
 @property (nonatomic, assign, getter = isExpandedLeft) BOOL expandedLeft;
 
 /**
- * The boolean value showing the receiver is expanded for the riggt image or not. The default value of this property is NO.
+ * The boolean value showing the receiver is the current cell to be expanded for the riggt image or not. The default value of this property is NO.
  */
 @property (nonatomic, assign, getter = isExpandedRight) BOOL expandedRight;
 

@@ -587,6 +587,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
         NSLog(@"cell.isExpandable: %d",cell.isExpandable);
 
         
+        
         if (cell.isExpandable)
         {
             // Check if left or right expanded based on objectIndex being odd or even
@@ -634,6 +635,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 
                 NSLog(@"expandedIndexPaths.count - %d", expandedIndexPaths.count);
 
+                
                 
                 if (cell.isExpandedLeft)
                 {

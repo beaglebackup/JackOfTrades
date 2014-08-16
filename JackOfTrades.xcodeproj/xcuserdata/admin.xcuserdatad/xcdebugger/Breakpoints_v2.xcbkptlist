@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912437.900535"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "729"
-            endingLineNumber = "729"
+            startingLineNumber = "731"
+            endingLineNumber = "731"
             landmarkName = "-expandableButtonTouched:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/JTTypeExpandController.m"
-            timestampString = "429911843.4285"
+            timestampString = "429916201.691072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-tableView:didSelectSubRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912147.853403"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "622"
-            endingLineNumber = "622"
+            startingLineNumber = "623"
+            endingLineNumber = "623"
             landmarkName = "-expandCell:atIndexPath:forObjectIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912437.900535"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "698"
-            endingLineNumber = "698"
+            startingLineNumber = "700"
+            endingLineNumber = "700"
             landmarkName = "-numberOfExpandedSubrowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912437.900535"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "709"
-            endingLineNumber = "709"
+            startingLineNumber = "711"
+            endingLineNumber = "711"
             landmarkName = "-numberOfExpandedSubrowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912437.900535"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "715"
-            endingLineNumber = "715"
+            startingLineNumber = "717"
+            endingLineNumber = "717"
             landmarkName = "-numberOfExpandedSubrowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -276,11 +276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/JTTypeExpandController.m"
-            timestampString = "429911843.4285"
+            timestampString = "429916201.691072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "-tableView:cellForSubRowAtIndexPath:objectIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -324,11 +324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912431.379129"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "662"
-            endingLineNumber = "662"
+            startingLineNumber = "659"
+            endingLineNumber = "659"
             landmarkName = "-expandCell:atIndexPath:forObjectIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -340,11 +340,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429912661.378855"
+            timestampString = "429916337.35503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "609"
-            endingLineNumber = "609"
+            startingLineNumber = "610"
+            endingLineNumber = "610"
+            landmarkName = "-expandCell:atIndexPath:forObjectIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
+            timestampString = "429916337.35503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "605"
+            endingLineNumber = "605"
             landmarkName = "-expandCell:atIndexPath:forObjectIndex:"
             landmarkType = "5">
          </BreakpointContent>
