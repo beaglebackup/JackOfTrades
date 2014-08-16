@@ -47,7 +47,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
     self = [super initWithFrame:frame];
     
     if (self) {
-        _shouldExpandOnlyOneCell = NO;
+        _shouldExpandOnlyOneCell = YES;
     }
     
     return self;
@@ -59,7 +59,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
     
     if (self)
     {
-        _shouldExpandOnlyOneCell = NO;
+        _shouldExpandOnlyOneCell = YES;
     }
     
     return self;
