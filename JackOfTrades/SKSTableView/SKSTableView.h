@@ -74,7 +74,7 @@
  *
  *                 For further information, please check the sample table view[@ViewController] in the project.
  */
-- (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath objectIndex:(NSInteger)objectIndex;
 
 @optional
 

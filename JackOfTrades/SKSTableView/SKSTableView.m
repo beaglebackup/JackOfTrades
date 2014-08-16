@@ -32,7 +32,9 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 - (NSIndexPath *)correspondingIndexPathForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-- (void)setExpanded:(BOOL)isExpanded forCellAtIndexPath:(NSIndexPath *)indexPath;
+- (void)setExpandedLeft:(BOOL)isExpanded forCellAtIndexPath:(NSIndexPath *)indexPath;
+- (void)setExpandedRight:(BOOL)isExpanded forCellAtIndexPath:(NSIndexPath *)indexPath;
+
 
 - (IBAction)expandableButtonTouched:(id)sender event:(id)event;
 
@@ -102,11 +104,15 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 NSIndexPath *rowIndexPath = [NSIndexPath indexPathForRow:row inSection:section];
                 
                 NSLog(@"rowIndexPath -- Section: %d, Row: %d", rowIndexPath.section, rowIndexPath.row);
+                
+                NSInteger objectIndexLeft = rowIndexPath.row * 2;
+                NSInteger objectIndexRight = rowIndexPath.row * 2 + 1;
 
                 NSInteger numberOfSubrowsLeft = [self.SKSTableViewDelegate tableView:self
-                                                      numberOfSubRowsAtObjectIndex:rowIndexPath.row];
+                                                      numberOfSubRowsAtObjectIndex:objectIndexLeft];
                 NSInteger numberOfSubrowsRight = [self.SKSTableViewDelegate tableView:self
-                                                        numberOfSubRowsAtObjectIndex:(rowIndexPath.row + 1)];
+                                                        numberOfSubRowsAtObjectIndex:objectIndexRight];
+                NSLog(@"rowIndexPath.row = %d",rowIndexPath.row);
                 
                 NSLog(@"numberOfSubrowsLeft = %d",numberOfSubrowsLeft);
                 NSLog(@"numberOfSubrowsRight = %d",numberOfSubrowsRight);
@@ -142,6 +148,8 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"[_SKSTableViewDelegate tableView:tableView numberOfRowsInSection:section] + [self numberOfExpandedSubrowsInSection:section] = %d",[_SKSTableViewDelegate tableView:tableView numberOfRowsInSection:section] + [self numberOfExpandedSubrowsInSection:section]);
+    
     return [_SKSTableViewDelegate tableView:tableView numberOfRowsInSection:section] + [self numberOfExpandedSubrowsInSection:section];
 }
 
@@ -159,10 +167,11 @@ CGFloat const kDefaultCellHeight = 44.0f;
         
         BOOL isExpandedLeft = [self.expandableCells[@(correspondingIndexPath.section)][correspondingIndexPath.row][kIsExpandedLeftKey] boolValue];
         BOOL isExpandedRight = [self.expandableCells[@(correspondingIndexPath.section)][correspondingIndexPath.row][kIsExpandedRightKey] boolValue];
+    
+        
 
         if (expandableCell.isExpandable)
         {
-            
             
             expandableCell.expandedLeft = isExpandedLeft;
             expandableCell.expandedRight = isExpandedRight;
@@ -208,7 +217,20 @@ CGFloat const kDefaultCellHeight = 44.0f;
     }
     else
     {
-        UITableViewCell *cell = [_SKSTableViewDelegate tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:correspondingIndexPath];
+        NSInteger objectIndex;
+        
+        BOOL isExpandedLeft = [self.expandableCells[@(correspondingIndexPath.section)][correspondingIndexPath.row][kIsExpandedLeftKey] boolValue];
+        BOOL isExpandedRight = [self.expandableCells[@(correspondingIndexPath.section)][correspondingIndexPath.row][kIsExpandedRightKey] boolValue];
+        
+        if (isExpandedLeft) {
+            objectIndex = correspondingIndexPath.row * 2;
+        }
+        else if (isExpandedRight)
+        {
+            objectIndex = correspondingIndexPath.row * 2 + 1;
+        }
+        
+        UITableViewCell *cell = [_SKSTableViewDelegate tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:correspondingIndexPath objectIndex:objectIndex];
         cell.backgroundColor = [self separatorColor];
         cell.backgroundView = nil;
         cell.indentationLevel = 2;
@@ -300,76 +322,13 @@ CGFloat const kDefaultCellHeight = 44.0f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    SKSTableViewCell *cell = (SKSTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-//    
-//    if ([cell respondsToSelector:@selector(isExpandable)])
-//    {
-//        if (cell.isExpandable)
-//        {
-//            cell.expandedLeft = !cell.isExpandedLeft;
-//            cell.expandedRight = !cell.isExpandedRight;
-//
-//            NSIndexPath *_indexPath = indexPath;
-//            NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
-//            if ((cell.isExpandedLeft || cell.isExpandedRight) && _shouldExpandOnlyOneCell)
-//            {
-//                _indexPath = correspondingIndexPath;
-//                [self collapseCurrentlyExpandedIndexPaths];
-//            }
-//        
-//            if (_indexPath)
-//            {
-//                NSInteger numberOfSubRows = [self numberOfSubRowsAtIndexPath:correspondingIndexPath];
-//            
-//                NSMutableArray *expandedIndexPaths = [NSMutableArray array];
-//                NSInteger row = _indexPath.row;
-//                NSInteger section = _indexPath.section;
-//            
-//                for (NSInteger index = 1; index <= numberOfSubRows; index++)
-//                {
-//                    NSIndexPath *expIndexPath = [NSIndexPath indexPathForRow:row+index inSection:section];
-//                    [expandedIndexPaths addObject:expIndexPath];
-//                }
-//            
-//                if (cell.isExpandedLeft || cell.isExpandedRight)
-//                {
-//                    [self setExpanded:YES forCellAtIndexPath:correspondingIndexPath];
-//                    [self insertRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
-//                }
-//                else
-//                {
-//                    [self setExpanded:NO forCellAtIndexPath:correspondingIndexPath];
-//                    [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
-//                }
-//            
-//                [cell accessoryViewAnimation];
-//            }
-//        }
-//        
-//        if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)])
-//        {
-//            NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
-//            
-//            if (correspondingIndexPath.subRow == 0)
-//            {
-//                [_SKSTableViewDelegate tableView:tableView didSelectRowAtIndexPath:correspondingIndexPath];
-//            }
-//            else
-//            {
-//                [_SKSTableViewDelegate tableView:self didSelectSubRowAtIndexPath:correspondingIndexPath];
-//            }
-//        }
-//    }
-//    else
-//    {
-        if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:didSelectSubRowAtIndexPath:)])
-        {
-            NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
-            
-            [_SKSTableViewDelegate tableView:self didSelectSubRowAtIndexPath:correspondingIndexPath];
-        }
-//    }
+
+    if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:didSelectSubRowAtIndexPath:)])
+    {
+        NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
+        
+        [_SKSTableViewDelegate tableView:self didSelectSubRowAtIndexPath:correspondingIndexPath];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
@@ -619,13 +578,29 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 - (void) expandCell:(SKSTableViewCell*)cell atIndexPath:(NSIndexPath *)indexPath forObjectIndex:(NSInteger)objectIndex  {
     
+    
+    NSLog(@"indexPath -- Section: %d, Row: %d", indexPath.section, indexPath.row);
+
     if ([cell respondsToSelector:@selector(isExpandable)])
     {
+        
+        NSLog(@"cell.isExpandable: %d",cell.isExpandable);
+
+        
         if (cell.isExpandable)
         {
-            cell.expandedLeft = !cell.isExpandedLeft;
-            cell.expandedRight = !cell.isExpandedRight;
+            // Check if left or right expanded based on objectIndex being odd or even
+            if (objectIndex % 2) { // odd
+                cell.expandedRight = !cell.isExpandedRight;
+            }
+            else { // even
+                cell.expandedLeft = !cell.isExpandedLeft;
+            }
             
+            NSLog(@"cell.expandedLeft: %d",cell.expandedLeft);
+            NSLog(@"cell.expandedRight: %d",cell.expandedRight);
+            NSLog(@"cell.isExpandedLeft: %d",cell.isExpandedLeft);
+            NSLog(@"cell.isExpandedRight: %d",cell.isExpandedRight);
             
             NSIndexPath *_indexPath = indexPath;
             NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
@@ -635,6 +610,9 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 [self collapseCurrentlyExpandedIndexPaths];
             }
             
+            NSLog(@"_indexPath -- Section: %d, Row: %d", _indexPath.section, _indexPath.row);
+            NSLog(@"correspondingIndexPath -- Section: %d, Row: %d", correspondingIndexPath.section, correspondingIndexPath.row);
+
             if (_indexPath)
             {
                 NSInteger numberOfSubRows = [self numberOfSubRowsAtObjectIndex:objectIndex];
@@ -649,21 +627,37 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 {
                     NSIndexPath *expIndexPath = [NSIndexPath indexPathForRow:row+index inSection:section];
                     [expandedIndexPaths addObject:expIndexPath];
+                    
+                    NSLog(@"expandedIndexPaths -- Section: %d, Row: %d", expIndexPath.section, expIndexPath.row);
+
                 }
+                
+                NSLog(@"expandedIndexPaths.count - %d", expandedIndexPaths.count);
+
                 
                 if (cell.isExpandedLeft)
                 {
                     [self setExpandedLeft:YES forCellAtIndexPath:correspondingIndexPath];
+                    [self beginUpdates];
                     [self insertRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+                    [self endUpdates];
+
                 }
                 else if (cell.isExpandedRight) {
                     [self setExpandedRight:YES forCellAtIndexPath:correspondingIndexPath];
+                    [self beginUpdates];
                     [self insertRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+                    [self endUpdates];
+
                 }
                 else
                 {
-                    [self setExpanded:NO forCellAtIndexPath:correspondingIndexPath];
+                    [self setExpandedLeft:NO forCellAtIndexPath:correspondingIndexPath];
+                    [self setExpandedRight:NO forCellAtIndexPath:correspondingIndexPath];
+                    [self beginUpdates];
                     [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+                    [self endUpdates];
+
                 }
                 
                 [cell accessoryViewAnimation];
@@ -676,7 +670,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
             
             if (correspondingIndexPath.subRow == 0)
             {
-//                [_SKSTableViewDelegate tableView:tableView didSelectRowAtIndexPath:correspondingIndexPath];
+                [_SKSTableViewDelegate tableView:self didSelectRowAtIndexPath:correspondingIndexPath];
             }
             else
             {
@@ -684,15 +678,6 @@ CGFloat const kDefaultCellHeight = 44.0f;
             }
         }
     }
-//    else
-//    {
-//        if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:didSelectSubRowAtIndexPath:)])
-//        {
-//            NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
-//            
-//            [_SKSTableViewDelegate tableView:self didSelectSubRowAtIndexPath:correspondingIndexPath];
-//        }
-//    }
     
 }
 
@@ -707,14 +692,26 @@ CGFloat const kDefaultCellHeight = 44.0f;
         
         if ([row[kIsExpandedLeftKey] boolValue] == YES)
         {
+            NSLog(@"left row = %@",row);
+            NSLog(@"left [row[kSubrowsLeftKey] integerValue] = %ld",(long)[row[kSubrowsLeftKey] integerValue]);
+
             totalExpandedSubrows += [row[kSubrowsLeftKey] integerValue];
+            
         }
         else if ([row[kIsExpandedRightKey] boolValue] == YES)
         {
-            totalExpandedSubrows += [row[kSubrowsRightKey] integerValue];
+            
+            NSLog(@"right row = %@",row);
+            NSLog(@"right [row[kSubrowsLeftKey] integerValue] = %ld",(long)[row[kSubrowsLeftKey] integerValue]);
+
+            totalExpandedSubrows += [row[kSubrowsRightKey]
+                                     integerValue];
+            
         }
         
     }
+    
+    NSLog(@"totalExpandedSubrows = %d",totalExpandedSubrows);
     
     return totalExpandedSubrows;
 }
@@ -823,6 +820,23 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 
                 [totalExpandableIndexPaths addObject:[NSIndexPath indexPathForRow:currentRow inSection:[key integerValue]]];
             }
+            
+            BOOL isExpandedRight = [obj[kIsExpandedRightKey] boolValue];
+            if (isExpandedRight)
+            {
+                NSInteger expandedSubrows = [obj[kSubrowsRightKey] integerValue];
+                for (NSInteger index = 1; index <= expandedSubrows; index++)
+                {
+                    NSIndexPath *expandedIndexPath = [NSIndexPath indexPathForRow:currentRow + index
+                                                                        inSection:[key integerValue]];
+                    [totalExpandedIndexPaths addObject:expandedIndexPath];
+                }
+                
+                [obj setObject:@(NO) forKey:kIsExpandedRightKey];
+                totalExpandedSubrows += expandedSubrows;
+                
+                [totalExpandableIndexPaths addObject:[NSIndexPath indexPathForRow:currentRow inSection:[key integerValue]]];
+            }
         }];
     }];
     
@@ -833,6 +847,8 @@ CGFloat const kDefaultCellHeight = 44.0f;
         cell.expandedRight = NO;
         [cell accessoryViewAnimation];
     }
+    
+    
     
     [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
 }

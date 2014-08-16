@@ -74,8 +74,8 @@
     
     
     // Set the tableVew delegate
-    self.typeExpandTableView.delegate = self;
-    self.typeExpandTableView.dataSource = self;
+//    self.typeExpandTableView.delegate = self;
+//    self.typeExpandTableView.dataSource = self;
     self.typeExpandTableView.SKSTableViewDelegate = self;
 
     
@@ -94,7 +94,6 @@
 #pragma mark - UITableView Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSLog(@"[self.objects count] = %lu",(unsigned long)[self.objects count]);
     
     return (ceil([self.objects count]/2)); // Divide by two - round up
 }
@@ -159,7 +158,8 @@
     return cell;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath objectIndex:(NSInteger)objectIndex
+
 {
     static NSString *CellIdentifier = @"UITableViewCell";
     
@@ -168,7 +168,17 @@
     if (!cell)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    Type* type = self.objects[indexPath.row];
+    
+    NSLog(@"indexPath.row = %d",indexPath.row);
+    NSLog(@"indexPath.row = %d",indexPath.subRow);
+
+    
+    Type* type = self.objects[objectIndex];
+    
+    NSLog(@"type = %@",type);
+    NSLog(@"type.subtypes.count = %lu",(unsigned long)type.subtypes.count);
+
+    
     Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
     
     
@@ -233,11 +243,10 @@
 #pragma mark - ()
 - (void)typeCell:(JTTypeTableViewCell *)typeCell didTapButton:(UIButton *)button {
 
-    NSInteger row = (button.tag + 2 + 1) / 2; // Divide by two - round up
-
+    NSInteger row = floor(button.tag / 2); // Divide by two - round down
+    
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     
-
     [self.typeExpandTableView expandCell:typeCell atIndexPath:indexPath forObjectIndex:button.tag];
 
     
