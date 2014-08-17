@@ -31,4 +31,5 @@
 
 + (NSString *)parentStringKey;
 
++ (NSString *)textPointerKey;
 @end

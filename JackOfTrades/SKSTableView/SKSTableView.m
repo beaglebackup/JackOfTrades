@@ -576,31 +576,50 @@ CGFloat const kDefaultCellHeight = 44.0f;
     {
         
         NSLog(@"cell.isExpandable: %d",cell.isExpandable);
-
         
+        // SCENARIOS
+        // 1. A new cell
+        // 2. The same cell, same image (close it)
+        // 3. The other image in the same cell (close the existing cell, open the other image)
+        // 4. Different cell (close existing cell, opent the other one)
+
         
         if (cell.isExpandable)
         {
             // Check if left or right expanded based on objectIndex being odd or even
             if (objectIndex % 2) { // odd
                 cell.expandingRight = !cell.isExpandingRight;
+//                cell.expandedRight = [self isCellExpandedRight:indexPath];
             }
             else { // even
                 cell.expandingLeft = !cell.isExpandingLeft;
+//                cell.expandedLeft = [self isCellExpandedLeft:indexPath];
             }
             
-            NSLog(@"cell.expandedLeft: %d",cell.expandingLeft);
-            NSLog(@"cell.expandedRight: %d",cell.expandingRight);
-            NSLog(@"cell.isExpandedLeft: %d",cell.isExpandingRight);
-            NSLog(@"cell.isExpandedRight: %d",cell.isExpandingLeft);
+            NSLog(@"--------------------------");
+            NSLog(@"expandingLeft: %d",cell.expandingLeft);
+            NSLog(@"expandingRight: %d",cell.expandingRight);
+            NSLog(@"expandedRight: %d",cell.expandedRight);
+            NSLog(@"expandedLeft: %d",cell.expandedLeft);
+            
+        
             
             NSIndexPath *_indexPath = indexPath;
             NSIndexPath *correspondingIndexPath = [self correspondingIndexPathForRowAtIndexPath:indexPath];
-            if ((cell.isExpandingLeft || cell.isExpandingRight) && _shouldExpandOnlyOneCell)
+            if (cell.expandingLeft && _shouldExpandOnlyOneCell)
             {
                 _indexPath = correspondingIndexPath;
-                [self collapseCurrentlyExpandedIndexPaths];
+                [self collapseCurrentlyExpandedIndexPathsLeft];
             }
+            else if (cell.expandingRight && _shouldExpandOnlyOneCell)
+            {
+                _indexPath = correspondingIndexPath;
+                [self collapseCurrentlyExpandedIndexPathsRight];
+            }
+//
+//            if (cell.expandingLeft) {
+//                return;
+//            }
             
             NSLog(@"_indexPath -- Section: %d, Row: %d", _indexPath.section, _indexPath.row);
             NSLog(@"correspondingIndexPath -- Section: %d, Row: %d", correspondingIndexPath.section, correspondingIndexPath.row);
@@ -776,14 +795,26 @@ CGFloat const kDefaultCellHeight = 44.0f;
     [cellInfo setObject:@(isExpanded) forKey:kIsExpandedLeftKey];
 }
 
+
+
 - (void)setExpandedRight:(BOOL)isExpanded forCellAtIndexPath:(NSIndexPath *)indexPath
 {
     NSMutableDictionary *cellInfo = self.expandableCells[@(indexPath.section)][indexPath.row];
     [cellInfo setObject:@(isExpanded) forKey:kIsExpandedRightKey];
 }
 
+- (BOOL)isCellExpandedLeft:(NSIndexPath *)indexPath {
+    NSMutableDictionary *cellInfo = self.expandableCells[@(indexPath.section)][indexPath.row];
+    return [cellInfo[kIsExpandedLeftKey] boolValue];
+}
 
-- (void)collapseCurrentlyExpandedIndexPaths
+- (BOOL)isCellExpandedRight:(NSIndexPath *)indexPath {
+    NSMutableDictionary *cellInfo = self.expandableCells[@(indexPath.section)][indexPath.row];
+    return [cellInfo[kIsExpandedRightKey] boolValue];
+}
+
+
+- (void)collapseCurrentlyExpandedIndexPathsLeft
 {
     NSMutableArray *totalExpandedIndexPaths = [NSMutableArray array];
     NSMutableArray *totalExpandableIndexPaths = [NSMutableArray array];
@@ -813,6 +844,35 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 [totalExpandableIndexPaths addObject:[NSIndexPath indexPathForRow:currentRow inSection:[key integerValue]]];
             }
             
+        }];
+    }];
+    
+    for (NSIndexPath *indexPath in totalExpandableIndexPaths)
+    {
+        SKSTableViewCell *cell = (SKSTableViewCell *)[self cellForRowAtIndexPath:indexPath];
+        cell.expandingLeft = NO;
+        [cell accessoryViewAnimation];
+    }
+    
+    
+    [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+    
+    
+}
+
+- (void)collapseCurrentlyExpandedIndexPathsRight
+{
+    NSMutableArray *totalExpandedIndexPaths = [NSMutableArray array];
+    NSMutableArray *totalExpandableIndexPaths = [NSMutableArray array];
+    
+    [self.expandableCells enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        
+        __block NSInteger totalExpandedSubrows = 0;
+        
+        [obj enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            
+            NSInteger currentRow = idx + totalExpandedSubrows;
+            
             BOOL isExpandedRight = [obj[kIsExpandedRightKey] boolValue];
             if (isExpandedRight)
             {
@@ -835,13 +895,14 @@ CGFloat const kDefaultCellHeight = 44.0f;
     for (NSIndexPath *indexPath in totalExpandableIndexPaths)
     {
         SKSTableViewCell *cell = (SKSTableViewCell *)[self cellForRowAtIndexPath:indexPath];
-        cell.expandingLeft = NO;
         cell.expandingRight = NO;
         [cell accessoryViewAnimation];
     }
     
     
     [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+    
+    
 }
 
 @end

@@ -29,6 +29,7 @@
     
     // Admin
 //    [JTDatabaseManager addSubtypesToTypes];
+//    [JTDatabaseManager moveSubtypeTextToClass];
     
     
     return YES;

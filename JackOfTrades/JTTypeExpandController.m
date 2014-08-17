@@ -13,7 +13,9 @@
 #import "JTTypeSegueHackButton.h"
 
 
-@interface JTTypeExpandController ()
+@interface JTTypeExpandController () {
+    NSInteger selectedObject;
+}
 
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
 
@@ -196,9 +198,7 @@
     if (!cell)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    
-    
-    
+    cell.tag = objectIndex;
     
     NSLog(@"indexPath.row = %d",indexPath.row);
     NSLog(@"indexPath.row = %d",indexPath.subRow);
@@ -227,7 +227,13 @@
 {
     NSLog(@"Section: %d, Row:%d, Subrow:%d", indexPath.section, indexPath.row, indexPath.subRow);
     
-    Type* type = self.objects[indexPath.row];
+    // Get the Type (from self.objects)
+    
+    Type* type = self.objects[selectedObject];
+    
+  
+    NSLog(@"type.name = %@",type.name);
+
     Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
     
     JTTypeSegueHackButton* button = [[JTTypeSegueHackButton alloc] init];
@@ -274,6 +280,8 @@
     NSInteger row = floor(button.tag / 2); // Divide by two - round down
     
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    selectedObject = button.tag; // Hack to save the objectIndex
     
     [self.typeExpandTableView expandCell:typeCell atIndexPath:indexPath forObjectIndex:button.tag];
 

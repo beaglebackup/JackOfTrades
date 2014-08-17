@@ -59,6 +59,8 @@
                                              nil];
     [subtypeQuery selectKeys:keys];
     
+    [subtypeQuery includeKey:[Subtype textPointerKey]];
+    
     [subtypeQuery orderByAscending:[Subtype nameKey]];
     
     [subtypeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -73,6 +75,8 @@
     
     // Requery without any key restraints (get all keys)
     PFQuery *subtypeQuery = [Subtype query];
+    
+    [subtypeQuery includeKey:[Subtype textPointerKey]];
     
     [subtypeQuery getObjectInBackgroundWithId:[subtype objectId] block:^(PFObject *object, NSError *error) {
         
@@ -117,6 +121,40 @@
             }];
         }
     }];
+}
+
++ (void)moveSubtypeTextToClass {
+    
+    // Get all Subtypes
+    PFQuery *subtypeQuery = [Subtype query];
+    
+    [subtypeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (objects) {
+            
+            [objects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                // Find the Type for this Subtype
+                Subtype* subtype = (Subtype*)obj;
+                NSString* text = subtype.text;
+                NSString* name = subtype.name;
+                
+                PFObject* textObject = [PFObject objectWithClassName:@"Text"];
+                [textObject setObject:text forKey:@"text"];
+                [textObject setObject:name forKey:@"parentString"];
+                [textObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    
+                    if (succeeded) {
+                        [subtype setObject:textObject forKey:@"textPointer"];
+                        [subtype save];
+                    }
+                }];
+                
+            }];
+        }
+    }];
+
+    
 }
 
 

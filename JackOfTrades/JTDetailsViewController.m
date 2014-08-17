@@ -93,7 +93,10 @@ typedef enum {
     
     // Set the title && text
     _titleLabel.text = _subtype.name;
-    _textView.text = _subtype.text;
+    
+    PFObject* textObject = [_subtype objectForKey:[Subtype textPointerKey]];
+    NSString* text = [textObject objectForKey:@"text"];
+    _textView.text = text;
     
 
     
