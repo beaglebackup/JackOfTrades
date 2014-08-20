@@ -54,11 +54,12 @@
     
     if (self.isExpandingLeft || self.isExpandingRight) {
         
-        if (![self containsIndicatorView])
-            [self addIndicatorView];
+        if (![self containsIndicatorView]) {
+//            [self addIndicatorView];
+        }
         else {
-            [self removeIndicatorView];
-            [self addIndicatorView];
+//            [self removeIndicatorView];
+//            [self addIndicatorView];
         }
     }
 }
@@ -94,6 +95,7 @@ static UIImage *_image = nil;
 
 - (void)addIndicatorView
 {
+    
     
     CGRect bounds = self.accessoryView.bounds;
 

@@ -667,7 +667,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
                 }
                 // User clicked on an open cell, close it
-                    
+                
                 [cell accessoryViewAnimation];
             }
         }
