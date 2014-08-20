@@ -915,16 +915,31 @@ static void *SubRowObjectKey;
 
 @dynamic subRow;
 
+//- (NSInteger)subRow
+//{
+//    id subRowObj = objc_getAssociatedObject(self, SubRowObjectKey);
+//    return [subRowObj integerValue];
+//}
+//
+//- (void)setSubRow:(NSInteger)subRow
+//{
+//    id subRowObj = [NSNumber numberWithInteger:subRow];
+//    objc_setAssociatedObject(self, SubRowObjectKey, subRowObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+
+
 - (NSInteger)subRow
 {
-    id subRowObj = objc_getAssociatedObject(self, SubRowObjectKey);
+    id myclass = [SKSTableView class];
+    id subRowObj = objc_getAssociatedObject(myclass, SubRowObjectKey);
     return [subRowObj integerValue];
 }
 
 - (void)setSubRow:(NSInteger)subRow
 {
     id subRowObj = [NSNumber numberWithInteger:subRow];
-    objc_setAssociatedObject(self, SubRowObjectKey, subRowObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    id myclass = [SKSTableView class];
+    objc_setAssociatedObject(myclass, nil, subRowObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (NSIndexPath *)indexPathForSubRow:(NSInteger)subrow inRow:(NSInteger)row inSection:(NSInteger)section
