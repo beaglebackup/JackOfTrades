@@ -111,6 +111,9 @@ build/
 # NB: this is exclusive with OPTION 2 below
 xcuserdata
 JackOfTrades.xcodeproj/project.xcworkspace/xcuserdata/bumblebee.xcuserdatad/UserInterfaceState.xcuserstate
+JackOfTrades.xcodeproj/project.xcworkspace/xcuserdata/admin.xcuserdatad/UserInterfaceState.xcuserstate
+
+
 
 # OPTION 2: ---------------------------------
 #     get rid of ALL personal settings, but KEEP SOME OF THEM
