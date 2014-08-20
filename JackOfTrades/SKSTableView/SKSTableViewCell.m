@@ -99,10 +99,10 @@ static UIImage *_image = nil;
 
     CGFloat x;
     
-    if (self.isExpandedLeft) {
+    if (self.isExpandingLeft) {
         x = self.contentView.center.x/2; // A quarter of the cell width
     }
-    else if (self.isExpandedRight) {
+    else if (self.isExpandingRight) {
         x = self.contentView.center.x + self.contentView.center.x/2; // 3/4 of the cell width
     }
     

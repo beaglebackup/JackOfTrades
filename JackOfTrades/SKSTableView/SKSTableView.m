@@ -158,6 +158,10 @@ CGFloat const kDefaultCellHeight = 44.0f;
         if (expandableCell.isExpandable)
         {
             
+            NSLog(@"cellForRowAtIndexPath -- indexPath.row = %d",indexPath.row);
+            NSLog(@"cellForRowAtIndexPath -- isExpandedLeft = %d",isExpandedLeft);
+            NSLog(@"cellForRowAtIndexPath -- isExpandedRight = %d",isExpandedRight);
+ 
             expandableCell.expandingLeft = isExpandedLeft;
             expandableCell.expandingRight = isExpandedRight;
             
@@ -578,21 +582,22 @@ CGFloat const kDefaultCellHeight = 44.0f;
     if ([cell respondsToSelector:@selector(isExpandable)])
     {
         
+        NSLog(@"self.expandableCells = %@",self.expandableCells);
+        
         NSLog(@"------------------------- BEFORE -");
         NSLog(@"expandingLeft: %d",cell.isExpandingLeft);
         NSLog(@"expandingRight: %d",cell.isExpandingRight);
-        NSLog(@"expandedRight: %d",cell.expandedRight);
-        NSLog(@"expandedLeft: %d",cell.expandedLeft);
+      
         
         if (cell.isExpandable)
         {
             // Check if left or right expanded based on objectIndex being odd or even
             if (objectIndex % 2) { // odd
-                cell.expandingRight = !cell.isExpandingRight;
+                cell.expandingRight = 1;
                 cell.expandingLeft = 0;
             }
             else { // even
-                cell.expandingLeft = !cell.isExpandingLeft;
+                cell.expandingLeft = 1;
                 cell.expandingRight = 0;
             }
             
@@ -600,8 +605,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
             NSLog(@"--------------------------");
             NSLog(@"expandingLeft: %d",cell.isExpandingLeft);
             NSLog(@"expandingRight: %d",cell.isExpandingRight);
-            NSLog(@"expandedRight: %d",cell.expandedRight);
-            NSLog(@"expandedLeft: %d",cell.expandedLeft);
+           
             
             
             
@@ -663,16 +667,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
                 }
                 // User clicked on an open cell, close it
-                else
-                {
-                    [self setExpandedLeft:NO forCellAtIndexPath:correspondingIndexPath];
-                    [self setExpandedRight:NO forCellAtIndexPath:correspondingIndexPath];
-                    [self beginUpdates];
-                    [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
-                    [self endUpdates];
-
-                }
-                
+                    
                 [cell accessoryViewAnimation];
             }
         }
@@ -883,13 +878,15 @@ CGFloat const kDefaultCellHeight = 44.0f;
     {
         SKSTableViewCell *cell = (SKSTableViewCell *)[self cellForRowAtIndexPath:indexPath];
 //        cell.expandingLeft = NO;
+//        cell.expandingRight = NO;
         [cell accessoryViewAnimation];
     }
+
+
     
     NSLog(@"totalExpandedIndexPaths = %@", totalExpandedIndexPaths);
     
     [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
-    
     
 }
 
