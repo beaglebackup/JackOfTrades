@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429931313.058747"
+            timestampString = "430259898.567358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "821"
-            endingLineNumber = "821"
+            startingLineNumber = "826"
+            endingLineNumber = "826"
             landmarkName = "-collapseCurrentlyExpandedIndexPathsLeft"
             landmarkType = "5">
          </BreakpointContent>
@@ -196,12 +196,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429931313.058747"
+            timestampString = "430259898.567358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "859"
-            endingLineNumber = "859"
-            landmarkName = "-collapseCurrentlyExpandedIndexPathsLeft"
+            startingLineNumber = "864"
+            endingLineNumber = "864"
+            landmarkName = "-collapseCurrentlyExpandedIndexPathsRight"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -224,16 +224,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
-            timestampString = "429931313.058747"
+            timestampString = "430259898.567358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "833"
-            endingLineNumber = "833"
+            startingLineNumber = "838"
+            endingLineNumber = "838"
             landmarkName = "-collapseCurrentlyExpandedIndexPathsLeft"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JackOfTrades/SKSTableView/SKSTableView.m"
+            timestampString = "430259895.005317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "784"
+            endingLineNumber = "784"
+            landmarkName = "-correspondingIndexPathForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
