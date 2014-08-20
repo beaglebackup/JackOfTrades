@@ -136,7 +136,6 @@
     }
     
     cell.delegate = self;
-    
     cell.backgroundColor = [UIColor colorPurple];
     
     NSInteger leftItem = indexPath.row * 2;
@@ -219,6 +218,7 @@
 
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     
     
 }

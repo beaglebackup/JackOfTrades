@@ -124,7 +124,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="typeTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="typeTableViewCell" id="evC-3X-s1g" customClass="JTTypeTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="typeTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="typeTableViewCell" id="evC-3X-s1g" customClass="JTTypeTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="328" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evC-3X-s1g" id="Itn-kL-pJN">
