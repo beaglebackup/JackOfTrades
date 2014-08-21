@@ -98,7 +98,6 @@
 #pragma mark - UITableView Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    
     return (ceil([self.objects count]/2)); // Divide by two - round up
 }
 
