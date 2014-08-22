@@ -22,6 +22,7 @@
 - (IBAction)openPortalButton:(id)sender;
 - (IBAction)openArticlesButton:(id)sender;
 - (IBAction)openIPMButton:(id)sender;
+- (IBAction)openVideosButton:(id)sender;
 
 
 

@@ -78,6 +78,9 @@
                                 <state key="normal" title="Videos">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openVideosButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="3id-2E-qUP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-1Q-yYU">
                                 <rect key="frame" x="20" y="204" width="117" height="30"/>

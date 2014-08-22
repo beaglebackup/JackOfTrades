@@ -91,11 +91,6 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)openPortalButton:(id)sender {
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.training.pestecipm.com"]];
-
-}
 
 - (IBAction)openArticlesButton:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http:pctonline.com/"];
@@ -105,7 +100,25 @@
 }
 
 - (IBAction)openIPMButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.epa.gov/opp00001/factsheets/ipm.htm/"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"IPM"];
+    [self presentModalViewController:webViewController animated:YES];
 }
 
-    
+- (IBAction)openVideosButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.youtube.com/"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Youtube"];
+    [self presentModalViewController:webViewController animated:YES];
+}
+
+
+- (IBAction)openPortalButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.training.pestecipm.com/"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Portal"];
+    [self presentModalViewController:webViewController animated:YES];
+}
+
 @end
