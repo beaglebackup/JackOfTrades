@@ -20,5 +20,9 @@
 
 - (IBAction)didTapCloseButton:(id)sender;
 - (IBAction)openPortalButton:(id)sender;
+- (IBAction)openArticlesButton:(id)sender;
+- (IBAction)openIPMButton:(id)sender;
+
+
 
 @end

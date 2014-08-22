@@ -7,6 +7,7 @@
 //
 
 #import "JTMenuViewController.h"
+#import "JTMenuWebViewController.h"
 
 @interface JTMenuViewController ()
 
@@ -28,6 +29,45 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+//ARTICLES
+- (void)viewDidUnload
+{
+    [self setArticlesButton:nil];
+    [super viewDidUnload];
+    //release any retained subviews of the main view.
+    //e.g. self.myOutlet = nil;
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+}
+
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    //return YES for supported orientations
+//    //return (interfaceOrientation != UIInterfaceOrientationPortraitUpSideDown);
+//}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -56,4 +96,16 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.training.pestecipm.com"]];
 
 }
+
+- (IBAction)openArticlesButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http:pctonline.com/"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"PCT Online"];
+    [self presentModalViewController:webViewController animated:YES];
+}
+
+- (IBAction)openIPMButton:(id)sender {
+}
+
+    
 @end
