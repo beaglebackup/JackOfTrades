@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8406E8E3199DC720009EE857 /* JTTypeExpandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E8E2199DC720009EE857 /* JTTypeExpandController.m */; };
+		8406E8E6199DC785009EE857 /* JTTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E8E5199DC785009EE857 /* JTTypeTableViewCell.m */; };
+		8406E909199EF1C4009EE857 /* JTTypeSegueHackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */; };
+		840D3B8B199DC443002AC8D1 /* arrow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7B199DC443002AC8D1 /* arrow-icon.png */; };
+		840D3B8C199DC443002AC8D1 /* arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7C199DC443002AC8D1 /* arrow-icon@2x.png */; };
+		840D3B8D199DC443002AC8D1 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7D199DC443002AC8D1 /* checkmark.png */; };
+		840D3B8E199DC443002AC8D1 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840D3B7E199DC443002AC8D1 /* checkmark@2x.png */; };
+		840D3B8F199DC444002AC8D1 /* JKExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B80199DC443002AC8D1 /* JKExpandTableView.m */; };
+		840D3B90199DC444002AC8D1 /* JKMultiSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B82199DC443002AC8D1 /* JKMultiSelectSubTableViewCell.m */; };
+		840D3B91199DC444002AC8D1 /* JKParentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B84199DC443002AC8D1 /* JKParentTableViewCell.m */; };
+		840D3B92199DC444002AC8D1 /* JKSingleSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B86199DC443002AC8D1 /* JKSingleSelectSubTableViewCell.m */; };
+		840D3B93199DC444002AC8D1 /* JKSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B88199DC443002AC8D1 /* JKSubTableViewCell.m */; };
+		840D3B94199DC444002AC8D1 /* JKSubTableViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B8A199DC443002AC8D1 /* JKSubTableViewCellCell.m */; };
+		84256D5119A005D000B8752D /* JTTypeExpandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84256D5019A005D000B8752D /* JTTypeExpandButton.m */; };
+		84256D5519A013B200B8752D /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84256D5419A013B200B8752D /* UIColor+Extensions.m */; };
 		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
 		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
@@ -24,6 +39,12 @@
 		8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC85196B0917004F3422 /* JTTypeCollectionCell.m */; };
 		8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */; };
 		8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC8B196B1683004F3422 /* JTSubtypeButton.m */; };
+		84C2EA1A19A56F0A00F067E6 /* expandableImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2EA0919A56F0A00F067E6 /* expandableImage.png */; };
+		84C2EA1B19A56F0A00F067E6 /* expandableImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2EA0A19A56F0A00F067E6 /* expandableImage@2x.png */; };
+		84C2EA1E19A56F0A00F067E6 /* SKSTableView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C2EA0D19A56F0A00F067E6 /* SKSTableView-Info.plist */; };
+		84C2EA1F19A56F0A00F067E6 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EA1019A56F0A00F067E6 /* SKSTableView.m */; };
+		84C2EA2019A56F0A00F067E6 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EA1219A56F0A00F067E6 /* SKSTableViewCell.m */; };
+		84C2EA2119A56F0A00F067E6 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EA1419A56F0A00F067E6 /* SKSTableViewCellIndicator.m */; };
 		84D42832196C6E74005B2F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D42831196C6E74005B2F8E /* Parse.framework */; };
 		84D4287C196DCB04005B2F8E /* JTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4287B196DCB04005B2F8E /* JTMenuViewController.m */; };
 		84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD52C719856D160061A528 /* JTSubDetailsViewController.m */; };
@@ -53,7 +74,6 @@
 		EFBB46D1193022B9002EECBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B3193022B9002EECBD /* UIKit.framework */; };
 		EFBB46D9193022BA002EECBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46D7193022BA002EECBD /* InfoPlist.strings */; };
 		EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */; };
-		EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46E4193054D6002EECBD /* IMG_0615.JPG */; };
 		EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +88,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8406E8E1199DC720009EE857 /* JTTypeExpandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeExpandController.h; sourceTree = "<group>"; };
+		8406E8E2199DC720009EE857 /* JTTypeExpandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeExpandController.m; sourceTree = "<group>"; };
+		8406E8E4199DC785009EE857 /* JTTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeTableViewCell.h; sourceTree = "<group>"; };
+		8406E8E5199DC785009EE857 /* JTTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeTableViewCell.m; sourceTree = "<group>"; };
+		8406E907199EF1C4009EE857 /* JTTypeSegueHackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeSegueHackButton.h; sourceTree = "<group>"; };
+		8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeSegueHackButton.m; sourceTree = "<group>"; };
+		840D3B7B199DC443002AC8D1 /* arrow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon.png"; sourceTree = "<group>"; };
+		840D3B7C199DC443002AC8D1 /* arrow-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon@2x.png"; sourceTree = "<group>"; };
+		840D3B7D199DC443002AC8D1 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		840D3B7E199DC443002AC8D1 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		840D3B7F199DC443002AC8D1 /* JKExpandTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKExpandTableView.h; sourceTree = "<group>"; };
+		840D3B80199DC443002AC8D1 /* JKExpandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKExpandTableView.m; sourceTree = "<group>"; };
+		840D3B81199DC443002AC8D1 /* JKMultiSelectSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMultiSelectSubTableViewCell.h; sourceTree = "<group>"; };
+		840D3B82199DC443002AC8D1 /* JKMultiSelectSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMultiSelectSubTableViewCell.m; sourceTree = "<group>"; };
+		840D3B83199DC443002AC8D1 /* JKParentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKParentTableViewCell.h; sourceTree = "<group>"; };
+		840D3B84199DC443002AC8D1 /* JKParentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKParentTableViewCell.m; sourceTree = "<group>"; };
+		840D3B85199DC443002AC8D1 /* JKSingleSelectSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSingleSelectSubTableViewCell.h; sourceTree = "<group>"; };
+		840D3B86199DC443002AC8D1 /* JKSingleSelectSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSingleSelectSubTableViewCell.m; sourceTree = "<group>"; };
+		840D3B87199DC443002AC8D1 /* JKSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTableViewCell.h; sourceTree = "<group>"; };
+		840D3B88199DC443002AC8D1 /* JKSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTableViewCell.m; sourceTree = "<group>"; };
+		840D3B89199DC443002AC8D1 /* JKSubTableViewCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTableViewCellCell.h; sourceTree = "<group>"; };
+		840D3B8A199DC443002AC8D1 /* JKSubTableViewCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTableViewCellCell.m; sourceTree = "<group>"; };
+		84256D4F19A005D000B8752D /* JTTypeExpandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeExpandButton.h; sourceTree = "<group>"; };
+		84256D5019A005D000B8752D /* JTTypeExpandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeExpandButton.m; sourceTree = "<group>"; };
+		84256D5319A013B200B8752D /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		84256D5419A013B200B8752D /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		8453F60E1963E3CD002D7661 /* JTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeButton.h; sourceTree = "<group>"; };
 		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
@@ -92,6 +138,16 @@
 		8491BC88196B1669004F3422 /* JTSubtypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeCollectionCell.m; sourceTree = "<group>"; };
 		8491BC8A196B1677004F3422 /* JTSubtypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSubtypeButton.h; sourceTree = "<group>"; };
 		8491BC8B196B1683004F3422 /* JTSubtypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubtypeButton.m; sourceTree = "<group>"; };
+		84C2EA0919A56F0A00F067E6 /* expandableImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandableImage.png; sourceTree = "<group>"; };
+		84C2EA0A19A56F0A00F067E6 /* expandableImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expandableImage@2x.png"; sourceTree = "<group>"; };
+		84C2EA0D19A56F0A00F067E6 /* SKSTableView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SKSTableView-Info.plist"; sourceTree = "<group>"; };
+		84C2EA0E19A56F0A00F067E6 /* SKSTableView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKSTableView-Prefix.pch"; sourceTree = "<group>"; };
+		84C2EA0F19A56F0A00F067E6 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
+		84C2EA1019A56F0A00F067E6 /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
+		84C2EA1119A56F0A00F067E6 /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
+		84C2EA1219A56F0A00F067E6 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
+		84C2EA1319A56F0A00F067E6 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
+		84C2EA1419A56F0A00F067E6 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
 		84D42831196C6E74005B2F8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = JackOfTrades/Parse.framework; sourceTree = "<group>"; };
 		84D4287A196DCB04005B2F8E /* JTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTMenuViewController.h; sourceTree = "<group>"; };
 		84D4287B196DCB04005B2F8E /* JTMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTMenuViewController.m; sourceTree = "<group>"; };
@@ -140,7 +196,6 @@
 		EFBB46D6193022BA002EECBD /* JackOfTradesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JackOfTradesTests-Info.plist"; sourceTree = "<group>"; };
 		EFBB46D8193022BA002EECBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackOfTradesTests.m; sourceTree = "<group>"; };
-		EFBB46E4193054D6002EECBD /* IMG_0615.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0615.JPG; sourceTree = SOURCE_ROOT; };
 		EFBB46E619305AC7002EECBD /* JTDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDetailsViewController.h; sourceTree = "<group>"; };
 		EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,9 +235,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8406E8E0199DC6F4009EE857 /* TypeViewController - Expand */ = {
+			isa = PBXGroup;
+			children = (
+				8406E8E1199DC720009EE857 /* JTTypeExpandController.h */,
+				8406E8E2199DC720009EE857 /* JTTypeExpandController.m */,
+				8406E8E4199DC785009EE857 /* JTTypeTableViewCell.h */,
+				8406E907199EF1C4009EE857 /* JTTypeSegueHackButton.h */,
+				8406E908199EF1C4009EE857 /* JTTypeSegueHackButton.m */,
+				8406E8E5199DC785009EE857 /* JTTypeTableViewCell.m */,
+				84256D4F19A005D000B8752D /* JTTypeExpandButton.h */,
+				84256D5019A005D000B8752D /* JTTypeExpandButton.m */,
+			);
+			name = "TypeViewController - Expand";
+			sourceTree = "<group>";
+		};
+		840D3B78199DC404002AC8D1 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				84C2EA0419A56F0A00F067E6 /* SKSTableView */,
+				840D3B79199DC443002AC8D1 /* ExpandTableView */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		840D3B79199DC443002AC8D1 /* ExpandTableView */ = {
+			isa = PBXGroup;
+			children = (
+				840D3B7A199DC443002AC8D1 /* img */,
+				840D3B7F199DC443002AC8D1 /* JKExpandTableView.h */,
+				840D3B80199DC443002AC8D1 /* JKExpandTableView.m */,
+				840D3B81199DC443002AC8D1 /* JKMultiSelectSubTableViewCell.h */,
+				840D3B82199DC443002AC8D1 /* JKMultiSelectSubTableViewCell.m */,
+				840D3B83199DC443002AC8D1 /* JKParentTableViewCell.h */,
+				840D3B84199DC443002AC8D1 /* JKParentTableViewCell.m */,
+				840D3B85199DC443002AC8D1 /* JKSingleSelectSubTableViewCell.h */,
+				840D3B86199DC443002AC8D1 /* JKSingleSelectSubTableViewCell.m */,
+				840D3B87199DC443002AC8D1 /* JKSubTableViewCell.h */,
+				840D3B88199DC443002AC8D1 /* JKSubTableViewCell.m */,
+				840D3B89199DC443002AC8D1 /* JKSubTableViewCellCell.h */,
+				840D3B8A199DC443002AC8D1 /* JKSubTableViewCellCell.m */,
+			);
+			name = ExpandTableView;
+			path = Externals/ExpandTableView;
+			sourceTree = SOURCE_ROOT;
+		};
+		840D3B7A199DC443002AC8D1 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				840D3B7B199DC443002AC8D1 /* arrow-icon.png */,
+				840D3B7C199DC443002AC8D1 /* arrow-icon@2x.png */,
+				840D3B7D199DC443002AC8D1 /* checkmark.png */,
+				840D3B7E199DC443002AC8D1 /* checkmark@2x.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		84256D5219A0139A00B8752D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				84256D5319A013B200B8752D /* UIColor+Extensions.h */,
+				84256D5419A013B200B8752D /* UIColor+Extensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		8453F6081963D6E0002D7661 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8406E8E0199DC6F4009EE857 /* TypeViewController - Expand */,
 				84DD52C519856CEF0061A528 /* SubDetailsViewController */,
 				8453F6111963E3EE002D7661 /* TypeViewController */,
 				8453F60D1963D90C002D7661 /* DetailsViewController */,
@@ -285,6 +406,23 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		84C2EA0419A56F0A00F067E6 /* SKSTableView */ = {
+			isa = PBXGroup;
+			children = (
+				84C2EA0919A56F0A00F067E6 /* expandableImage.png */,
+				84C2EA0A19A56F0A00F067E6 /* expandableImage@2x.png */,
+				84C2EA0D19A56F0A00F067E6 /* SKSTableView-Info.plist */,
+				84C2EA0E19A56F0A00F067E6 /* SKSTableView-Prefix.pch */,
+				84C2EA0F19A56F0A00F067E6 /* SKSTableView.h */,
+				84C2EA1019A56F0A00F067E6 /* SKSTableView.m */,
+				84C2EA1119A56F0A00F067E6 /* SKSTableViewCell.h */,
+				84C2EA1219A56F0A00F067E6 /* SKSTableViewCell.m */,
+				84C2EA1319A56F0A00F067E6 /* SKSTableViewCellIndicator.h */,
+				84C2EA1419A56F0A00F067E6 /* SKSTableViewCellIndicator.m */,
+			);
+			path = SKSTableView;
+			sourceTree = "<group>";
+		};
 		84DD52C519856CEF0061A528 /* SubDetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +476,8 @@
 		EFBB46B5193022B9002EECBD /* JackOfTrades */ = {
 			isa = PBXGroup;
 			children = (
+				84256D5219A0139A00B8752D /* Categories */,
+				840D3B78199DC404002AC8D1 /* Externals */,
 				8491BC60196AFDA2004F3422 /* Data */,
 				8453F60A1963D6F0002D7661 /* Managers */,
 				8453F6091963D6E6002D7661 /* Views */,
@@ -345,7 +485,6 @@
 				EFBB46BE193022B9002EECBD /* AppDelegate.h */,
 				EFBB46BF193022B9002EECBD /* AppDelegate.m */,
 				EFBB46C1193022B9002EECBD /* Main.storyboard */,
-				EFBB46E4193054D6002EECBD /* IMG_0615.JPG */,
 				EFBB46C7193022B9002EECBD /* Images.xcassets */,
 				EFBB46B6193022B9002EECBD /* Supporting Files */,
 			);
@@ -461,9 +600,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFBB46C8193022B9002EECBD /* Images.xcassets in Resources */,
+				840D3B8B199DC443002AC8D1 /* arrow-icon.png in Resources */,
 				EFBB46BA193022B9002EECBD /* InfoPlist.strings in Resources */,
+				840D3B8D199DC443002AC8D1 /* checkmark.png in Resources */,
+				840D3B8C199DC443002AC8D1 /* arrow-icon@2x.png in Resources */,
 				EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */,
-				EFBB46E5193054D6002EECBD /* IMG_0615.JPG in Resources */,
+				84C2EA1B19A56F0A00F067E6 /* expandableImage@2x.png in Resources */,
+				840D3B8E199DC443002AC8D1 /* checkmark@2x.png in Resources */,
+				84C2EA1A19A56F0A00F067E6 /* expandableImage.png in Resources */,
+				84C2EA1E19A56F0A00F067E6 /* SKSTableView-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +627,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D3B94199DC444002AC8D1 /* JKSubTableViewCellCell.m in Sources */,
+				840D3B91199DC444002AC8D1 /* JKParentTableViewCell.m in Sources */,
+				840D3B8F199DC444002AC8D1 /* JKExpandTableView.m in Sources */,
 				EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */,
 				8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */,
 				EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */,
@@ -491,22 +639,33 @@
 				84D4287C196DCB04005B2F8E /* JTMenuViewController.m in Sources */,
 				EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */,
 				EFBB46C6193022B9002EECBD /* JTTypeController.m in Sources */,
+				84256D5519A013B200B8752D /* UIColor+Extensions.m in Sources */,
 				EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */,
 				EF8FF5691963A21800991CFF /* MothsViewController.m in Sources */,
 				8491BC7A196B0079004F3422 /* Subtype.m in Sources */,
 				EF8FF57E1963AC6300991CFF /* StingingViewController.m in Sources */,
 				EF8FF56C1963A32800991CFF /* PantryViewController.m in Sources */,
+				840D3B90199DC444002AC8D1 /* JKMultiSelectSubTableViewCell.m in Sources */,
 				8491BC80196B0505004F3422 /* JTDatabaseManager.m in Sources */,
+				840D3B92199DC444002AC8D1 /* JKSingleSelectSubTableViewCell.m in Sources */,
 				8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */,
 				8491BC63196AFDC3004F3422 /* Type.m in Sources */,
 				8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */,
+				8406E8E6199DC785009EE857 /* JTTypeTableViewCell.m in Sources */,
+				8406E8E3199DC720009EE857 /* JTTypeExpandController.m in Sources */,
 				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
+				84C2EA1F19A56F0A00F067E6 /* SKSTableView.m in Sources */,
 				EF8FF5781963AC3500991CFF /* OccasionalViewController.m in Sources */,
+				8406E909199EF1C4009EE857 /* JTTypeSegueHackButton.m in Sources */,
 				8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */,
 				84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */,
 				EF8FF57B1963AC4800991CFF /* SpidersViewController.m in Sources */,
 				EFBB46C0193022B9002EECBD /* AppDelegate.m in Sources */,
 				EFBB46BC193022B9002EECBD /* main.m in Sources */,
+				84C2EA2019A56F0A00F067E6 /* SKSTableViewCell.m in Sources */,
+				840D3B93199DC444002AC8D1 /* JKSubTableViewCell.m in Sources */,
+				84256D5119A005D000B8752D /* JTTypeExpandButton.m in Sources */,
+				84C2EA2119A56F0A00F067E6 /* SKSTableViewCellIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,40 +1,29 @@
 //
 //  AppDelegate.m
-//  JackOfTrades
+//  SKSTableView
 //
-//  Created by Gabriel on 5/23/14.
-//  Copyright (c) 2014 Gabriel. All rights reserved.
+//  Created by Sakkaras on 26/12/13.
+//  Copyright (c) 2013 Sakkaras. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "Type.h"
-#import "Subtype.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    ViewController *controller = [[ViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    self.window.rootViewController = navController;
     
-    // Register Parse data subclasses
-    [Type registerSubclass];
-    [Subtype registerSubclass];
-    
-    
-    // Initialize Parse
-    [Parse setApplicationId:@"qnCDYVRzw5ysXZGS7r25ntqsFq5HGCyWIG7CtGHO"
-                  clientKey:@"EodWjT2NWMIKDq2I98FcqefhDv9Uvc9wDS5v3YlA"];
-    
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-    
-    // Admin
-//    [JTDatabaseManager addSubtypesToTypes];
-//    [JTDatabaseManager moveSubtypeTextToClass];
-    
-    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

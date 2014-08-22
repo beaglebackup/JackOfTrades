@@ -11,7 +11,8 @@
 @implementation Type
 
 @dynamic name;
-
+@dynamic thumb;
+@dynamic subtypes;
 
 
 + (NSString *)parseClassName {
@@ -20,6 +21,11 @@
 
 + (NSString *)nameKey {
     return @"name";
+}
+
+
++ (NSString *)subtypesKey {
+    return @"subtypes";
 }
 
 

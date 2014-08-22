@@ -32,6 +32,11 @@
     return @"parentString";
 }
 
++ (NSString *)textPointerKey {
+    return @"textPointer";
+}
+
+
 
 
 @end
