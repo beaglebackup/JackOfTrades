@@ -24,13 +24,15 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-//ARTICLES
+//Web Browser
 - (void)viewDidUnload
 {
     [self setArticlesButton:nil];
@@ -93,7 +95,7 @@
 
 
 - (IBAction)openArticlesButton:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http:pctonline.com/"];
+    NSURL *url = [NSURL URLWithString:@"http://www.pctonline.com/"];
     JTMenuWebViewController *webViewController =
     [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"PCT Online"];
     [self presentModalViewController:webViewController animated:YES];

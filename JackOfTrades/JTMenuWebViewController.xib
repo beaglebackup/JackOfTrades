@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JTMenuWebViewController">
             <connections>
+                <outlet property="back" destination="mjz-oM-vRX" id="CLm-er-lt8"/>
+                <outlet property="forward" destination="34z-OM-M0N" id="wEB-Bp-RSi"/>
+                <outlet property="refresh" destination="blY-of-XSf" id="8IF-Mc-Pjr"/>
+                <outlet property="stop" destination="km6-Py-Ckr" id="uNQ-ML-iNF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webTitle" destination="yxh-vk-deV" id="3zk-ix-Onr"/>
                 <outlet property="webView" destination="4ml-9V-hM8" id="qfO-ie-o79"/>
@@ -34,6 +38,35 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-Ai-iNw">
+                    <rect key="frame" x="0.0" y="519" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="rewind" id="mjz-oM-vRX">
+                            <connections>
+                                <action selector="goBack" destination="4ml-9V-hM8" id="68e-Tg-gwR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eut-PQ-6UJ"/>
+                        <barButtonItem systemItem="refresh" id="blY-of-XSf">
+                            <connections>
+                                <action selector="reload" destination="4ml-9V-hM8" id="VnO-wy-HTZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8j0-g1-mja"/>
+                        <barButtonItem systemItem="stop" id="km6-Py-Ckr">
+                            <connections>
+                                <action selector="stopLoading" destination="4ml-9V-hM8" id="ZiX-zp-ZlN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xUS-VQ-gpB"/>
+                        <barButtonItem systemItem="fastForward" id="34z-OM-M0N">
+                            <connections>
+                                <action selector="goForward" destination="4ml-9V-hM8" id="OKE-QQ-7Ce"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

@@ -33,9 +33,19 @@
     
 }
 
+
+- (void)updateButtons
+{
+    self.forward.enabled = webView.canGoForward;
+    self.back.enabled = webView.canGoBack;
+    self.stop.enabled = webView.loading;
+}
+
+
 - (id)initWithURL:(NSURL *)url {
     return [self initWithURL:url andTitle:nil];
 }
+
 
 
 - (void)viewDidLoad
@@ -44,8 +54,14 @@
     webTitle.title = theTitle;
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:theURL];
     [webView loadRequest:requestObject];
+    // Do any additional setup after loading the view, typically from a nib.
+    webView.delegate = self;
+    //[self loadRequestFromString:@"http://iosdeveloperzone.com"];
+    
     
 }
+
+
 
 -(IBAction) done:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
@@ -60,11 +76,12 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)wv{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self updateButtons];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)wv{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    
+    [self updateButtons];
 }
 
 - (void)webView:(UIWebView *)wv didFailLoadWithError:(NSError *)error {
@@ -75,11 +92,25 @@
 //   UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:errorTitle
 //                      message:errorString delgate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
 //  [errorView show];
+    [self updateButtons];
 }
+
 
 -(void)didPresentAlertView:(UIAlertView *)alertView {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+
+
+- (void)loadRequestFromString:(NSString*)urlString
+{
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+   [webView loadRequest:urlRequest];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
