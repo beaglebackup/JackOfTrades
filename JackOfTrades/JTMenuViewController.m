@@ -115,6 +115,29 @@
     [self presentModalViewController:webViewController animated:YES];
 }
 
+- (IBAction)openSPCBButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.pestboard.ca.gov/"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"SPCB"];
+    [self presentModalViewController:webViewController animated:YES];
+    
+}
+
+- (IBAction)openFeedBackButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"https://docs.google.com/a/pestecipm.com/forms/d/1e9nQm3BSte7pIZWEJlrUaXXAB3XO4Qst75MUFaLbV_s/viewform"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Feed Back"];
+    [self presentModalViewController:webViewController animated:YES];
+    
+}
+
+- (IBAction)openPestecButton:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.pestec.com//"];
+    JTMenuWebViewController *webViewController =
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Pestec"];
+    [self presentModalViewController:webViewController animated:YES];
+}
+
 
 - (IBAction)openPortalButton:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://www.training.pestecipm.com/"];

@@ -82,7 +82,34 @@
 - (void)webViewDidFinishLoad:(UIWebView *)wv{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self updateButtons];
+    [webView stringByEvaluatingJavaScriptFromString:
+     @"var tags = document.getElementsByTagName('a')];"
+     "for(var i=0; i < tags.length; i++) {"
+         "var tag = tags[i];"
+         "var t = tag.getAttribute('target');"
+         "var h = tag.getAttribute('href');"
+         "if(/* check the target and href */) {"
+             "tag.setAttribute('target', '');"
+     "tag.setAttribute('href', /* make a special url from href */);"];
 }
+
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+//        if(navigationType == UIWebViewNavigationTypeLinkClicked || navigationType == UIWebViewNavigationTypeFormSubmitted) {
+//            NSURL *url = [request URL];
+//            if(/* check the url is special or not */) {
+//                NSString *urlstr = /* convert special url to normal url */;
+//                NSMutableURLRequest *req = [request mutableCopyWithZone:nil];
+//                [req setURL:[NSURL URLWithString:urlstr]];
+//                
+//                if(/* is popup window close? */) {
+//                    /* open a popup window */
+//                }
+//                [popupWebView loadRequest:req];
+//                return NO;
+//            }
+//        }
+//        return YES;
+//}
 
 - (void)webView:(UIWebView *)wv didFailLoadWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

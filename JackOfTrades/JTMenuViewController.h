@@ -16,6 +16,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *videoButton;
 @property (strong, nonatomic) IBOutlet UIButton *feedbackButton;
 @property (strong, nonatomic) IBOutlet UIButton *portalButton;
+@property (strong, nonatomic) IBOutlet UIButton *pestecButton;
+@property (strong, nonatomic) IBOutlet UIButton *spcbButton;
+
+
 
 
 - (IBAction)didTapCloseButton:(id)sender;
@@ -23,6 +27,10 @@
 - (IBAction)openArticlesButton:(id)sender;
 - (IBAction)openIPMButton:(id)sender;
 - (IBAction)openVideosButton:(id)sender;
+- (IBAction)openSPCBButton:(id)sender;
+- (IBAction)openFeedBackButton:(id)sender;
+- (IBAction)openPestecButton:(id)sender;
+
 
 
 
