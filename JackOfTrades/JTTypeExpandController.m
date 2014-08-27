@@ -62,9 +62,28 @@
         }
         
         else {
-            self.objects = types;
             
-//            NSLog(@"self.object.coutn = %@",self.objects.count);
+            
+            // Order subtypes
+            __block NSMutableArray* orderedTypes = [[NSMutableArray alloc] initWithCapacity:[types count]];
+            
+            [types enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            
+                Type* type = (Type*)obj;
+                NSArray* subtypes = type.subtypes;                
+                NSArray* orderedSubtypes = [subtypes sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                    NSString *first = [(Subtype*)a name];
+                    NSString *second = [(Subtype*)b name];
+                    return [first compare:second];
+                }];
+                
+                type.subtypes = orderedSubtypes;
+                
+                [orderedTypes insertObject:type atIndex:idx];
+                
+            }];
+            
+            self.objects = orderedTypes;
             
             [self objectsDidLoad:error];
         }
@@ -76,12 +95,8 @@
     
     [self.activityIndicator stopAnimating];
     
-    
     // Set the tableVew delegate
-//    self.typeExpandTableView.delegate = self;
-//    self.typeExpandTableView.dataSource = self;
     self.typeExpandTableView.SKSTableViewDelegate = self;
-
     
     [self.typeExpandTableView reloadData];
     
@@ -101,17 +116,11 @@
     return (ceil([self.objects count]/2)); // Divide by two - round up
 }
 
-//- (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 1;
-////    return [self.contents[indexPath.section][indexPath.row] count] - 1;
-//}
+
 
 - (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtObjectIndex:(NSInteger)objectIndex
 {
     Type* typeObject = (Type*)self.objects[objectIndex];
-    
-    NSLog(@"typeObject.subtypes.count = %d",typeObject.subtypes.count);
     
     return typeObject.subtypes.count;
 }
@@ -198,9 +207,6 @@
     
     cell.tag = objectIndex;
     
-    NSLog(@"indexPath.row = %d",indexPath.row);
-    NSLog(@"indexPath.row = %d",indexPath.subRow);
-
     
     Type* type = self.objects[objectIndex];
     Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
@@ -218,21 +224,15 @@
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
+
 }
 
 - (void)tableView:(SKSTableView *)tableView didSelectSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Section: %d, Row:%d, Subrow:%d", indexPath.section, indexPath.row, indexPath.subRow);
     
     // Get the Type (from self.objects)
-    
     Type* type = self.objects[selectedObject];
     
-  
-    NSLog(@"type.name = %@",type.name);
-
     Subtype* subtype = type.subtypes[indexPath.subRow-1]; // FIXME: Why -1?
     
     JTTypeSegueHackButton* button = [[JTTypeSegueHackButton alloc] init];
@@ -249,17 +249,6 @@
 
 
 #pragma mark - Navigation
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    UIButton* button = (UIButton*)sender;
-//    
-//    if ([[segue identifier] isEqualToString:@"typeToSubtype"])
-//    {
-//        JTSubtypeViewController *subtypeVC = [segue destinationViewController];
-//        subtypeVC.typeName = button.titleLabel.text;
-//    }
-//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -284,9 +273,6 @@
     
     [self.typeExpandTableView expandCell:typeCell atIndexPath:indexPath forObjectIndex:button.tag];
 
-    
-//    [self performSegueWithIdentifier:@"typeToSubtype" sender:sender];
-    
     
 }
 
