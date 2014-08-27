@@ -40,13 +40,18 @@
     self.title = @"I am Gabe";
     
     
-    // Back button
+    // Hide back button for this view
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationItem setBackBarButtonItem:nil];
+    
+    
+    // Back button for child view
     UIBarButtonItem *backButton =
     [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                      style:UIBarButtonItemStylePlain
                                     target:nil
                                     action:nil];
-    [[self navigationItem] setBackBarButtonItem:backButton];
+    [self.navigationItem setBackBarButtonItem:backButton];
 
 
     

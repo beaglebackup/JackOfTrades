@@ -22,6 +22,13 @@
 		840D3B94199DC444002AC8D1 /* JKSubTableViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D3B8A199DC443002AC8D1 /* JKSubTableViewCellCell.m */; };
 		84256D5119A005D000B8752D /* JTTypeExpandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84256D5019A005D000B8752D /* JTTypeExpandButton.m */; };
 		84256D5519A013B200B8752D /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84256D5419A013B200B8752D /* UIColor+Extensions.m */; };
+		8431BBEA19AD5E6C0080F84C /* JTWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBE519AD5E6C0080F84C /* JTWelcomeViewController.m */; };
+		8431BBEB19AD5E6C0080F84C /* JTLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBE719AD5E6C0080F84C /* JTLogInViewController.m */; };
+		8431BBEC19AD5E6C0080F84C /* JTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBE919AD5E6C0080F84C /* JTSignUpViewController.m */; };
+		8431BBEF19AD60F40080F84C /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBEE19AD60F40080F84C /* UIImage+Extensions.m */; };
+		8431BBF219AE4A720080F84C /* JTUIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBF119AE4A720080F84C /* JTUIConstants.m */; };
+		8431BBF419AE4E5C0080F84C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8431BBF319AE4E5C0080F84C /* Accounts.framework */; };
+		8431BBF619AE4EA70080F84C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8431BBF519AE4EA70080F84C /* Social.framework */; };
 		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
 		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
@@ -114,6 +121,18 @@
 		84256D5019A005D000B8752D /* JTTypeExpandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeExpandButton.m; sourceTree = "<group>"; };
 		84256D5319A013B200B8752D /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		84256D5419A013B200B8752D /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		8431BBE419AD5E6C0080F84C /* JTWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTWelcomeViewController.h; sourceTree = "<group>"; };
+		8431BBE519AD5E6C0080F84C /* JTWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTWelcomeViewController.m; sourceTree = "<group>"; };
+		8431BBE619AD5E6C0080F84C /* JTLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLogInViewController.h; sourceTree = "<group>"; };
+		8431BBE719AD5E6C0080F84C /* JTLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLogInViewController.m; sourceTree = "<group>"; };
+		8431BBE819AD5E6C0080F84C /* JTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSignUpViewController.h; sourceTree = "<group>"; };
+		8431BBE919AD5E6C0080F84C /* JTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSignUpViewController.m; sourceTree = "<group>"; };
+		8431BBED19AD60F40080F84C /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		8431BBEE19AD60F40080F84C /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		8431BBF019AE4A720080F84C /* JTUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTUIConstants.h; sourceTree = "<group>"; };
+		8431BBF119AE4A720080F84C /* JTUIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTUIConstants.m; sourceTree = "<group>"; };
+		8431BBF319AE4E5C0080F84C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		8431BBF519AE4EA70080F84C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8453F60E1963E3CD002D7661 /* JTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeButton.h; sourceTree = "<group>"; };
 		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
@@ -205,6 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8431BBF619AE4EA70080F84C /* Social.framework in Frameworks */,
+				8431BBF419AE4E5C0080F84C /* Accounts.framework in Frameworks */,
 				8491BC77196AFF2E004F3422 /* SystemConfiguration.framework in Frameworks */,
 				8491BC75196AFF26004F3422 /* StoreKit.framework in Frameworks */,
 				8491BC73196AFF21004F3422 /* Security.framework in Frameworks */,
@@ -294,15 +315,31 @@
 		84256D5219A0139A00B8752D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8431BBED19AD60F40080F84C /* UIImage+Extensions.h */,
+				8431BBEE19AD60F40080F84C /* UIImage+Extensions.m */,
 				84256D5319A013B200B8752D /* UIColor+Extensions.h */,
 				84256D5419A013B200B8752D /* UIColor+Extensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		8431BBE319AD5E000080F84C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8431BBE419AD5E6C0080F84C /* JTWelcomeViewController.h */,
+				8431BBE519AD5E6C0080F84C /* JTWelcomeViewController.m */,
+				8431BBE619AD5E6C0080F84C /* JTLogInViewController.h */,
+				8431BBE719AD5E6C0080F84C /* JTLogInViewController.m */,
+				8431BBE819AD5E6C0080F84C /* JTSignUpViewController.h */,
+				8431BBE919AD5E6C0080F84C /* JTSignUpViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		8453F6081963D6E0002D7661 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8431BBE319AD5E000080F84C /* Login */,
 				8406E8E0199DC6F4009EE857 /* TypeViewController - Expand */,
 				84DD52C519856CEF0061A528 /* SubDetailsViewController */,
 				8453F6111963E3EE002D7661 /* TypeViewController */,
@@ -454,6 +491,8 @@
 		EFBB46AE193022B9002EECBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8431BBF519AE4EA70080F84C /* Social.framework */,
+				8431BBF319AE4E5C0080F84C /* Accounts.framework */,
 				84D42831196C6E74005B2F8E /* Parse.framework */,
 				8491BC76196AFF2E004F3422 /* SystemConfiguration.framework */,
 				8491BC74196AFF26004F3422 /* StoreKit.framework */,
@@ -487,6 +526,8 @@
 				EFBB46C1193022B9002EECBD /* Main.storyboard */,
 				EFBB46C7193022B9002EECBD /* Images.xcassets */,
 				EFBB46B6193022B9002EECBD /* Supporting Files */,
+				8431BBF019AE4A720080F84C /* JTUIConstants.h */,
+				8431BBF119AE4A720080F84C /* JTUIConstants.m */,
 			);
 			path = JackOfTrades;
 			sourceTree = "<group>";
@@ -629,10 +670,12 @@
 			files = (
 				840D3B94199DC444002AC8D1 /* JKSubTableViewCellCell.m in Sources */,
 				840D3B91199DC444002AC8D1 /* JKParentTableViewCell.m in Sources */,
+				8431BBEC19AD5E6C0080F84C /* JTSignUpViewController.m in Sources */,
 				840D3B8F199DC444002AC8D1 /* JKExpandTableView.m in Sources */,
 				EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */,
 				8491BC86196B0917004F3422 /* JTTypeCollectionCell.m in Sources */,
 				EF86FC5E194FFDFA0059CD68 /* JTSubtypeViewController.m in Sources */,
+				8431BBEF19AD60F40080F84C /* UIImage+Extensions.m in Sources */,
 				EF8FF5661963A0E600991CFF /* FliesViewController.m in Sources */,
 				EF8FF56319639EF500991CFF /* CrittersViewController.m in Sources */,
 				84DD52E41991BCE00061A528 /* JTImageViewerViewController.m in Sources */,
@@ -640,6 +683,7 @@
 				EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */,
 				EFBB46C6193022B9002EECBD /* JTTypeController.m in Sources */,
 				84256D5519A013B200B8752D /* UIColor+Extensions.m in Sources */,
+				8431BBF219AE4A720080F84C /* JTUIConstants.m in Sources */,
 				EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */,
 				EF8FF5691963A21800991CFF /* MothsViewController.m in Sources */,
 				8491BC7A196B0079004F3422 /* Subtype.m in Sources */,
@@ -651,7 +695,9 @@
 				8491BC89196B1669004F3422 /* JTSubtypeCollectionCell.m in Sources */,
 				8491BC63196AFDC3004F3422 /* Type.m in Sources */,
 				8491BC8C196B1683004F3422 /* JTSubtypeButton.m in Sources */,
+				8431BBEB19AD5E6C0080F84C /* JTLogInViewController.m in Sources */,
 				8406E8E6199DC785009EE857 /* JTTypeTableViewCell.m in Sources */,
+				8431BBEA19AD5E6C0080F84C /* JTWelcomeViewController.m in Sources */,
 				8406E8E3199DC720009EE857 /* JTTypeExpandController.m in Sources */,
 				EF86FC611950018F0059CD68 /* BitingViewController.m in Sources */,
 				84C2EA1F19A56F0A00F067E6 /* SKSTableView.m in Sources */,

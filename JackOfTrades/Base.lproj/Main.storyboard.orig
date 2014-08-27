@@ -145,6 +145,7 @@
         <!--Type Expand Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="vXZ-lx-hvc" customClass="JTTypeExpandController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UuE-jj-Pkq"/>
@@ -238,9 +239,12 @@
                         <segue destination="mLl-7N-0Sm" kind="push" identifier="subtypeToDetail" id="X7f-Qx-MSD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="426" y="286"/>
+=======
+            <point key="canvasLocation" x="349" y="36"/>
+>>>>>>> login
         </scene>
         <!--Sub Details View Controller-->
         <scene sceneID="8Rm-XJ-per">

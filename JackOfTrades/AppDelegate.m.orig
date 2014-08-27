@@ -40,7 +40,7 @@
     
     
     self.navController = (UINavigationController*)self.window.rootViewController;
-    self.welcomeController = (JTWelcomeViewController*)[self.navController.viewControllers objectAtIndex:0];
+    self.welcomeController = (JTWelcomeViewController*)[self.navController .viewControllers  objectAtIndex:0];
 
 
     
@@ -80,6 +80,26 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+<<<<<<< HEAD
+#pragma mark - ()
+- (void) setupAppearance {
+    // Navigation bar appearance (background and title)
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:20.0f], NSFontAttributeName, nil]];
+    
+    if([UINavigationBar instancesRespondToSelector:@selector(barTintColor)]){ //iOS7
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorLightBeige]];
+    }
+    else {
+        [[UINavigationBar appearance] setBackgroundColor:[UIColor colorLightBeige]];
+
+    }
+    // Navigation bar buttons appearance
+    
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorLightBeige], NSForegroundColorAttributeName, [UIFont systemFontOfSize:18.0f], NSFontAttributeName, nil]];
+}
+
+=======
 
 #pragma mark - Login/Signup
 
@@ -167,15 +187,13 @@
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     
-    [self.welcomeController.presentedViewController dismissViewControllerAnimated:NO completion:nil];
-    
     [self userDidLogIn:user];
     
 }
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     
-//    [self.welcomeController.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+    [logInController dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -199,24 +217,8 @@
     
 }
 
-#pragma mark - ()
-- (void) setupAppearance {
-    // Navigation bar appearance (background and title)
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:20.0f], NSFontAttributeName, nil]];
-    
-    if([UINavigationBar instancesRespondToSelector:@selector(barTintColor)]){ //iOS7
-        [[UINavigationBar appearance] setBarTintColor:[UIColor colorLightBeige]];
-    }
-    else {
-        [[UINavigationBar appearance] setBackgroundColor:[UIColor colorLightBeige]];
-        
-    }
-    // Navigation bar buttons appearance
-    
-    //    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorLightBeige], NSForegroundColorAttributeName, [UIFont systemFontOfSize:18.0f], NSFontAttributeName, nil]];
-}
 
 
 
+>>>>>>> login
 @end
