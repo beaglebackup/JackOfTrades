@@ -31,7 +31,7 @@
     // Title View
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
-    [titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
 //    [titleLabel setTextColor:[UIColor colorNavBarTitle]];
     [titleLabel setText:@"Gabe's World"];
     [titleLabel sizeToFit];
@@ -58,29 +58,29 @@
     self.logInView.passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     
-    [self.logInView.signUpButton.titleLabel setFont:[UIFont systemFontOfSize:15.0f]];
+    [self.logInView.signUpButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
     [self.logInView.signUpButton setTitleEdgeInsets:UIEdgeInsetsMake( 0.0f, 10.0f, 0.0f, 0.0f)];
-    [self.logInView.signUpButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-    [self.logInView.signUpButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [self.logInView.signUpButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.logInView.signUpButton setTitleColor:[UIColor colorPurple] forState:UIControlStateSelected];
+    [self.logInView.signUpButton setTitleColor:[UIColor colorPurple] forState:UIControlStateHighlighted];
+    [self.logInView.signUpButton setTitleColor:[UIColor colorPurple] forState:UIControlStateNormal];
 
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
+    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
+    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateSelected];
+    [self.logInView.signUpButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateHighlighted];
     [self.logInView.signUpButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
     [self.logInView.signUpButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateSelected];
     [self.logInView.signUpButton.titleLabel setShadowOffset:CGSizeMake( 0.0f, 0.0f)];
     
     
     
-    [self.logInView.logInButton.titleLabel setFont:[UIFont systemFontOfSize:15.0f]];
+    [self.logInView.logInButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
     [self.logInView.logInButton setTitleEdgeInsets:UIEdgeInsetsMake( 0.0f, 10.0f, 0.0f, 0.0f)];
-    [self.logInView.logInButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.logInView.logInButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-    [self.logInView.logInButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
-    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
-    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
+    [self.logInView.logInButton setTitleColor:[UIColor colorPurple] forState:UIControlStateNormal];
+    [self.logInView.logInButton setTitleColor:[UIColor colorPurple] forState:UIControlStateSelected];
+    [self.logInView.logInButton setTitleColor:[UIColor colorPurple] forState:UIControlStateHighlighted];
+    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
+    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateSelected];
+    [self.logInView.logInButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorLavender]] forState:UIControlStateHighlighted];
     [self.logInView.logInButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal]; // Need to keep these in here to override superclass settings
     [self.logInView.logInButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateSelected];
     [self.logInView.logInButton.titleLabel setShadowOffset:CGSizeMake( 0.0f, 0.0f)];
