@@ -109,7 +109,7 @@
 }
 
 - (IBAction)openVideosButton:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://www.youtube.com/"];
+    NSURL *url = [NSURL URLWithString:@"https://www.youtube.com/channel/UCku3vXWq0mcuO2kQBWQ8NYA"];
     JTMenuWebViewController *webViewController =
     [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Youtube"];
     [self presentModalViewController:webViewController animated:YES];
