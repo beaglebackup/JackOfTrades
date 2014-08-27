@@ -66,42 +66,9 @@
     
     // Refresh current user with server side data -- checks if user is still valid and so on
     if ([PFUser currentUser]) {
-        
-        NSLog(@" 52aaew");
-        
-
+    
         [[PFUser currentUser] refreshInBackgroundWithTarget:self selector:@selector(refreshCurrentUserCallbackWithResult:error:)];
-
-        NSLog(@" after");
-
-    
     }
-        
-        
-      
-    
-}
-
-
-#pragma mark - NSNotifications
-
-
-- (void)userContinuedAsAnonymous {
-    
-
-    ///////////////////////////
-    // Save the current user
-    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-
-            
-            // User already loggid in
-            AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-            [appDel userHasLoggedIn];
-
-        }
-    }];
-    
     
 }
 
@@ -109,9 +76,6 @@
 
 
 #pragma mark - ()
-
-
-
 - (BOOL)presentLoginViewController {
     
     if (![PFUser currentUser]) {

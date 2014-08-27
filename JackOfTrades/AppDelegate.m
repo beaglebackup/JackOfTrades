@@ -88,7 +88,7 @@
     
     if (withDismissButton == YES) {
         
-        loginViewController.fields = PFLogInFieldsFacebook |
+        loginViewController.fields =
         PFLogInFieldsUsernameAndPassword
         | PFLogInFieldsLogInButton
         | PFLogInFieldsSignUpButton
@@ -97,7 +97,7 @@
         
     } else {
         
-        loginViewController.fields = PFLogInFieldsFacebook |
+        loginViewController.fields = 
         PFLogInFieldsUsernameAndPassword
         | PFLogInFieldsLogInButton
         | PFLogInFieldsSignUpButton
@@ -156,7 +156,7 @@
 - (void)proceedToMainInterface:(PFUser *)user {
     
     // Present the main interface
-    [self.navController performSegueWithIdentifier:@"welcomeToType" sender:nil];
+    [self.welcomeController performSegueWithIdentifier:@"welcomeToType" sender:nil];
 
     
 }

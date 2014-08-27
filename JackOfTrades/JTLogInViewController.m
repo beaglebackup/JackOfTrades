@@ -29,15 +29,15 @@
 
     
     // Title View
-//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-//    [titleLabel setBackgroundColor:[UIColor clearColor]];
-//    [titleLabel setFont:[UIFont fontWithName:kMasterBoldFontName size:kNavBarTitleFontSize]];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [titleLabel setBackgroundColor:[UIColor clearColor]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
 //    [titleLabel setTextColor:[UIColor colorNavBarTitle]];
-//    [titleLabel setText:[kLocalizedAppName uppercaseString]];
-//    [titleLabel sizeToFit];
-//    UIView *titleView = [[UIView alloc] initWithFrame:titleLabel.frame];
-//    [titleView addSubview:titleLabel];
-//    self.logInView.logo = titleView;
+    [titleLabel setText:@"Gabe's World"];
+    [titleLabel sizeToFit];
+    UIView *titleView = [[UIView alloc] initWithFrame:titleLabel.frame];
+    [titleView addSubview:titleLabel];
+    self.logInView.logo = titleView;
 
 
 
@@ -106,7 +106,7 @@
     
     
     CGRect logoFrame = self.logInView.logo.frame;
-    logoFrame.origin.y = 20.0f;
+    logoFrame.origin.y = 40.0f;
     [self.logInView.logo setFrame:logoFrame];
     
     
