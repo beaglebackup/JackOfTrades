@@ -82,6 +82,8 @@
 		EFBB46D9193022BA002EECBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFBB46D7193022BA002EECBD /* InfoPlist.strings */; };
 		EFBB46DB193022BA002EECBD /* JackOfTradesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */; };
 		EFBB46E819305AC7002EECBD /* JTDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */; };
+		EFC9072519A6FF88007C7BDC /* JTMenuWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC9072319A6FF88007C7BDC /* JTMenuWebViewController.m */; };
+		EFC9072619A6FF88007C7BDC /* JTMenuWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC9072419A6FF88007C7BDC /* JTMenuWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +219,9 @@
 		EFBB46DA193022BA002EECBD /* JackOfTradesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackOfTradesTests.m; sourceTree = "<group>"; };
 		EFBB46E619305AC7002EECBD /* JTDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDetailsViewController.h; sourceTree = "<group>"; };
 		EFBB46E719305AC7002EECBD /* JTDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDetailsViewController.m; sourceTree = "<group>"; };
+		EFC9072219A6FF88007C7BDC /* JTMenuWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTMenuWebViewController.h; sourceTree = "<group>"; };
+		EFC9072319A6FF88007C7BDC /* JTMenuWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTMenuWebViewController.m; sourceTree = "<group>"; };
+		EFC9072419A6FF88007C7BDC /* JTMenuWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JTMenuWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +353,9 @@
 				8453F60B1963D744002D7661 /* old */,
 				84D4287A196DCB04005B2F8E /* JTMenuViewController.h */,
 				84D4287B196DCB04005B2F8E /* JTMenuViewController.m */,
+				EFC9072219A6FF88007C7BDC /* JTMenuWebViewController.h */,
+				EFC9072319A6FF88007C7BDC /* JTMenuWebViewController.m */,
+				EFC9072419A6FF88007C7BDC /* JTMenuWebViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -609,7 +617,7 @@
 				ORGANIZATIONNAME = Gabriel;
 				TargetAttributes = {
 					EFBB46AB193022B9002EECBD = {
-						DevelopmentTeam = X2ZH23CYYJ;
+						DevelopmentTeam = 5F7L2M2YUE;
 					};
 					EFBB46CC193022B9002EECBD = {
 						TestTargetID = EFBB46AB193022B9002EECBD;
@@ -650,6 +658,7 @@
 				840D3B8E199DC443002AC8D1 /* checkmark@2x.png in Resources */,
 				84C2EA1A19A56F0A00F067E6 /* expandableImage.png in Resources */,
 				84C2EA1E19A56F0A00F067E6 /* SKSTableView-Info.plist in Resources */,
+				EFC9072619A6FF88007C7BDC /* JTMenuWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +691,7 @@
 				84D4287C196DCB04005B2F8E /* JTMenuViewController.m in Sources */,
 				EF8FF5751963AAEC00991CFF /* RodentsViewController.m in Sources */,
 				EFBB46C6193022B9002EECBD /* JTTypeController.m in Sources */,
+				EFC9072519A6FF88007C7BDC /* JTMenuWebViewController.m in Sources */,
 				84256D5519A013B200B8752D /* UIColor+Extensions.m in Sources */,
 				8431BBF219AE4A720080F84C /* JTUIConstants.m in Sources */,
 				EF8FF56F1963A60700991CFF /* BirdsViewController.m in Sources */,
