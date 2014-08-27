@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSArray* objects;
 @property (strong, nonatomic) NSArray* objectsSubtypeArrays;
 
+
+
 @property (strong, nonatomic) IBOutlet SKSTableView *typeExpandTableView;
 
 @end

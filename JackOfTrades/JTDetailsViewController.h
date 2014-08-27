@@ -20,10 +20,12 @@
  */
 @property (strong, nonatomic) Subtype* subtype;
 
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) NSString* navTitle;
+
 @property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 
+@property (strong, nonatomic) IBOutlet UIView *buttonBar;
 @property (strong, nonatomic) IBOutlet UIButton *rxButton;
 @property (strong, nonatomic) IBOutlet UIButton *toolboxButton;
 @property (strong, nonatomic) IBOutlet UIButton *handsButton;

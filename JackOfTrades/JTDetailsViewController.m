@@ -26,7 +26,7 @@ typedef enum {
 
 @implementation JTDetailsViewController
 
-@synthesize subtype=_subtype, titleLabel=_titleLabel, mainImageView=_mainImageView, textView=_textView, rxButton=_rxButton, toolboxButton=_toolboxButton, handsButton=_handsButton, bulbButton=_bulbButton;
+@synthesize subtype=_subtype, navTitle=_navTitle, mainImageView=_mainImageView, textView=_textView, rxButton=_rxButton, toolboxButton=_toolboxButton, handsButton=_handsButton, bulbButton=_bulbButton, buttonBar=_buttonBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,12 +41,22 @@ typedef enum {
 {
     [super viewDidLoad];
     
+    // Set the title
+    self.title = _navTitle;
+
+       
+
+    
+    // Activity Indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.activityIndicator.center = self.mainImageView.center;
     [self.view addSubview:self.activityIndicator];
     [self.activityIndicator startAnimating];
     
 
+    // Button Bar
+    self.buttonBar.backgroundColor = [UIColor colorLavender];
+    
     
     // Set the tags to identify the buttons when pressed
     self.rxButton.tag = JTSubDetailsButtonsRX;
@@ -91,9 +101,8 @@ typedef enum {
 
 - (void)objectsDidLoad:(NSError *)error {
     
-    // Set the title && text
-    _titleLabel.text = _subtype.name;
     
+    // Set the text
     PFObject* textObject = [_subtype objectForKey:[Subtype textPointerKey]];
     NSString* text = [textObject objectForKey:@"text"];
     _textView.text = text;

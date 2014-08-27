@@ -30,19 +30,35 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"in type controller");
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorLavender];
+    self.view.backgroundColor = [UIColor colorPurple];
+
     
+    // Set the title
+    self.title = @"I am Gabe";
+    
+    
+    // Back button
+    UIBarButtonItem *backButton =
+    [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+
+
+    
+    
+    
+    // Activity Indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.activityIndicator.center = self.typeExpandTableView.center;
     [self.view addSubview:self.activityIndicator];
     [self.activityIndicator startAnimating];
     
-    
-    
+
     
     // Call Parse for Data
     [JTDatabaseManager queryForTypesWithCallback:^(NSArray *types, NSError *error) {
@@ -258,6 +274,7 @@
     {
         JTDetailsViewController *detailsVC = [segue destinationViewController];
         detailsVC.subtype = button.subtype;
+        detailsVC.navTitle = button.subtype.name;
     }
 }
 

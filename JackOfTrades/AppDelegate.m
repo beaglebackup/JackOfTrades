@@ -26,6 +26,8 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [self setupAppearance];
+    
     
     // Admin
 //    [JTDatabaseManager addSubtypesToTypes];
@@ -60,6 +62,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - ()
+- (void) setupAppearance {
+    // Navigation bar appearance (background and title)
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:20.0f], NSFontAttributeName, nil]];
+    
+    if([UINavigationBar instancesRespondToSelector:@selector(barTintColor)]){ //iOS7
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorLightBeige]];
+    }
+    else {
+        [[UINavigationBar appearance] setBackgroundColor:[UIColor colorLightBeige]];
+
+    }
+    // Navigation bar buttons appearance
+    
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorLightBeige], NSForegroundColorAttributeName, [UIFont systemFontOfSize:18.0f], NSFontAttributeName, nil]];
 }
 
 @end
