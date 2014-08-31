@@ -337,11 +337,11 @@ CGFloat const kDefaultCellHeight = 44.0f;
  *  Uncomment the implementations of the required methods.
  */
 
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)])
-//        [_SKSTableViewDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
-//}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([_SKSTableViewDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)])
+        [_SKSTableViewDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
 //
 //- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 //{
@@ -666,6 +666,11 @@ CGFloat const kDefaultCellHeight = 44.0f;
                     
                 }
                 
+                [self scrollToRowAtIndexPath:indexPath
+                                      atScrollPosition:UITableViewScrollPositionTop
+                                              animated:YES];
+
+                
                 [cell accessoryViewAnimation];
             }
         }
@@ -877,6 +882,8 @@ CGFloat const kDefaultCellHeight = 44.0f;
     [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
 }
+
+
 
 
 @end
