@@ -202,7 +202,6 @@
 #pragma mark - ()
 - (void) setupAppearance {
     // Navigation bar appearance (background and title)
-    
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:20.0f], NSFontAttributeName, nil]];
     
     if([UINavigationBar instancesRespondToSelector:@selector(barTintColor)]){ //iOS7
@@ -210,11 +209,22 @@
     }
     else {
         [[UINavigationBar appearance] setBackgroundColor:[UIColor colorLightBeige]];
-        
     }
-    // Navigation bar buttons appearance
     
-    //    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorLightBeige], NSForegroundColorAttributeName, [UIFont systemFontOfSize:18.0f], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorNavBarPurple]];
+
+    // Navigation bar buttons appearance
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTintColor:[UIColor colorNavBarPurple]];
+    
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIColor colorNavBarPurple],NSForegroundColorAttributeName,
+                                [UIFont boldSystemFontOfSize:18.0f], NSFontAttributeName,
+                                nil];
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:attributes
+     forState:UIControlStateNormal];
 }
 
 

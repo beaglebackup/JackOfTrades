@@ -874,7 +874,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 
     
-    [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+    [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
 }
 

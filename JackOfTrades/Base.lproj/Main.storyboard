@@ -317,7 +317,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="h9y-Ez-JTz">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="YaZ-jZ-0EP">
+                        <barButtonItem key="rightBarButtonItem" image="icon-menu.png" style="plain" id="YaZ-jZ-0EP">
                             <connections>
                                 <segue destination="szo-T4-6gM" kind="modal" id="2hX-XU-3vc"/>
                             </connections>
@@ -378,89 +378,93 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
-                                <rect key="frame" x="0.0" y="134" width="320" height="214"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-Up-oGv">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-8J-nTj">
+                                        <rect key="frame" x="3" y="-2" width="74" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icon-briefcase.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapRXButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="sSI-Bz-T2a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
+                                        <rect key="frame" x="224" y="-2" width="113" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icon-gear.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapToolboxButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Izq-3Q-Rd2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
+                                        <rect key="frame" x="149" y="-2" width="103" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icon-like.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapHandsButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Y9M-YY-0Xr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
+                                        <rect key="frame" x="84" y="-2" width="72" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icon-idea.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapBulbButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="huV-P8-x80"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ou3-4N-3Gt"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DB8-yK-Wiy">
+                                <rect key="frame" x="-5" y="-30" width="330" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="BgJ-Uf-bYI"/>
+                                    <constraint firstAttribute="width" secondItem="DB8-yK-Wiy" secondAttribute="height" multiplier="33:14" id="Uog-Po-XN3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-oC-7QO">
+                                <rect key="frame" x="0.0" y="134" width="320" height="244"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-Up-oGv">
-                                <rect key="frame" x="0.0" y="414" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-8J-nTj">
-                                <rect key="frame" x="20" y="463" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RX">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapRXButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="sSI-Bz-T2a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-eI-qAy">
-                                <rect key="frame" x="244" y="463" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ToolBox">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapToolboxButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Izq-3Q-Rd2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-bp-cCa">
-                                <rect key="frame" x="172" y="463" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hands">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapHandsButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="Y9M-YY-0Xr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-d2-nvW">
-                                <rect key="frame" x="99" y="463" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bulb">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapBulbButton:" destination="mLl-7N-0Sm" eventType="touchUpInside" id="huV-P8-x80"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DB8-yK-Wiy">
-                                <rect key="frame" x="-5" y="-10" width="330" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DB8-yK-Wiy" secondAttribute="height" multiplier="33:14" id="Uog-Po-XN3"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pqI-d2-nvW" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="Ay9-DO-BY8"/>
-                            <constraint firstItem="y4l-eI-qAy" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="BdK-ki-mEk"/>
+                            <constraint firstItem="rHH-oC-7QO" firstAttribute="leading" secondItem="pxI-Up-oGv" secondAttribute="leading" id="ADl-O3-33F"/>
                             <constraint firstItem="DB8-yK-Wiy" firstAttribute="top" secondItem="yGR-g9-eOi" secondAttribute="bottom" id="CrG-qP-mdU"/>
                             <constraint firstAttribute="trailing" secondItem="DB8-yK-Wiy" secondAttribute="trailing" id="NJ6-m9-zlk"/>
-                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="OfN-8J-nTj" secondAttribute="bottom" id="PLk-M3-PxM"/>
+                            <constraint firstItem="rHH-oC-7QO" firstAttribute="trailing" secondItem="pxI-Up-oGv" secondAttribute="trailing" id="UYu-Y5-AOR"/>
+                            <constraint firstItem="pxI-Up-oGv" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" priority="100" id="Wex-ZC-aaP"/>
                             <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="pxI-Up-oGv" secondAttribute="bottom" id="Zeu-gm-gbl"/>
-                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="y4l-eI-qAy" secondAttribute="bottom" id="eVn-8c-CLY"/>
-                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="pqI-d2-nvW" secondAttribute="bottom" id="oPk-Fz-KmO"/>
-                            <constraint firstItem="N2q-bp-cCa" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="otf-hi-hlr"/>
+                            <constraint firstItem="rHH-oC-7QO" firstAttribute="top" secondItem="yGR-g9-eOi" secondAttribute="bottom" constant="134" id="kOO-9G-Pah"/>
+                            <constraint firstItem="rHH-oC-7QO" firstAttribute="centerX" secondItem="DB8-yK-Wiy" secondAttribute="centerX" id="mlG-Ql-bE5"/>
                             <constraint firstItem="DB8-yK-Wiy" firstAttribute="leading" secondItem="71E-q9-u7s" secondAttribute="leading" id="s8j-TH-far"/>
-                            <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="N2q-bp-cCa" secondAttribute="bottom" id="tcx-h9-5XA"/>
-                            <constraint firstItem="OfN-8J-nTj" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" id="ypM-2b-QOb"/>
+                            <constraint firstItem="rHH-oC-7QO" firstAttribute="leading" secondItem="71E-q9-u7s" secondAttribute="leading" id="uZH-DH-uhR"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="PxG-Ps-QO3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="TUP-Rr-QQz">
+                        <barButtonItem key="rightBarButtonItem" image="icon-menu.png" id="TUP-Rr-QQz">
                             <connections>
                                 <segue destination="szo-T4-6gM" kind="modal" id="wWg-mP-jJH"/>
                             </connections>
@@ -511,6 +515,13 @@
             <point key="canvasLocation" x="2181" y="-946"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-briefcase.png" width="30" height="26"/>
+        <image name="icon-gear.png" width="29" height="29"/>
+        <image name="icon-idea.png" width="20" height="29"/>
+        <image name="icon-like.png" width="30" height="29"/>
+        <image name="icon-menu.png" width="36" height="35"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

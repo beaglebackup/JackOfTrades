@@ -12,6 +12,8 @@
 
 + (UIColor *)colorPurple;
 + (UIColor *)colorLavender;
++ (UIColor *)colorNavBarPurple;
++ (UIColor *)colorLightPurple;
 + (UIColor *)colorLightBeige;
 
 

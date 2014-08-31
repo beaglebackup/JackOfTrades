@@ -20,6 +20,14 @@
     return [UIColor colorWithRed:188.0/255.0 green:147.0/255.0 blue:193.0/255.0 alpha:1];
 }
 
++ (UIColor *)colorNavBarPurple {
+    return [UIColor colorWithRed:144.0/255.0 green:19.0/255.0 blue:254.0/255.0 alpha:1];
+}
+
++ (UIColor *)colorLightPurple {
+    return [UIColor colorWithRed:99.0/255.0 green:15.0/255.0 blue:173.0/255.0 alpha:1];
+}
+
 + (UIColor *)colorLightBeige {
     return [UIColor colorWithRed:238.0/255.0 green:234.0/255.0 blue:230.0/255.0 alpha:1];
 }
