@@ -44,8 +44,13 @@ typedef enum {
     // Set the title
     self.title = _navTitle;
 
-       
-
+    
+    // Set text for button (to pass to subdetailsVC)
+    self.rxButton.detailType = @"RX";
+    self.handsButton.detailType = @"Hands";
+    self.toolboxButton.detailType = @"Toolbox";
+    self.bulbButton.detailType = @"Bulb";
+    
     
     // Activity Indicator
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -142,7 +147,7 @@ typedef enum {
 #pragma mark - Navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
-     UIButton* button = (UIButton*)sender;
+     JTDetailsButton* button = (JTDetailsButton*)sender;
      
      // Subdetails
      if ([[segue identifier] isEqualToString:@"detailsToSubdetails"])
@@ -172,11 +177,12 @@ typedef enum {
          }
          
          JTSubDetailsViewController *subdetailsVC = [segue destinationViewController];
+
          
          NSLog(@"JTDetailsViewController -- button.titleLabel.text = %@",button.titleLabel.text);
          NSLog(@"JTDetailsViewController --  url= %@",url);
 
-         subdetailsVC.navTitle = button.titleLabel.text;
+         subdetailsVC.navTitle = [NSString stringWithFormat:@"%@: %@",button.detailType, self.subtype.name];
          subdetailsVC.url = url;
      }
      
@@ -186,6 +192,9 @@ typedef enum {
          JTImageViewerViewController *imageViewerVC = [segue destinationViewController];
          imageViewerVC.passedImage = self.mainImageView.image;
      }
+     
+     // No backButton text
+     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
  }
  
 

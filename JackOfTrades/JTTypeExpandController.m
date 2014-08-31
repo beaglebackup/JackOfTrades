@@ -281,6 +281,10 @@
         detailsVC.subtype = button.subtype;
         detailsVC.navTitle = button.subtype.name;
     }
+    
+    // No backButton text
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+
 }
 
 

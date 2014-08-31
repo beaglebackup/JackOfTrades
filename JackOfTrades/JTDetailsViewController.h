@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Subtype.h"
+#import "JTDetailsButton.h"
 
 @interface JTDetailsViewController : UIViewController
 
@@ -26,10 +27,10 @@
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @property (strong, nonatomic) IBOutlet UIView *buttonBar;
-@property (strong, nonatomic) IBOutlet UIButton *rxButton;
-@property (strong, nonatomic) IBOutlet UIButton *toolboxButton;
-@property (strong, nonatomic) IBOutlet UIButton *handsButton;
-@property (strong, nonatomic) IBOutlet UIButton *bulbButton;
+@property (strong, nonatomic) IBOutlet JTDetailsButton *rxButton;
+@property (strong, nonatomic) IBOutlet JTDetailsButton *toolboxButton;
+@property (strong, nonatomic) IBOutlet JTDetailsButton *handsButton;
+@property (strong, nonatomic) IBOutlet JTDetailsButton *bulbButton;
 
 
 - (IBAction)didTapRXButton:(id)sender;
