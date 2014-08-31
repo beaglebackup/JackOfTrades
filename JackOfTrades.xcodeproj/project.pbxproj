@@ -29,6 +29,16 @@
 		8431BBF219AE4A720080F84C /* JTUIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431BBF119AE4A720080F84C /* JTUIConstants.m */; };
 		8431BBF419AE4E5C0080F84C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8431BBF319AE4E5C0080F84C /* Accounts.framework */; };
 		8431BBF619AE4EA70080F84C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8431BBF519AE4EA70080F84C /* Social.framework */; };
+		8434C57619B3C92100245F05 /* icon-briefcase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C56C19B3C92100245F05 /* icon-briefcase@2x.png */; };
+		8434C57719B3C92100245F05 /* icon-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C56D19B3C92100245F05 /* icon-gear@2x.png */; };
+		8434C57819B3C92100245F05 /* icon-idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C56E19B3C92100245F05 /* icon-idea@2x.png */; };
+		8434C57919B3C92100245F05 /* icon-like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C56F19B3C92100245F05 /* icon-like@2x.png */; };
+		8434C57A19B3C92100245F05 /* icon-briefcase.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57019B3C92100245F05 /* icon-briefcase.png */; };
+		8434C57B19B3C92100245F05 /* icon-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57119B3C92100245F05 /* icon-gear.png */; };
+		8434C57C19B3C92100245F05 /* icon-idea.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57219B3C92100245F05 /* icon-idea.png */; };
+		8434C57D19B3C92100245F05 /* icon-like.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57319B3C92100245F05 /* icon-like.png */; };
+		8434C57E19B3C92100245F05 /* icon-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57419B3C92100245F05 /* icon-menu.png */; };
+		8434C57F19B3C92100245F05 /* icon-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434C57519B3C92100245F05 /* icon-menu@2x.png */; };
 		8453F6101963E3CD002D7661 /* JTTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453F60F1963E3CD002D7661 /* JTTypeButton.m */; };
 		8491BC63196AFDC3004F3422 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491BC62196AFDC3004F3422 /* Type.m */; };
 		8491BC65196AFE5A004F3422 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491BC64196AFE5A004F3422 /* Parse.framework */; };
@@ -135,6 +145,16 @@
 		8431BBF119AE4A720080F84C /* JTUIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTUIConstants.m; sourceTree = "<group>"; };
 		8431BBF319AE4E5C0080F84C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		8431BBF519AE4EA70080F84C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8434C56C19B3C92100245F05 /* icon-briefcase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-briefcase@2x.png"; path = "../../../../Downloads/jot-icons/icon-briefcase@2x.png"; sourceTree = "<group>"; };
+		8434C56D19B3C92100245F05 /* icon-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-gear@2x.png"; path = "../../../../Downloads/jot-icons/icon-gear@2x.png"; sourceTree = "<group>"; };
+		8434C56E19B3C92100245F05 /* icon-idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-idea@2x.png"; path = "../../../../Downloads/jot-icons/icon-idea@2x.png"; sourceTree = "<group>"; };
+		8434C56F19B3C92100245F05 /* icon-like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-like@2x.png"; path = "../../../../Downloads/jot-icons/icon-like@2x.png"; sourceTree = "<group>"; };
+		8434C57019B3C92100245F05 /* icon-briefcase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-briefcase.png"; path = "../../../../Downloads/jot-icons/icon-briefcase.png"; sourceTree = "<group>"; };
+		8434C57119B3C92100245F05 /* icon-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-gear.png"; path = "../../../../Downloads/jot-icons/icon-gear.png"; sourceTree = "<group>"; };
+		8434C57219B3C92100245F05 /* icon-idea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-idea.png"; path = "../../../../Downloads/jot-icons/icon-idea.png"; sourceTree = "<group>"; };
+		8434C57319B3C92100245F05 /* icon-like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-like.png"; path = "../../../../Downloads/jot-icons/icon-like.png"; sourceTree = "<group>"; };
+		8434C57419B3C92100245F05 /* icon-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-menu.png"; path = "../../../../Downloads/jot-icons/icon-menu.png"; sourceTree = "<group>"; };
+		8434C57519B3C92100245F05 /* icon-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-menu@2x.png"; path = "../../../../Downloads/jot-icons/icon-menu@2x.png"; sourceTree = "<group>"; };
 		8453F60E1963E3CD002D7661 /* JTTypeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTypeButton.h; sourceTree = "<group>"; };
 		8453F60F1963E3CD002D7661 /* JTTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTypeButton.m; sourceTree = "<group>"; };
 		8491BC61196AFDC3004F3422 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
@@ -341,6 +361,31 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		8434C56A19B3C90500245F05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8434C56B19B3C90800245F05 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8434C56B19B3C90800245F05 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8434C56C19B3C92100245F05 /* icon-briefcase@2x.png */,
+				8434C56D19B3C92100245F05 /* icon-gear@2x.png */,
+				8434C56E19B3C92100245F05 /* icon-idea@2x.png */,
+				8434C56F19B3C92100245F05 /* icon-like@2x.png */,
+				8434C57019B3C92100245F05 /* icon-briefcase.png */,
+				8434C57119B3C92100245F05 /* icon-gear.png */,
+				8434C57219B3C92100245F05 /* icon-idea.png */,
+				8434C57319B3C92100245F05 /* icon-like.png */,
+				8434C57419B3C92100245F05 /* icon-menu.png */,
+				8434C57519B3C92100245F05 /* icon-menu@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8453F6081963D6E0002D7661 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +568,7 @@
 		EFBB46B5193022B9002EECBD /* JackOfTrades */ = {
 			isa = PBXGroup;
 			children = (
+				8434C56A19B3C90500245F05 /* Resources */,
 				84256D5219A0139A00B8752D /* Categories */,
 				840D3B78199DC404002AC8D1 /* Externals */,
 				8491BC60196AFDA2004F3422 /* Data */,
@@ -648,17 +694,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434C57819B3C92100245F05 /* icon-idea@2x.png in Resources */,
+				8434C57919B3C92100245F05 /* icon-like@2x.png in Resources */,
 				EFBB46C8193022B9002EECBD /* Images.xcassets in Resources */,
 				840D3B8B199DC443002AC8D1 /* arrow-icon.png in Resources */,
 				EFBB46BA193022B9002EECBD /* InfoPlist.strings in Resources */,
+				8434C57C19B3C92100245F05 /* icon-idea.png in Resources */,
 				840D3B8D199DC443002AC8D1 /* checkmark.png in Resources */,
+				8434C57E19B3C92100245F05 /* icon-menu.png in Resources */,
+				8434C57D19B3C92100245F05 /* icon-like.png in Resources */,
 				840D3B8C199DC443002AC8D1 /* arrow-icon@2x.png in Resources */,
+				8434C57F19B3C92100245F05 /* icon-menu@2x.png in Resources */,
+				8434C57719B3C92100245F05 /* icon-gear@2x.png in Resources */,
 				EFBB46C3193022B9002EECBD /* Main.storyboard in Resources */,
 				84C2EA1B19A56F0A00F067E6 /* expandableImage@2x.png in Resources */,
 				840D3B8E199DC443002AC8D1 /* checkmark@2x.png in Resources */,
+				8434C57619B3C92100245F05 /* icon-briefcase@2x.png in Resources */,
+				8434C57B19B3C92100245F05 /* icon-gear.png in Resources */,
 				84C2EA1A19A56F0A00F067E6 /* expandableImage.png in Resources */,
 				84C2EA1E19A56F0A00F067E6 /* SKSTableView-Info.plist in Resources */,
 				EFC9072619A6FF88007C7BDC /* JTMenuWebViewController.xib in Resources */,
+				8434C57A19B3C92100245F05 /* icon-briefcase.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,9 +15,7 @@
     #import <Foundation/Foundation.h>
 
     #import <Parse/Parse.h>
-
     #import "JTDatabaseManager.h"
-
     #import "UIColor+Extensions.h"
 
 #endif
