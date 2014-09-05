@@ -26,7 +26,7 @@ typedef enum {
 
 @implementation JTDetailsViewController
 
-@synthesize subtype=_subtype, navTitle=_navTitle, mainImageView=_mainImageView, textView=_textView, rxButton=_rxButton, toolboxButton=_toolboxButton, handsButton=_handsButton, bulbButton=_bulbButton, buttonBar=_buttonBar;
+@synthesize subtype=_subtype, navTitle=_navTitle, mainImageView=_mainImageView, textView=_textView, textWebView=_textWebView, rxButton=_rxButton, toolboxButton=_toolboxButton, handsButton=_handsButton, bulbButton=_bulbButton, buttonBar=_buttonBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -101,16 +101,21 @@ typedef enum {
             [self objectsDidLoad:error];
         }
     }];
+    
+    
+ 
 
 }
 
 - (void)objectsDidLoad:(NSError *)error {
     
     
-    // Set the text
-    PFObject* textObject = [_subtype objectForKey:[Subtype textPointerKey]];
-    NSString* text = [textObject objectForKey:@"text"];
-    _textView.text = text;
+    
+    // Load textWebView
+    NSURL* textURL = [NSURL URLWithString:_subtype.mainText];
+    NSURLRequest* request = [NSURLRequest requestWithURL:textURL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
+    [self.textWebView loadRequest:request];
+
     
 
     
@@ -143,6 +148,21 @@ typedef enum {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+#pragma mark - UIWebView Delegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activityIndicator stopAnimating];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    NSLog(@"JTSubDetailsViewController -- error = %@",error);
+    
+    [self.activityIndicator stopAnimating];
+}
+
+
 
 #pragma mark - Navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -196,9 +216,8 @@ typedef enum {
      // No backButton text
      self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
  }
- 
 
-
+#pragma mark - Buttons
 - (IBAction)didTapRXButton:(id)sender {
     [self performSegueWithIdentifier:@"detailsToSubdetails" sender:sender];
 }

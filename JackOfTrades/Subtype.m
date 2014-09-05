@@ -12,7 +12,7 @@
 
 @dynamic name;
 @dynamic mainPhoto;
-@dynamic text;
+@dynamic mainText;
 @dynamic RX;
 @dynamic toolbox;
 @dynamic hands;

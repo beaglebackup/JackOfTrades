@@ -25,6 +25,9 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIWebView *textWebView;
+
+
 
 @property (strong, nonatomic) IBOutlet UIView *buttonBar;
 @property (strong, nonatomic) IBOutlet JTDetailsButton *rxButton;

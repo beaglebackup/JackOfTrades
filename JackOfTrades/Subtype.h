@@ -12,7 +12,7 @@
 
 @property (retain) NSString *name;
 @property (retain) PFFile *mainPhoto;
-@property (retain) NSString *text;
+@property (retain) NSString *mainText;
 
 @property (retain) NSString* RX;
 @property (retain) NSString* hands;

@@ -451,6 +451,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <webView contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-Cq-V0n">
+                                <rect key="frame" x="0.0" y="134" width="320" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -460,6 +465,8 @@
                             <constraint firstItem="rHH-oC-7QO" firstAttribute="trailing" secondItem="pxI-Up-oGv" secondAttribute="trailing" id="UYu-Y5-AOR"/>
                             <constraint firstItem="pxI-Up-oGv" firstAttribute="top" secondItem="rHH-oC-7QO" secondAttribute="bottom" priority="100" id="Wex-ZC-aaP"/>
                             <constraint firstItem="0fR-ML-NzK" firstAttribute="top" secondItem="pxI-Up-oGv" secondAttribute="bottom" id="Zeu-gm-gbl"/>
+                            <constraint firstItem="pxI-Up-oGv" firstAttribute="top" secondItem="fjs-Cq-V0n" secondAttribute="bottom" id="bNq-pM-tqF"/>
+                            <constraint firstItem="fjs-Cq-V0n" firstAttribute="top" secondItem="yGR-g9-eOi" secondAttribute="bottom" constant="180" id="jB6-zG-VXG"/>
                             <constraint firstItem="rHH-oC-7QO" firstAttribute="top" secondItem="yGR-g9-eOi" secondAttribute="bottom" priority="250" constant="180" id="kOO-9G-Pah"/>
                             <constraint firstItem="rHH-oC-7QO" firstAttribute="centerX" secondItem="DB8-yK-Wiy" secondAttribute="centerX" id="mlG-Ql-bE5"/>
                             <constraint firstItem="DB8-yK-Wiy" firstAttribute="leading" secondItem="71E-q9-u7s" secondAttribute="leading" id="s8j-TH-far"/>
@@ -481,6 +488,7 @@
                         <outlet property="mainImageView" destination="DB8-yK-Wiy" id="Bsl-yx-Ua3"/>
                         <outlet property="rxButton" destination="OfN-8J-nTj" id="Xdj-KR-Fua"/>
                         <outlet property="textView" destination="rHH-oC-7QO" id="GGy-Jl-6Bj"/>
+                        <outlet property="textWebView" destination="fjs-Cq-V0n" id="EQ2-cQ-r1o"/>
                         <outlet property="toolboxButton" destination="y4l-eI-qAy" id="vpQ-JB-WrB"/>
                         <segue destination="P9M-bf-n1Z" kind="push" identifier="imageViewer" id="pCs-bu-t7v"/>
                         <segue destination="Y1g-LR-c2y" kind="push" identifier="detailsToSubdetails" id="oxk-gt-6WR"/>
