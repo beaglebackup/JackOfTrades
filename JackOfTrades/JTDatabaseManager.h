@@ -21,6 +21,5 @@
 
 #pragma mark - Admin
 + (void)addSubtypesToTypes;
-+ (void)moveSubtypeTextToClass;
 
 @end

@@ -661,7 +661,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
                     [self setExpandedLeft:NO forCellAtIndexPath:indexPath];
                     [self setExpandedRight:NO forCellAtIndexPath:indexPath];
                     [self beginUpdates];
-                    [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+                    [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
                     [self endUpdates];
                     
                 }
@@ -671,7 +671,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
                                               animated:YES];
 
                 
-                [cell accessoryViewAnimation];
+//                [cell accessoryViewAnimation];
             }
         }
         
@@ -688,6 +688,8 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 [_SKSTableViewDelegate tableView:self didSelectSubRowAtIndexPath:correspondingIndexPath];
             }
         }
+        
+        [self reloadData];
     }
     
 }
@@ -879,7 +881,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 
     
-    [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self deleteRowsAtIndexPaths:totalExpandedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
     
 }
 
