@@ -24,6 +24,12 @@ h5 {
 	font-size: 1.20em;
 	color: #F00;
 }
+h6 {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0;
+	font-size: 1em;
+}
 p { 
 	margin-bottom: 0.5em; 
 	direction: ltr; 
