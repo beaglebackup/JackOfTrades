@@ -104,7 +104,7 @@
 }
 
 - (IBAction)openIPMButton:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://www.epa.gov/opp00001/factsheets/ipm.htm/"];
+    NSURL *url = [NSURL URLWithString:@"http://www.epa.gov/opp00001/factsheets/ipm.htm"];
     JTMenuWebViewController *webViewController =
     [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"IPM"];
     [self presentModalViewController:webViewController animated:YES];
