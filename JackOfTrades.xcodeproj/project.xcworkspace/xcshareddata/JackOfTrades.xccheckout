@@ -10,29 +10,29 @@
 	<string>JackOfTrades</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3D4AA9F4-3DB3-423D-81CA-2BF9961C8341</key>
+		<key>CC96B866B34FAB0C58BBCA0358F89A75815A2D9B</key>
 		<string>https://github.com/beaglebackup/JackOfTrades.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>JackOfTrades.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3D4AA9F4-3DB3-423D-81CA-2BF9961C8341</key>
+		<key>CC96B866B34FAB0C58BBCA0358F89A75815A2D9B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/beaglebackup/JackOfTrades.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3D4AA9F4-3DB3-423D-81CA-2BF9961C8341</string>
+	<string>CC96B866B34FAB0C58BBCA0358F89A75815A2D9B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3D4AA9F4-3DB3-423D-81CA-2BF9961C8341</string>
+			<string>CC96B866B34FAB0C58BBCA0358F89A75815A2D9B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JackOfTrades</string>
 		</dict>
