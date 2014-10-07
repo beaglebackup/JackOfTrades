@@ -37,7 +37,7 @@
 
     
     // Set the title
-    self.title = @"I am Gabe";
+    self.title = @"Jack of Trades";
     
     
     // Hide back button for this view
