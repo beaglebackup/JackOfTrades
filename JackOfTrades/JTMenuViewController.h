@@ -15,21 +15,22 @@
 @property (strong, nonatomic) IBOutlet UIButton *articlesButton;
 @property (strong, nonatomic) IBOutlet UIButton *videoButton;
 @property (strong, nonatomic) IBOutlet UIButton *feedbackButton;
-@property (strong, nonatomic) IBOutlet UIButton *portalButton;
 @property (strong, nonatomic) IBOutlet UIButton *pestecButton;
 @property (strong, nonatomic) IBOutlet UIButton *spcbButton;
+@property (strong, nonatomic) IBOutlet UIButton *nSeriesButton;
+
 
 
 
 
 - (IBAction)didTapCloseButton:(id)sender;
-- (IBAction)openPortalButton:(id)sender;
 - (IBAction)openArticlesButton:(id)sender;
 - (IBAction)openIPMButton:(id)sender;
 - (IBAction)openVideosButton:(id)sender;
 - (IBAction)openSPCBButton:(id)sender;
 - (IBAction)openFeedBackButton:(id)sender;
 - (IBAction)openPestecButton:(id)sender;
+- (IBAction)openNSeriesButton:(id)sender;
 
 
 

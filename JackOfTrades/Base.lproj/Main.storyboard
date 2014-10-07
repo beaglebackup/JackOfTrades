@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="odr-34-qWe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="odr-34-qWe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -43,25 +43,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-dr-Brj">
-                                <rect key="frame" x="13" y="356" width="294" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-SI-AS7">
-                                        <rect key="frame" x="20" y="-3" width="116" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                        <state key="normal" title="PORTAL">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="openPortalButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="AHl-ag-tQ2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lu1-Af-TnC">
                                 <rect key="frame" x="13" y="90" width="294" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -161,16 +142,16 @@
                                 <rect key="frame" x="13" y="311" width="294" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-1Q-yYU">
-                                        <rect key="frame" x="20" y="3" width="168" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCG-zT-wYD">
+                                        <rect key="frame" x="20" y="-4" width="168" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                        <state key="normal" title="Feed back">
-                                            <color key="titleColor" red="1" green="0.074673274136579426" blue="0.82331439529020367" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="N-Series">
+                                            <color key="titleColor" red="1" green="0.074673274139999996" blue="0.82331439529999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="openFeedBackButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="9pY-dk-BEI"/>
+                                            <action selector="openNSeriesButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="8hl-aK-QCn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -193,6 +174,25 @@
                                     <action selector="didTapCloseButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="dQP-nA-ibr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7j-b3-FMc">
+                                <rect key="frame" x="13" y="355" width="294" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-1Q-yYU">
+                                        <rect key="frame" x="20" y="3" width="168" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="Feed back">
+                                            <color key="titleColor" red="1" green="0.074673274136579426" blue="0.82331439529020367" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openFeedBackButton:" destination="szo-T4-6gM" eventType="touchUpInside" id="9pY-dk-BEI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -202,8 +202,8 @@
                         <outlet property="closeButton" destination="QtW-l2-rIT" id="MGW-kc-iM8"/>
                         <outlet property="feedbackButton" destination="QHI-1Q-yYU" id="WS4-w3-izM"/>
                         <outlet property="ipmButton" destination="5bR-Zp-nCk" id="DqE-LF-ig0"/>
+                        <outlet property="nSeriesButton" destination="iCG-zT-wYD" id="168-qg-Wmz"/>
                         <outlet property="pestecButton" destination="dBu-OP-z4X" id="wKX-2N-nNP"/>
-                        <outlet property="portalButton" destination="Nkw-SI-AS7" id="stQ-es-ytS"/>
                         <outlet property="spcbButton" destination="LAJ-oy-gQD" id="V0o-Uf-vyy"/>
                         <outlet property="videoButton" destination="5Ps-sm-CaL" id="0VU-Ec-Lgu"/>
                     </connections>

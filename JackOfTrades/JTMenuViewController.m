@@ -140,11 +140,10 @@
     [self presentModalViewController:webViewController animated:YES];
 }
 
-
-- (IBAction)openPortalButton:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://www.training.pestecipm.com/"];
+- (IBAction)openNSeriesButton:(id)sender{
+    NSURL *url = [NSURL URLWithString:@"http://www.cdpr.ca.gov/docs/whs/pdf/hs1759.pdf"];
     JTMenuWebViewController *webViewController =
-    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"Portal"];
+    [[JTMenuWebViewController alloc] initWithURL:url andTitle:@"N-Series"];
     [self presentModalViewController:webViewController animated:YES];
 }
 
