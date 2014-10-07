@@ -53,6 +53,7 @@
 		84D4287C196DCB04005B2F8E /* JTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4287B196DCB04005B2F8E /* JTMenuViewController.m */; };
 		84DD52C819856D160061A528 /* JTSubDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD52C719856D160061A528 /* JTSubDetailsViewController.m */; };
 		84DD52E41991BCE00061A528 /* JTImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD52E31991BCE00061A528 /* JTImageViewerViewController.m */; };
+		EF1C282F19E3B5E300A29F58 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1C282D19E3B5E300A29F58 /* MainStoryboard_iPad.storyboard */; };
 		EFBB46B0193022B9002EECBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46AF193022B9002EECBD /* Foundation.framework */; };
 		EFBB46B2193022B9002EECBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B1193022B9002EECBD /* CoreGraphics.framework */; };
 		EFBB46B4193022B9002EECBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBB46B3193022B9002EECBD /* UIKit.framework */; };
@@ -149,6 +150,7 @@
 		84DD52C719856D160061A528 /* JTSubDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSubDetailsViewController.m; sourceTree = "<group>"; };
 		84DD52E21991BCE00061A528 /* JTImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTImageViewerViewController.h; sourceTree = "<group>"; };
 		84DD52E31991BCE00061A528 /* JTImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTImageViewerViewController.m; sourceTree = "<group>"; };
+		EF1C282E19E3B5E300A29F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = JackOfTrades/Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		EFBB46AC193022B9002EECBD /* JackOfTrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackOfTrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBB46AF193022B9002EECBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFBB46B1193022B9002EECBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,6 +369,7 @@
 		EFBB46A3193022B9002EECBD = {
 			isa = PBXGroup;
 			children = (
+				EF1C282D19E3B5E300A29F58 /* MainStoryboard_iPad.storyboard */,
 				EFBB46B5193022B9002EECBD /* JackOfTrades */,
 				EFBB46D4193022BA002EECBD /* JackOfTradesTests */,
 				EFBB46AE193022B9002EECBD /* Frameworks */,
@@ -542,6 +545,7 @@
 				EFBB46BA193022B9002EECBD /* InfoPlist.strings in Resources */,
 				8434C59019B3CD1600245F05 /* icon-idea.png in Resources */,
 				8434C59219B3CD1600245F05 /* icon-menu.png in Resources */,
+				EF1C282F19E3B5E300A29F58 /* MainStoryboard_iPad.storyboard in Resources */,
 				8434C59119B3CD1600245F05 /* icon-like.png in Resources */,
 				8434C59319B3CD1600245F05 /* icon-menu@2x.png in Resources */,
 				8434C58B19B3CD1600245F05 /* icon-gear@2x.png in Resources */,
@@ -617,6 +621,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EF1C282D19E3B5E300A29F58 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1C282E19E3B5E300A29F58 /* Base */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		EFBB46B8193022B9002EECBD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -730,7 +742,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "424abe01-e719-4ed1-9bce-fd602f1e6f5c";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -751,7 +763,7 @@
 				GCC_PREFIX_HEADER = "JackOfTrades/JackOfTrades-Prefix.pch";
 				INFOPLIST_FILE = "JackOfTrades/JackOfTrades-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "424abe01-e719-4ed1-9bce-fd602f1e6f5c";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
